@@ -27,6 +27,7 @@ export const rafd: Project = {
   },
   stack: [],
   accent: { dark: "#86ade0", light: "#2a5a96" },
+  chapter: { bg: "linear-gradient(160deg,#0f2140 0%,#16305c 100%)", ink: "#eaf1fb", sub: "#a9bcd8", dark: true },
   facts: [
     { label: { ar: "الجمهور", en: "Audience" }, value: { ar: "طلاب الجامعة الافتراضية السورية", en: "Syrian Virtual University students" } },
     { label: { ar: "التطبيقات", en: "Apps" }, value: { ar: "سطح المكتب · أندرويد · iOS (قيد التطوير)", en: "Desktop · Android · iOS (in development)" } },

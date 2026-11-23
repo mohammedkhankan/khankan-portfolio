@@ -51,11 +51,11 @@ export function Gallery({ images, locale, layout = "editorial" }: { images: Gall
   const current = index !== null ? images[index] : null;
 
   const thumb = (img: GalleryImage, i: number, sizes: string, className?: string) => (
-    <figure key={img.src} className={className} data-reveal>
+    <figure key={img.src} className={className}>
       <button
         type="button"
         onClick={(e) => open(i, e.currentTarget)}
-        className="group relative block w-full overflow-hidden rounded-md border border-line bg-surface-2 shadow-media"
+        className="group relative block w-full overflow-hidden rounded-[var(--radius-md)] bg-raise shadow-soft ring-1 ring-line"
         aria-label={`${ui.a11y.openImage[locale]}: ${img.alt}`}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -71,14 +71,11 @@ export function Gallery({ images, locale, layout = "editorial" }: { images: Gall
           style={img.blur ? { backgroundImage: `url(${img.blur})`, backgroundSize: "cover" } : undefined}
           className="h-auto w-full transition-transform duration-700 ease-[var(--ease-out-soft)] group-hover:scale-[1.015]"
         />
-        <span className="absolute end-3 top-3 grid size-9 place-items-center rounded-sm bg-bg/80 text-ink opacity-0 backdrop-blur transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden>
+        <span className="absolute end-3 top-3 grid size-10 place-items-center rounded-full bg-bg/80 text-ink opacity-0 backdrop-blur transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden>
           <Expand />
         </span>
       </button>
-      <figcaption className="mt-3 flex gap-3 text-sm text-muted">
-        <span className="font-mono text-xs" dir="ltr">{String(i + 1).padStart(2, "0")}</span>
-        {img.alt}
-      </figcaption>
+      <figcaption className="mt-3 text-sm text-muted">{img.alt}</figcaption>
     </figure>
   );
 
@@ -125,7 +122,7 @@ export function Gallery({ images, locale, layout = "editorial" }: { images: Gall
         {current && (
           <div className="flex h-full flex-col" dir={rtl ? "rtl" : "ltr"}>
             <div className="flex items-center justify-between px-4 py-3 md:px-8">
-              <span className="font-mono text-xs text-[#a6a296]" dir="ltr" aria-live="polite">
+              <span className="text-sm tabular-nums text-[#a3acbd]" dir="ltr" aria-live="polite">
                 {String((index ?? 0) + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
               </span>
               <button type="button" onClick={close} className="grid size-11 place-items-center rounded-sm hover:bg-white/10" aria-label={ui.a11y.close[locale]} autoFocus>

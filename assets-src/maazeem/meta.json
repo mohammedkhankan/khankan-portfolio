@@ -1,0 +1,87 @@
+{
+ "00-hero.webp": {
+  "alt": {
+   "ar": "لوحة المناسبة ودعوة الضيف على الجوال",
+   "en": "Event dashboard and a guest invitation on mobile"
+  },
+  "order": 0,
+  "role": "hero"
+ },
+ "01-dashboard.webp": {
+  "alt": {
+   "ar": "لوحة التحكم",
+   "en": "Dashboard"
+  },
+  "order": 1
+ },
+ "02-event-creation.webp": {
+  "alt": {
+   "ar": "إنشاء المناسبة",
+   "en": "Creating an event"
+  },
+  "order": 2
+ },
+ "03-invitation-designer.webp": {
+  "alt": {
+   "ar": "محرر الدعوات",
+   "en": "Invitation designer"
+  },
+  "order": 3
+ },
+ "04-b-template-library.webp": {
+  "alt": {
+   "ar": "مكتبة القوالب",
+   "en": "Template library"
+  },
+  "order": 4
+ },
+ "05-qr-configuration.webp": {
+  "alt": {
+   "ar": "إعداد الباركود",
+   "en": "QR configuration"
+  },
+  "order": 5
+ },
+ "06-guest-management.webp": {
+  "alt": {
+   "ar": "إدارة المدعوين",
+   "en": "Guest management"
+  },
+  "order": 6
+ },
+ "07-b-excel-import.webp": {
+  "alt": {
+   "ar": "استيراد المدعوين من Excel",
+   "en": "Excel guest import"
+  },
+  "order": 7
+ },
+ "08-sending-methods.webp": {
+  "alt": {
+   "ar": "طرق الإرسال",
+   "en": "Sending methods"
+  },
+  "order": 8
+ },
+ "09-client-tracking.webp": {
+  "alt": {
+   "ar": "متابعة الردود",
+   "en": "RSVP tracking"
+  },
+  "order": 9
+ },
+ "10-guest-checkin.webp": {
+  "alt": {
+   "ar": "تسجيل الحضور بمسح الباركود",
+   "en": "QR check-in at the door"
+  },
+  "order": 10
+ },
+ "11-mobile-experience.webp": {
+  "alt": {
+   "ar": "تجربة الضيف على الجوال",
+   "en": "The guest's mobile experience"
+  },
+  "order": 11
+ }
+}

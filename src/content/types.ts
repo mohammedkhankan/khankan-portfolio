@@ -69,6 +69,12 @@ export interface Project {
   url?: string;
   /** Accent used for small markers only. */
   accent: { dark: string; light: string };
+  /** Full-bleed chapter colours taken from the project's own brand / showcase art. */
+  chapter: { bg: string; ink: string; sub: string; dark: boolean };
+  /** Documented proof points (only facts backed by a report, test or the brief). */
+  proof?: { value: L; label: L }[];
+  /** Caption shown under real screenshots, e.g. "demo data". */
+  mediaNote?: L;
   facts?: { label: L; value: L }[];
   context: LL;
   challenge: LL;

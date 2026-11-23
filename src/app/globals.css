@@ -1,239 +1,187 @@
 @import "tailwindcss";
 
 /* ==========================================================================
-   DESIGN SYSTEM — "Drafting Table"
-   Architectural minimalism: warm ink / paper surfaces, one copper signal
-   color, hairline rules, mono annotations like a technical drawing.
-   All tokens live here; components only consume them.
+   DESIGN SYSTEM — "Horizon" (أفق)
+   The site opens at dusk over a single glowing horizon line — the name of
+   Mohammed's company. Everything else is quiet: one navy family, chalk text,
+   and each project shown in its own brand colour.
+   Gold (#F4C98B) is reserved for the horizon line and focus only.
    ========================================================================== */
 
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme {
-  /* ---- Color tokens (resolved from CSS variables so themes can swap) ---- */
+  --color-glow: #f4c98b;
+  --color-night: #0c1322;
+  --color-dusk: #1b2848;
+  --color-chalk: #eef0f3;
+  --color-steel: #a3acbd;
+
+  --font-sans: var(--font-body-latin), var(--font-body-ar), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display-latin), var(--font-display-ar), ui-sans-serif, system-ui, sans-serif;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lead: clamp(1.125rem, 1.02rem + 0.45vw, 1.375rem);
+  --text-h4: clamp(1.1875rem, 1.08rem + 0.45vw, 1.4375rem);
+  --text-h3: clamp(1.5rem, 1.25rem + 1vw, 2.125rem);
+  --text-h2: clamp(2rem, 1.5rem + 2.2vw, 3.5rem);
+  --text-h1: clamp(2.5rem, 1.6rem + 4vw, 5.25rem);
+  --text-mega: clamp(3rem, 1.4rem + 7.4vw, 8.5rem);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-xl: 36px;
+
+  --shadow-float: 0 30px 80px -30px rgb(4 8 20 / 0.55);
+  --shadow-soft: 0 12px 40px -18px rgb(4 8 20 / 0.35);
+
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 160ms;
+  --duration-base: 320ms;
+  --duration-slow: 900ms;
+}
+
+/* Project colour resolves per element (where --p is set). */
+/* Theme-dependent colours resolve per element (so a section with data-theme="dark"
+   gets dark tokens even when the page is light), hence `inline`. */
+@theme inline {
   --color-bg: var(--c-bg);
   --color-surface: var(--c-surface);
-  --color-surface-2: var(--c-surface-2);
+  --color-raise: var(--c-raise);
   --color-line: var(--c-line);
   --color-line-strong: var(--c-line-strong);
   --color-ink: var(--c-ink);
   --color-muted: var(--c-muted);
-  --color-accent: var(--c-accent);
-  --color-accent-ink: var(--c-accent-ink);
-
-  /* ---- Typography ---- */
-  --font-sans: var(--font-body-latin), var(--font-body-ar), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-display-latin), var(--font-display-ar), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-mono-latin), ui-monospace, SFMono-Regular, Menlo, monospace;
-
-  /* Fluid type scale (min @360px → max @1440px) */
-  --text-micro: 0.6875rem;                               /* 11px — annotations */
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-lead: clamp(1.0625rem, 0.98rem + 0.4vw, 1.3125rem);
-  --text-h4: clamp(1.125rem, 1.03rem + 0.45vw, 1.375rem);
-  --text-h3: clamp(1.375rem, 1.2rem + 0.8vw, 1.875rem);
-  --text-h2: clamp(1.875rem, 1.5rem + 1.7vw, 3rem);
-  --text-h1: clamp(2.375rem, 1.7rem + 3.1vw, 4.5rem);
-  --text-display: clamp(2.75rem, 1.6rem + 5.4vw, 6.5rem);
-
-  /* ---- Radius tokens ---- */
-  --radius-hair: 2px;
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-
-  /* ---- Elevation (used sparingly: one level for media, one for dialogs) ---- */
-  --shadow-media: 0 1px 0 var(--c-line), 0 24px 48px -28px rgb(0 0 0 / 0.45);
-  --shadow-dialog: 0 40px 120px -20px rgb(0 0 0 / 0.6);
-
-  /* ---- Breakpoints ---- */
-  --breakpoint-sm: 40rem;   /* 640 */
-  --breakpoint-md: 48rem;   /* 768 */
-  --breakpoint-lg: 64rem;   /* 1024 */
-  --breakpoint-xl: 80rem;   /* 1280 */
-  --breakpoint-2xl: 96rem;  /* 1536 */
-
-  /* ---- Motion ---- */
-  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
-  --duration-fast: 160ms;
-  --duration-base: 320ms;
-  --duration-slow: 700ms;
+  --color-project: var(--p, var(--c-ink));
 }
 
-/* Project accent must resolve per element (where --p is set), hence `inline`. */
-@theme inline {
-  --color-project: var(--p, var(--c-accent));
-}
-
-/* ---- Theme values ---- */
 :root,
 [data-theme="dark"] {
   color-scheme: dark;
-  --c-bg: #0f100e;
-  --c-surface: #161714;
-  --c-surface-2: #1e1f1b;
-  --c-line: rgb(238 234 224 / 0.11);
-  --c-line-strong: rgb(238 234 224 / 0.24);
-  --c-ink: #eeeae0;
-  --c-muted: #a6a296;        /* 7.4:1 on bg */
-  --c-accent: #e08455;       /* 6.6:1 on bg */
-  --c-accent-ink: #160d07;
-  --grid: rgb(238 234 224 / 0.035);
+  --c-bg: #0c1322;
+  --c-surface: #121b2e;
+  --c-raise: #18233b;
+  --c-line: rgb(238 240 243 / 0.1);
+  --c-line-strong: rgb(238 240 243 / 0.22);
+  --c-ink: #eef0f3;
+  --c-muted: #a3acbd;
 }
 [data-theme="light"] {
   color-scheme: light;
-  --c-bg: #f3f0e8;
-  --c-surface: #faf8f3;
-  --c-surface-2: #e9e5d9;
-  --c-line: rgb(22 23 15 / 0.12);
-  --c-line-strong: rgb(22 23 15 / 0.28);
-  --c-ink: #17180f;
-  --c-muted: #5b584f;        /* 6.3:1 on bg */
-  --c-accent: #a4441a;       /* 5.6:1 on bg */
-  --c-accent-ink: #fff8f2;
-  --grid: rgb(22 23 15 / 0.045);
+  --c-bg: #f6f7f9;
+  --c-surface: #ffffff;
+  --c-raise: #eceff4;
+  --c-line: rgb(18 24 38 / 0.1);
+  --c-line-strong: rgb(18 24 38 / 0.22);
+  --c-ink: #121826;
+  --c-muted: #535d70;
 }
 
-/* Layout containers */
 @utility container-page {
   width: 100%;
-  max-width: 88rem;
+  max-width: 90rem;
   margin-inline: auto;
-  padding-inline: clamp(1.125rem, 0.6rem + 2.6vw, 3rem);
-}
-@utility container-text {
-  width: 100%;
-  max-width: 44rem;
+  padding-inline: clamp(1.25rem, 0.6rem + 2.8vw, 3.5rem);
 }
 @utility section-y {
-  padding-block: clamp(4rem, 2.8rem + 6vw, 9rem);
-}
-@utility annot {
-  font-family: var(--font-mono);
-  font-size: var(--text-micro);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--c-muted);
-}
-@utility hairline {
-  border-color: var(--c-line);
-}
-@utility grid-paper {
-  background-image:
-    linear-gradient(var(--grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size: 48px 48px;
+  padding-block: clamp(4.5rem, 3rem + 6vw, 10rem);
 }
 
 @layer base {
-  html {
-    background: var(--c-bg);
-    color: var(--c-ink);
-    -webkit-text-size-adjust: 100%;
-    text-rendering: optimizeLegibility;
-    scroll-padding-top: 5rem;
-  }
-  body {
-    font-family: var(--font-sans);
-    font-size: var(--text-base);
-    line-height: 1.65;
-    overflow-x: clip;
-    -webkit-font-smoothing: antialiased;
-  }
+  html { background: var(--c-bg); color: var(--c-ink); -webkit-text-size-adjust: 100%; scroll-padding-top: 5rem; }
+  body { font-family: var(--font-sans); font-size: var(--text-base); line-height: 1.65; overflow-x: clip; -webkit-font-smoothing: antialiased; }
   :lang(ar) body { line-height: 1.85; }
-  h1, h2, h3, h4 {
-    font-family: var(--font-display);
-    font-weight: 500;
-    line-height: 1.08;
-    letter-spacing: -0.02em;
-    text-wrap: balance;
-  }
-  :lang(ar) :is(h1, h2, h3, h4) { letter-spacing: 0; line-height: 1.3; }
+  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.05; letter-spacing: -0.025em; text-wrap: balance; }
+  :lang(ar) :is(h1, h2, h3, h4) { letter-spacing: 0; line-height: 1.25; }
   p { text-wrap: pretty; }
-  ::selection { background: var(--c-accent); color: var(--c-accent-ink); }
-  a { text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
-
-  /* Focus states — always visible for keyboard users */
-  :focus-visible {
-    outline: 2px solid var(--c-accent);
-    outline-offset: 3px;
-    border-radius: var(--radius-hair);
-  }
+  ::selection { background: #f4c98b; color: #0c1322; }
+  a { text-underline-offset: 0.22em; text-decoration-thickness: 1px; }
+  :focus-visible { outline: 2px solid #f4c98b; outline-offset: 3px; border-radius: 6px; }
 }
 
-/* ---- Buttons ---- */
 @layer components {
   .btn {
-    display: inline-flex; align-items: center; gap: 0.6rem;
-    min-height: 3rem; padding: 0 1.35rem;
-    border-radius: var(--radius-sm);
-    font-weight: 500; font-size: var(--text-sm);
-    transition: background-color var(--duration-fast), color var(--duration-fast),
-      border-color var(--duration-fast), transform var(--duration-fast) var(--ease-out-soft);
-    white-space: nowrap;
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+    min-height: 3.25rem; padding: 0 1.6rem; border-radius: 999px;
+    font-weight: 500; font-size: var(--text-sm); white-space: nowrap;
+    transition: background-color var(--duration-fast), color var(--duration-fast), border-color var(--duration-fast), transform var(--duration-fast) var(--ease-out-soft);
   }
-  .btn:active { transform: translateY(1px); }
-  .btn-primary { background: var(--c-ink); color: var(--c-bg); }
-  .btn-primary:hover { background: var(--c-accent); color: var(--c-accent-ink); }
-  .btn-ghost { border: 1px solid var(--c-line-strong); color: var(--c-ink); }
-  .btn-ghost:hover { border-color: var(--c-ink); }
-  .btn-link {
-    display: inline-flex; align-items: center; gap: 0.45rem; min-height: 2.75rem;
-    font-weight: 500; color: var(--c-ink);
-    background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
-    transition: background-size var(--duration-base) var(--ease-out-soft);
-  }
-  .btn-link:hover { background-size: 100% 1px; }
-  [dir="rtl"] .btn-link { background-position: 100% 100%; }
-  .flip-rtl { display: inline-block; }
-  [dir="rtl"] .flip-rtl { transform: scaleX(-1); }
+  .btn:active { transform: scale(0.98); }
+  .btn-solid { background: var(--c-ink); color: var(--c-bg); }
+  .btn-solid:hover { background: #f4c98b; color: #0c1322; }
+  .btn-line { border: 1px solid var(--c-line-strong); color: var(--c-ink); }
+  .btn-line:hover { border-color: var(--c-ink); }
 
-  .chip {
-    display: inline-flex; align-items: center; gap: 0.4rem;
-    padding: 0.3rem 0.6rem; border: 1px solid var(--c-line);
-    border-radius: var(--radius-hair);
-    font-family: var(--font-mono); font-size: var(--text-xs); color: var(--c-muted);
+  .link {
+    display: inline-flex; align-items: center; gap: 0.4rem; min-height: 2.75rem;
+    font-weight: 500; text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    transition: text-decoration-color var(--duration-fast);
+  }
+  .link:hover { text-decoration-color: currentColor; }
+
+  .tag {
+    display: inline-flex; align-items: center; gap: 0.45rem;
+    padding: 0.35rem 0.8rem; border-radius: 999px;
+    border: 1px solid var(--c-line); font-size: var(--text-xs); color: var(--c-muted);
     direction: ltr; unicode-bidi: isolate;
   }
+
   .prose-case p + p { margin-top: 1.1em; }
-  .prose-case ul { display: grid; gap: 0.6rem; }
-  .prose-case li { position: relative; padding-inline-start: 1.25rem; }
+  .prose-case ul { display: grid; gap: 0.7rem; }
+  .prose-case li { position: relative; padding-inline-start: 1.35rem; }
   .prose-case li::before {
-    content: ""; position: absolute; inset-inline-start: 0; top: 0.8em;
-    width: 0.55rem; height: 1px; background: var(--color-project);
+    content: ""; position: absolute; inset-inline-start: 0; top: 0.78em;
+    width: 0.45rem; height: 0.45rem; border-radius: 99px; background: var(--color-project);
+  }
+
+  /* The horizon: a thin luminous line with a soft bloom. */
+  .horizon-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgb(244 201 139 / 0.9) 22%, #fff6e6 50%, rgb(244 201 139 / 0.9) 78%, transparent);
+    box-shadow: 0 0 18px 2px rgb(244 201 139 / 0.45), 0 0 80px 10px rgb(244 201 139 / 0.12);
+  }
+  .sky {
+    background:
+      radial-gradient(55% 60% at 50% 100%, rgb(244 201 139 / 0.18), transparent 70%),
+      radial-gradient(45% 45% at 50% 100%, rgb(120 150 230 / 0.22), transparent 70%),
+      linear-gradient(180deg, #0a1020 0%, #0f1a33 45%, #1e2d55 100%);
   }
 }
 
-/* ---- Reveal-on-scroll (progressive: content visible without JS) ---- */
-.js [data-reveal] {
-  opacity: 0; transform: translateY(14px);
-  transition: opacity var(--duration-slow) var(--ease-out-soft), transform var(--duration-slow) var(--ease-out-soft);
+/* One orchestrated entrance on the hero only. */
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes dawn { from { opacity: 0; transform: scaleX(0.2); } to { opacity: 1; transform: none; } }
+.hero-in > * { animation: rise 1s var(--ease-out-soft) both; }
+.hero-in > *:nth-child(2) { animation-delay: 0.08s; }
+.hero-in > *:nth-child(3) { animation-delay: 0.16s; }
+.hero-in > *:nth-child(4) { animation-delay: 0.24s; }
+.hero-portrait { animation: rise 1.2s var(--ease-out-soft) 0.1s both; }
+/* Soften the photo's edges into the sky: fade the bottom and both sides. */
+.portrait-fade {
+  -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent 100%), linear-gradient(to right, transparent 0%, #000 14%, #000 86%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to bottom, #000 80%, transparent 100%), linear-gradient(to right, transparent 0%, #000 14%, #000 86%, transparent 100%);
+  mask-composite: intersect;
 }
-.js [data-reveal].is-in { opacity: 1; transform: none; }
-
-/* Hero plan drawing: draw-in lines */
-.plan-line { stroke-dasharray: 600; stroke-dashoffset: 600; animation: draw 1.8s var(--ease-out-soft) 0.2s forwards; }
-.plan-node { opacity: 0; animation: fade 0.8s var(--ease-out-soft) forwards; }
-@keyframes draw { to { stroke-dashoffset: 0; } }
-@keyframes fade { to { opacity: 1; } }
+.hero-horizon { animation: dawn 1.6s var(--ease-out-soft) both; transform-origin: center; }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
-  .js [data-reveal] { opacity: 1; transform: none; }
-  .plan-line { stroke-dashoffset: 0; }
-  .plan-node { opacity: 1; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-delay: 0s !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
 
-/* Native dialog lightbox */
-dialog.lightbox { max-width: 100vw; max-height: 100dvh; width: 100vw; height: 100dvh; margin: 0; padding: 0; border: 0; background: #0b0b0a; color: #eeeae0; }
-dialog.lightbox::backdrop { background: rgb(8 8 7 / 0.94); }
+dialog.lightbox { max-width: 100vw; max-height: 100dvh; width: 100vw; height: 100dvh; margin: 0; padding: 0; border: 0; background: #080c16; color: #eef0f3; }
+dialog.lightbox::backdrop { background: rgb(8 12 22 / 0.96); }
 
-/* Arabic: never letter-space or use the Latin mono face on Arabic text (breaks joining).
-   Unlayered so it overrides the `annot` utility. */
-:lang(ar) .annot-ar { text-transform: none; letter-spacing: 0; font-family: var(--font-sans); font-size: var(--text-xs); }
-
-/* Ruled grid: hairline cells without filler blocks on incomplete rows */
 .ruled { border-top: 1px solid var(--c-line); border-inline-start: 1px solid var(--c-line); }
 .ruled > * { border-bottom: 1px solid var(--c-line); border-inline-end: 1px solid var(--c-line); }
+/* Theme toggle icon follows the page theme, not a local data-theme override. */
+html[data-theme="dark"] .when-light, html:not([data-theme="dark"]) .when-dark { display: none; }

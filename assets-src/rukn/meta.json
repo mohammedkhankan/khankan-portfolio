@@ -1,0 +1,60 @@
+{
+ "00-rukn-hero.webp": {
+  "alt": {
+   "ar": "واجهة ركن على اللابتوب والجوال",
+   "en": "RUKN on laptop and mobile"
+  },
+  "order": 0,
+  "role": "hero"
+ },
+ "01-dashboard.webp": {
+  "alt": {
+   "ar": "لوحة تحكم التاجر",
+   "en": "Merchant dashboard"
+  },
+  "order": 1
+ },
+ "02-products.webp": {
+  "alt": {
+   "ar": "إدارة المنتجات",
+   "en": "Product management"
+  },
+  "order": 2
+ },
+ "03-inventory.webp": {
+  "alt": {
+   "ar": "المخزون",
+   "en": "Inventory"
+  },
+  "order": 3
+ },
+ "04-orders.webp": {
+  "alt": {
+   "ar": "الطلبات",
+   "en": "Orders"
+  },
+  "order": 4
+ },
+ "05-store-editor.webp": {
+  "alt": {
+   "ar": "محرر المتجر",
+   "en": "Store editor"
+  },
+  "order": 5
+ },
+ "06-analytics.webp": {
+  "alt": {
+   "ar": "الإحصائيات",
+   "en": "Analytics"
+  },
+  "order": 6
+ },
+ "07-mobile-storefront.webp": {
+  "alt": {
+   "ar": "واجهة المتجر على الجوال",
+   "en": "Mobile storefront"
+  },
+  "order": 7,
+  "role": "mobile"
+ }
+}

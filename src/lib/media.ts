@@ -22,6 +22,7 @@ export interface Portrait {
   height: number;
   sizes: number[];
   blur: string;
+  cutout: { width: number; height: number; sizes: number[] } | null;
 }
 
 export function getPortrait(): Portrait | null {

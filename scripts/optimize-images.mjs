@@ -42,7 +42,7 @@ async function processPortrait() {
   const dir = path.join(SRC, "portrait");
   if (!(await exists(dir))) return;
   const files = (await fs.readdir(dir)).filter((f) => IMG.test(f));
-  const src = files.find((f) => f.startsWith("original")) ?? files[0];
+  const src = files.find((f) => f.startsWith("original")) ?? files.find((f) => f !== "cutout.png");
   if (!src) return;
   const out = path.join(ROOT, "public", "portrait");
   await fs.mkdir(out, { recursive: true });
@@ -67,7 +67,20 @@ async function processPortrait() {
     await sharp(graded).resize({ width: real }).webp({ quality: 84 }).toFile(path.join(out, `portrait-${real}.webp`));
     sizes.push(real);
   }
-  const manifest = { width: targetW, height: targetH, sizes, blur: await blurOf(graded) };
+  // Optional transparent cut-out (background removed, nothing else changed) for the hero.
+  let cutout = null;
+  if (files.includes("cutout.png")) {
+    const cut = await sharp(path.join(dir, "cutout.png")).trim({ threshold: 1 }).toBuffer({ resolveWithObject: true });
+    const cs = [];
+    for (const width of [520, 900, cut.info.width]) {
+      const real = Math.min(width, cut.info.width);
+      if (cs.includes(real)) continue;
+      await sharp(cut.data).resize({ width: real }).webp({ quality: 86, alphaQuality: 90 }).toFile(path.join(out, `cutout-${real}.webp`));
+      cs.push(real);
+    }
+    cutout = { width: cut.info.width, height: cut.info.height, sizes: cs };
+  }
+  const manifest = { width: targetW, height: targetH, sizes, blur: await blurOf(graded), cutout };
   await fs.writeFile(path.join(out, "manifest.json"), JSON.stringify(manifest, null, 2));
   console.log(`portrait → ${sizes.join(", ")}`);
 }

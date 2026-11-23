@@ -10,7 +10,7 @@ export const home = {
       en: "Founder of OFOQ Technical Solutions & Digitalization and RAFD. Builds SaaS products and business systems: RUKN, OFOQ Restaurant OS, MAAZEEM, RAFD and AL TAYF.",
     } as L,
   },
-  eyebrow: { ar: "مؤسس · مهندس برمجيات · باني منتجات", en: "Founder · Software engineer · Product builder" } as L,
+  eyebrow: { ar: "مؤسس أفق ورفد، ومهندس برمجيات يبني منتجات SaaS", en: "Founder of OFOQ and RAFD, software engineer building SaaS products" } as L,
   headline: {
     ar: "أبني منتجات رقمية تحلّ مشكلات أعمال حقيقية — وتبقى تعمل بعد الإطلاق.",
     en: "I build digital products that solve real business problems — and keep working long after launch.",

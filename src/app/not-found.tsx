@@ -6,7 +6,7 @@ export default function NotFound() {
     <html lang="ar" dir="rtl" className={fontVars} data-theme="dark">
       <body className="grid min-h-dvh place-items-center bg-bg p-8 text-ink">
         <div className="text-center">
-          <p className="font-mono text-sm text-muted" dir="ltr">404</p>
+          <p className="font-display text-h1" dir="ltr">404</p>
           <h1 className="mt-4 font-display text-h2">الصفحة غير موجودة</h1>
           <p lang="en" dir="ltr" className="mt-2 text-muted">Page not found</p>
           <p className="mt-8 flex justify-center gap-6">

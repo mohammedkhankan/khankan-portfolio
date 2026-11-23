@@ -5,8 +5,7 @@ import { person, ui } from "@/content/site";
 import { about } from "@/content/pages";
 import { href, isLocale } from "@/lib/i18n";
 import { pageMeta } from "@/lib/seo";
-import { Portrait } from "@/components/Media";
-import { ArrowRight } from "@/components/Icons";
+import { CutoutPortrait } from "@/components/Media";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -19,34 +18,31 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AboutPage({ params }: Props) {
   const locale = (await params).locale as Locale;
   return (
-    <div className="container-page pb-24 pt-12 md:pt-20">
-      <header className="grid gap-10 border-b border-line pb-16 lg:grid-cols-12 lg:items-end" data-reveal>
-        <div className="lg:col-span-8">
-          <p className="annot annot-ar">{ui.nav.about[locale]}</p>
-          <h1 className="mt-6 text-h1">{about.title[locale]}</h1>
+    <div className="pb-24">
+      <header className="container-page grid gap-10 pt-14 md:pt-20 lg:grid-cols-12 lg:items-end">
+        <div className="lg:col-span-7 lg:pb-10">
+          <p className="text-sm text-muted">{ui.nav.about[locale]}</p>
+          <h1 className="mt-4 text-h1">{about.title[locale]}</h1>
           <ul className="mt-8 grid gap-1 text-muted">
             {person.roles[locale].map((r) => <li key={r}>{r}</li>)}
             <li>{person.education[locale]}</li>
             <li>{person.location[locale]}</li>
           </ul>
         </div>
-        <div className="max-w-xs lg:col-span-3 lg:col-start-10 lg:max-w-none">
-          <div className="overflow-hidden rounded-md border border-line-strong">
-            <Portrait locale={locale} sizes="(min-width: 1024px) 22vw, 60vw" />
-          </div>
+        {/* Framed portrait: dusk panel with the horizon behind */}
+        <div data-theme="dark" className="sky relative mx-auto w-full max-w-sm overflow-hidden rounded-[var(--radius-xl)] lg:col-span-4 lg:col-start-9 lg:max-w-none">
+          <div className="pointer-events-none absolute inset-x-0 bottom-[14%] horizon-line" aria-hidden />
+          <CutoutPortrait locale={locale} sizes="(min-width: 1024px) 30vw, 80vw" className="portrait-fade relative mx-auto block h-auto w-full pt-8" />
         </div>
       </header>
 
-      <ol className="relative">
+      <ol className="container-page mt-16">
         {about.chapters.map((c, i) => (
-          <li key={i} className="grid gap-6 border-b border-line py-14 md:grid-cols-12 md:gap-8 md:py-20" data-reveal>
-            <div className="md:col-span-3">
-              <span className="font-mono text-xs text-accent" dir="ltr">{String(i + 1).padStart(2, "0")}</span>
-              <p className="annot annot-ar mt-2">{c.k[locale]}</p>
-            </div>
+          <li key={i} className="grid gap-6 border-t border-line py-14 md:grid-cols-12 md:gap-10 md:py-20">
+            <p className="text-sm text-muted md:col-span-3">{c.k[locale]}</p>
             <div className="md:col-span-8 lg:col-span-7">
               <h2 className="text-h2">{c.t[locale]}</h2>
-              <div className="prose-case mt-6 text-lead text-ink/85">
+              <div className="prose-case mt-6 text-lead text-ink/90">
                 {c.p[locale].map((t, j) => <p key={j}>{t}</p>)}
               </div>
             </div>
@@ -54,9 +50,9 @@ export default async function AboutPage({ params }: Props) {
         ))}
       </ol>
 
-      <div className="mt-16 flex flex-wrap gap-3">
-        <Link href={href(locale, "/projects")} className="btn btn-primary">{ui.cta.viewWork[locale]} <ArrowRight className="flip-rtl" /></Link>
-        <Link href={href(locale, "/experience")} className="btn btn-ghost">{ui.nav.experience[locale]}</Link>
+      <div className="container-page mt-6 flex flex-wrap gap-3">
+        <Link href={href(locale, "/projects")} className="btn btn-solid">{ui.cta.viewWork[locale]}</Link>
+        <Link href={href(locale, "/experience")} className="btn btn-line">{ui.nav.experience[locale]}</Link>
       </div>
     </div>
   );

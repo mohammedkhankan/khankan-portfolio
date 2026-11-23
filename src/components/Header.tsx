@@ -28,8 +28,8 @@ function ThemeToggle({ locale }: { locale: Locale }) {
       aria-label={ui.a11y.theme[locale]}
       className="grid size-11 place-items-center rounded-sm text-muted transition-colors hover:text-ink"
     >
-      <Sun className="hidden dark:block" />
-      <Moon className="block dark:hidden" />
+      <Sun className="when-dark" />
+      <Moon className="when-light" />
     </button>
   );
 }
@@ -47,6 +47,7 @@ export function Header({ locale }: { locale: Locale }) {
   const rest = pathname.replace(/^\/(ar|en)/, "") || "/";
   const switchHref = href(otherLocale(locale), rest);
   const isActive = (p: string) => rest.startsWith(p);
+  const isHome = rest === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -84,16 +85,19 @@ export function Header({ locale }: { locale: Locale }) {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-[background-color,border-color] duration-300 border-b ${
-        scrolled ? "border-line bg-bg/85 backdrop-blur-md" : "border-transparent bg-bg/0"
+      // Over the home hero (a night sky) the header always uses dark tokens.
+      data-theme={isHome && !scrolled ? "dark" : undefined}
+      className={`${isHome ? "fixed inset-x-0" : "sticky"} top-0 z-50 border-b text-ink transition-[background-color,border-color] duration-300 ${
+        scrolled ? "border-line bg-bg/80 backdrop-blur-xl" : "border-transparent bg-transparent"
       }`}
     >
       <div className="container-page flex h-16 items-center justify-between gap-4 md:h-[4.5rem]">
-        <Link href={href(locale)} className="group flex items-center gap-3 min-h-11" aria-label={person.name[locale]}>
-          <span className="grid size-9 place-items-center rounded-sm border border-line-strong font-mono text-[0.7rem] tracking-wider transition-colors group-hover:border-accent group-hover:text-accent" dir="ltr">
-            MK
+        <Link href={href(locale)} className="group flex min-h-11 items-center gap-3" aria-label={person.name[locale]}>
+          <span className="relative block h-5 w-5" aria-hidden>
+            <span className="absolute inset-x-0 top-1/2 h-px bg-glow shadow-[0_0_10px_2px_rgb(244_201_139/0.55)]" />
+            <span className="absolute left-1/2 top-[3px] h-[7px] w-[14px] -translate-x-1/2 rounded-t-full border border-b-0 border-ink/80" />
           </span>
-          <span className="font-display text-[0.95rem] font-medium tracking-tight">{person.name[locale]}</span>
+          <span className="font-display text-[1rem] font-semibold tracking-tight">{person.name[locale]}</span>
         </Link>
 
         <nav aria-label={ui.a11y.primaryNav[locale]} className="hidden md:block">
@@ -103,10 +107,9 @@ export function Header({ locale }: { locale: Locale }) {
                 <Link
                   href={href(locale, n.path)}
                   aria-current={isActive(n.path) ? "page" : undefined}
-                  className="relative inline-flex min-h-11 items-center px-3 text-sm text-muted transition-colors hover:text-ink aria-[current=page]:text-ink"
+                  className="relative inline-flex min-h-11 items-center rounded-full px-4 text-sm text-muted transition-colors hover:text-ink aria-[current=page]:bg-ink/10 aria-[current=page]:text-ink"
                 >
                   {ui.nav[n.key][locale]}
-                  {isActive(n.path) && <span className="absolute inset-x-3 bottom-2 h-px bg-accent" aria-hidden />}
                 </Link>
               </li>
             ))}
@@ -150,24 +153,24 @@ export function Header({ locale }: { locale: Locale }) {
         aria-modal="true"
         aria-label={ui.a11y.menu[locale]}
         hidden={!open}
-        className="fixed inset-0 z-[60] flex h-dvh flex-col bg-bg md:hidden"
+        data-theme="dark"
+        className="fixed inset-0 z-[60] flex h-dvh flex-col bg-night text-ink md:hidden"
       >
         <div className="container-page flex h-16 items-center justify-between border-b border-line">
-          <span className="annot">{ui.a11y.menu[locale]}</span>
+          <span className="text-sm text-muted">{ui.a11y.menu[locale]}</span>
           <button type="button" onClick={() => setOpen(false)} aria-label={ui.a11y.close[locale]} className="grid size-11 place-items-center">
             <Close />
           </button>
         </div>
         <nav className="container-page flex-1 overflow-y-auto pt-6" aria-label={ui.a11y.primaryNav[locale]}>
           <ol className="divide-y divide-line border-b border-line">
-            {[{ key: "home", path: "/" } as const, ...NAV].map((n, i) => (
+            {[{ key: "home", path: "/" } as const, ...NAV].map((n) => (
               <li key={n.key}>
                 <Link
                   href={href(locale, n.path)}
                   aria-current={(n.path === "/" ? rest === "/" : isActive(n.path)) ? "page" : undefined}
-                  className="flex min-h-16 items-baseline gap-4 py-3 font-display text-[1.75rem] aria-[current=page]:text-accent"
+                  className="flex min-h-16 items-center py-3 font-display text-[1.9rem] aria-[current=page]:text-glow"
                 >
-                  <span className="font-mono text-xs text-muted" dir="ltr">0{i + 1}</span>
                   {ui.nav[n.key][locale]}
                 </Link>
               </li>

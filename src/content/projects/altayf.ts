@@ -23,15 +23,22 @@ export const altayf: Project = {
   status: "live",
   url: "https://altayf-sa.com/",
   stack: [
-    { name: "Next.js" },
-    { name: "React" },
+    { name: "Next.js 16" },
+    { name: "React 19" },
     { name: "TypeScript" },
-    { name: "Tailwind CSS" },
-    { name: "next/image", note: { ar: "تحسين الصور", en: "image optimization" } },
-    { name: "Lazy loading" },
+    { name: "CSS Modules" },
+    { name: "next/image", note: { ar: "WebP في الإنتاج", en: "WebP in production" } },
+    { name: "Schema.org" },
     { name: "Netlify", note: { ar: "الاستضافة الحالية", en: "current hosting" } },
   ],
   accent: { dark: "#cdb98e", light: "#6f5a2c" },
+  chapter: { bg: "linear-gradient(180deg,#f5efe8 0%,#e6dfd1 100%)", ink: "#3d2c1a", sub: "#6e5b45", dark: false },
+  proof: [
+    { value: { ar: "منشور", en: "Live" }, label: { ar: "على altayf-sa.com", en: "at altayf-sa.com" } },
+    { value: { ar: "3 مقاسات", en: "3 viewports" }, label: { ar: "كمبيوتر وتابلت وجوال بلا تمرير أفقي في الفحص", en: "Desktop, tablet and mobile — no horizontal overflow in testing" } },
+    { value: { ar: "WebP", en: "WebP" }, label: { ar: "صور مُحسَّنة عبر next/image في الإنتاج", en: "Images optimized through next/image in production" } },
+  ],
+  mediaNote: { ar: "لقطات من الموقع المنشور.", en: "Captures of the live site." },
   facts: [
     { label: { ar: "العميل", en: "Client" }, value: { ar: "الطيف المعمارية للمقاولات", en: "AL TAYF Architecture Contracting" } },
     { label: { ar: "الموقع", en: "Location" }, value: { ar: "المملكة العربية السعودية", en: "Saudi Arabia" } },
@@ -85,12 +92,14 @@ export const altayf: Project = {
   ],
   engineering: {
     ar: [
-      "الموقع مبني بـ Next.js وReact وTypeScript وTailwind CSS، مع تحسين الصور عبر next/image والتحميل الكسول، ومنشور حالياً على Netlify.",
-      "يتضمن المصدر بعض التكاملات مع Bunny؛ ولا يُعتبر هنا كل ما هو موجود محلياً مستخدماً في النسخة المنشورة.",
+      "الموقع مبني بـ Next.js 16 (App Router) وReact 19 وTypeScript، بتصميم يعتمد على CSS مخصص وModules. الصفحات والتخطيط تُرسم على الخادم، والمكونات التفاعلية فقط — المعرض والرأس وظهور الأقسام — تعمل في المتصفح.",
+      "في الإنتاج تُقدَّم الصور بصيغة WebP عبر مسار تحسين next/image بمقاسات وجودة محددة، والاستضافة على Netlify مع ضغط Brotli وتخزين مؤقت على الحافة. وتشمل البيانات المنظمة LocalBusiness وGeneralContractor وBreadcrumbList وImageGallery.",
+      "معارض الأقسام تقرأ manifest يُولَّد وقت البناء بدل قراءة مجلدات الصور أثناء الطلب، وهو إصلاح قلّص اعتماد حزمة خادم Netlify على ملفات الصور.",
     ],
     en: [
-      "Built with Next.js, React, TypeScript and Tailwind CSS, with images optimized through next/image and lazy loading, currently deployed on Netlify.",
-      "The source includes some Bunny integrations; not everything present locally is assumed to be part of the deployed site.",
+      "Built with Next.js 16 (App Router), React 19 and TypeScript, styled with custom CSS and modules. Pages and layout render on the server; only the interactive parts — gallery, header, section reveals — run in the browser.",
+      "In production, images are served as WebP through next/image's optimizer at set sizes and quality, hosted on Netlify with Brotli and edge caching. Structured data covers LocalBusiness, GeneralContractor, BreadcrumbList and ImageGallery.",
+      "Category galleries read a manifest generated at build time instead of scanning image folders per request — a fix that cut the Netlify server bundle's dependence on image files.",
     ],
   },
   decisions: [

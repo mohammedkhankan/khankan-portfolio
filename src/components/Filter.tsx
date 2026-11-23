@@ -15,10 +15,10 @@ export function Filter({ options, allLabel, label, children }: { options: { key:
             type="button"
             aria-pressed={active === o.key}
             onClick={() => setActive(o.key)}
-            className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-sm border border-transparent px-3 text-sm text-muted transition-colors hover:text-ink aria-pressed:border-line-strong aria-pressed:text-ink"
+            className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full border border-line px-4 text-sm text-muted transition-colors hover:text-ink aria-pressed:border-ink aria-pressed:bg-ink aria-pressed:text-bg"
           >
             {o.label}
-            {o.count > 0 && <span className="font-mono text-[0.7rem] text-muted" dir="ltr">{o.count}</span>}
+            {o.count > 0 && <span className="text-xs tabular-nums text-muted">{o.count}</span>}
           </button>
         ))}
       </div>

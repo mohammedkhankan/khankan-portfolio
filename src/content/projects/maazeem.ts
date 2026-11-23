@@ -29,13 +29,23 @@ export const maazeem: Project = {
     { name: "Next.js 16" },
     { name: "React 19" },
     { name: "TypeScript" },
-    { name: "PostgreSQL" },
+    { name: "PostgreSQL 17" },
     { name: "Drizzle ORM" },
-    { name: "Sharp" },
-    { name: "Docker" },
-    { name: "WhatsApp Cloud API", note: { ar: "تكامل قيد العمل", en: "integration in progress" } },
+    { name: "Tailwind CSS 4" },
+    { name: "Zod" },
+    { name: "Sharp + Pango" },
+    { name: "Baileys" },
+    { name: "Docker Compose" },
+    { name: "WhatsApp Cloud API", note: { ar: "الكود جاهز، التفعيل بانتظار موافقة Meta", en: "code complete, awaiting Meta approval" } },
   ],
-  accent: { dark: "#d394b9", light: "#8d3a6a" },
+  accent: { dark: "#c9a6ec", light: "#5b2f84" },
+  chapter: { bg: "linear-gradient(160deg,#221434 0%,#362248 45%,#553473 100%)", ink: "#f4ecfb", sub: "#cbb8de", dark: true },
+  proof: [
+    { value: { ar: "52 / 52", en: "52 / 52" }, label: { ar: "اختباراً ناجحاً على PostgreSQL حقيقي معزول", en: "tests passing on an isolated real PostgreSQL" } },
+    { value: { ar: "1.84 ث", en: "1.84 s" }, label: { ar: "لاستيراد 10,000 ضيف من Excel", en: "to import 10,000 guests from Excel" } },
+    { value: { ar: "5 من 30", en: "5 of 30" }, label: { ar: "30 مسحاً متزامناً لدعوة لخمسة أشخاص أدخلت 5 بالضبط", en: "30 concurrent scans on a 5-person invite admitted exactly 5" } },
+  ],
+  mediaNote: { ar: "لقطات من المنصة ببيانات تجريبية.", en: "Screens from the platform with demo data." },
   facts: [
     { label: { ar: "الأسواق", en: "Markets" }, value: { ar: "السعودية، سوريا، مصر، الإمارات وغيرها", en: "Saudi Arabia, Syria, Egypt, UAE and more" } },
     { label: { ar: "اللغات", en: "Languages" }, value: { ar: "العربية والإنجليزية", en: "Arabic & English" } },
@@ -101,28 +111,40 @@ export const maazeem: Project = {
   ],
   engineering: {
     ar: [
-      "المنصة مبنية بـ Next.js 16 وReact 19 وTypeScript مع PostgreSQL وDrizzle ORM، وتُعالَج صور الدعوات بمكتبة Sharp، والتشغيل في Docker.",
-      "يوجد عمل على تكامل WhatsApp Cloud API؛ ويُميَّز بوضوح بين ما هو موجود في الكود وما هو مفعّل فعلياً في الإنتاج.",
-      "تصميم الروابط العامة (متابعة صاحب المناسبة، ومسح الحضور) يعتمد على أن يمنح كل رابط أقل قدر من الوصول يكفي مهمته.",
+      "معازيم Modular Monolith: قاعدة كود واحدة بـ TypeScript تعمل كأربع عمليات — الويب، والعامل الخلفي، وبوت واتساب، والترحيل — فوق PostgreSQL 17 بـ 32 جدولاً عبر Drizzle ORM، ومنشورة بـ Docker Compose على خادم VPS.",
+      "كل النماذج تعمل عبر Next.js Server Actions بلا REST منفصل، وكل المدخلات ومتغيرات البيئة يُتحقق منها بـ Zod. وتُرسم الدعوة العربية على الخادم بـ Sharp وPango بنفس خطوط المحرر، فيطابق التصدير ما يراه المستخدم.",
+      "التحقق: 52 اختبار وحدة وتكامل ناجحاً على PostgreSQL حقيقي معزول، وTypeScript بلا أخطاء، وبناء إنتاجي ناجح.",
     ],
     en: [
-      "Built with Next.js 16, React 19 and TypeScript on PostgreSQL with Drizzle ORM; invitation images are processed with Sharp; runtime is Docker.",
-      "There is integration work on the WhatsApp Cloud API, with a clear line drawn between what exists in code and what is actually enabled in production.",
-      "Public links (host follow-up, door check-in) are designed so each grants the least access its job requires.",
+      "MAAZEEM is a modular monolith: one TypeScript codebase running as four processes — web, background worker, WhatsApp bot and migrations — on PostgreSQL 17 with 32 tables via Drizzle ORM, deployed with Docker Compose on a VPS.",
+      "Every form runs through Next.js Server Actions with no separate REST layer, and all input and environment variables are validated with Zod. Arabic invitations are rendered on the server with Sharp and Pango using the editor's own fonts, so the export matches what the user designed.",
+      "Verified: 52 passing unit and integration tests on an isolated real PostgreSQL, a clean TypeScript build and a successful production build.",
     ],
   },
   engineeringTopics: [
     {
-      title: { ar: "عزل بيانات العملاء", en: "Tenant isolation" },
-      body: { ar: "كل مقدم خدمة يرى مناسباته ومدعويه فقط.", en: "Each service provider sees only their own events and guests." },
+      title: { ar: "عزل صارم لبيانات كل عميل", en: "Strict tenant isolation" },
+      body: { ar: "كل استعلام مقيّد بمساحة التاجر المأخوذة من الجلسة، ولا يُقبل معرّف المستأجر من المتصفح. وعليه اختبار آلي مخصص.", en: "Every query is scoped to the workspace from the session; tenant IDs from the browser are never trusted. Covered by a dedicated test." },
     },
     {
-      title: { ar: "روابط بصلاحيات محدودة", en: "Least-privilege links" },
-      body: { ar: "رابط الاستقبال يسجّل الحضور ولا يكشف قائمة المدعوين كاملة لغير المخولين.", en: "The door link records attendance without exposing the full guest list to anyone else." },
+      title: { ar: "تسجيل حضور بلا تجاوز", en: "Race-free check-in" },
+      body: { ar: "UPDATE شرطي واحد مع قيد CHECK. في الاختبار، 30 مسحاً متزامناً على دعوة لخمسة أشخاص أدخلت 5 بالضبط.", en: "A single conditional UPDATE plus a CHECK constraint. In testing, 30 concurrent scans on a 5-person invite admitted exactly 5." },
     },
     {
-      title: { ar: "استيراد القوائم", en: "List import" },
-      body: { ar: "إدخال القوائم الكبيرة دفعة واحدة من ملفات Excel بدل الإدخال اليدوي لكل مدعو.", en: "Bringing large lists in at once from Excel instead of typing each guest by hand." },
+      title: { ar: "توليد آلاف الدعوات في الخلفية", en: "Background generation at scale" },
+      body: { ar: "طابور مهام داخل PostgreSQL بـ SKIP LOCKED بلا Redis، ومنع تكرار المهام، وبصمة لكل دعوة حتى يُعاد توليد ما تغيّر فقط.", en: "A Postgres-native job queue with SKIP LOCKED and no Redis, de-duplicated jobs, and a render hash per invitation so only what changed is regenerated." },
+    },
+    {
+      title: { ar: "استيراد Excel متين", en: "Robust Excel import" },
+      body: { ar: "10,000 ضيف في 1.84 ثانية، مع معالجة الأرقام العربية والمحارف الخفية، وكشف المكرر، واحترام حدود الباقة تحت التزامن.", en: "10,000 guests in 1.84 s, handling Arabic-Indic digits and invisible marks, catching duplicates and keeping plan limits under concurrency." },
+    },
+    {
+      title: { ar: "محفظة رسائل لا تخطئ", en: "Messaging billing that adds up" },
+      body: { ar: "محفظتان لا يصبح رصيدهما سالباً، وخصم قبل الإرسال واسترجاع تلقائي عند الفشل، ولا رسائل مكررة بعد انهيار مفاجئ.", en: "Two wallets that never go negative, charge-before-send with automatic refunds on failure, and no duplicate sends after a crash." },
+    },
+    {
+      title: { ar: "أمان من الداخل", en: "Secure by design" },
+      body: { ar: "scrypt بمعاملات OWASP، وجلسات مخزنة كبصمة، وحدود محاولات في قاعدة البيانات، وCSP وHSTS، ورموز دعوات عشوائية 128 بت، وسجل تدقيق للعمليات الحساسة.", en: "OWASP-grade scrypt, hashed session tokens, DB-backed rate limits, CSP and HSTS, 128-bit invitation tokens and an audit log of sensitive actions." },
     },
   ],
   decisions: [
@@ -136,8 +158,8 @@ export const maazeem: Project = {
     {
       title: { ar: "الصدق في قنوات الإرسال", en: "Honest sending channels" },
       body: {
-        ar: "الإرسال بمساعدة البوت أداة مساعدة وليس وسيلة لتجاوز حماية واتساب، ولا يضمن عدم الحظر. والتكامل الرسمي مع Meta يُعرض كقيد العمل حتى يكتمل.",
-        en: "Bot-assisted sending is an aid, not a way around WhatsApp's protections, and it doesn't guarantee against blocking. The official Meta integration is presented as in progress until it's complete.",
+        ar: "إرسال يدوي مجاني؛ وبوت برقم التاجر مع ضبط وتيرة لحماية الرقم، دون ادعاء تجاوز حماية واتساب أو ضمان عدم الحظر؛ وتكامل رسمي مع WhatsApp Cloud API مكتمل في الكود ومختبر بإشعارات محاكاة، وتفعيله ينتظر موافقة Meta على القالب.",
+        en: "Free manual sending; a bot on the merchant's own number with pacing to protect it — no claim to bypass WhatsApp's protections or guarantee against blocking; and an official WhatsApp Cloud API integration that is complete in code and tested with simulated webhooks, with activation awaiting Meta's template approval.",
       },
     },
     {
@@ -153,12 +175,12 @@ export const maazeem: Project = {
     en: ["MAAZEEM has been used for real events.", "Event and guest counts aren't shown because no verified figures are available for publication."],
   },
   currentStatus: {
-    ar: ["المنصة مستخدمة، وتكامل Meta الرسمي ما زال قيد العمل."],
-    en: ["The platform is in use; the official Meta integration is still in progress."],
+    ar: ["المنصة مستخدمة في مناسبات حقيقية. الإرسال اليدوي والبوت مكتملان، والإرسال الرسمي عبر Meta مكتمل في الكود وتفعيله بانتظار موافقة القالب."],
+    en: ["The platform is used for real events. Manual and bot sending are complete; official Meta sending is complete in code and awaits template approval."],
   },
   next: {
-    ar: ["استكمال تكامل WhatsApp Cloud API الرسمي وتفعيله، وتوسيع القوالب وأدوات المتابعة لمقدمي الخدمة."],
-    en: ["Complete and enable the official WhatsApp Cloud API integration, and expand templates and follow-up tools for providers."],
+    ar: ["تفعيل الإرسال الرسمي بعد موافقة Meta، ثم باقة احترافية مخطط لها: فئات المدعوين وأرقام الطاولات، وتفعيل موظفي الاستقبال، والتذكيرات المجدولة، وشاشة حضور مباشرة."],
+    en: ["Switch on official sending once Meta approves, then a planned professional tier: guest categories and table numbers, reception staff accounts, scheduled reminders and a live attendance screen."],
   },
   diagrams: ["maazeem-workflow", "maazeem-checkin", "maazeem-architecture"],
   shots: [

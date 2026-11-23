@@ -1,0 +1,96 @@
+{
+ "00-ofoq-hero-desktop-mobile.webp": {
+  "alt": {
+   "ar": "لوحة المطعم والمنيو الإلكتروني — لقطات حقيقية ببيانات تجريبية",
+   "en": "Restaurant dashboard and digital menu — real screens, demo data"
+  },
+  "order": 0,
+  "role": "hero"
+ },
+ "01-admin-dashboard.webp": {
+  "alt": {
+   "ar": "لوحة صاحب المطعم",
+   "en": "Owner dashboard"
+  },
+  "order": 1
+ },
+ "02-cashier-tables.webp": {
+  "alt": {
+   "ar": "الكاشير وإدارة الطاولات",
+   "en": "Cashier and table management"
+  },
+  "order": 2
+ },
+ "03-waiter-interface.webp": {
+  "alt": {
+   "ar": "واجهة النادل والطلبات الجاهزة للاستلام",
+   "en": "Waiter view with orders ready for pickup"
+  },
+  "order": 3
+ },
+ "04-kitchen-stations.webp": {
+  "alt": {
+   "ar": "شاشة المطبخ — طلبات جديدة وقيد التحضير",
+   "en": "Kitchen display — new and in-progress orders"
+  },
+  "order": 4
+ },
+ "05-mobile-digital-menu.webp": {
+  "alt": {
+   "ar": "المنيو الإلكتروني على الجوال",
+   "en": "Digital menu on mobile"
+  },
+  "order": 5,
+  "role": "mobile"
+ },
+ "06-mobile-menu-category.webp": {
+  "alt": {
+   "ar": "قسم من المنيو على الجوال",
+   "en": "A menu category on mobile"
+  },
+  "order": 6,
+  "role": "mobile"
+ },
+ "07-payments-and-billing.webp": {
+  "alt": {
+   "ar": "الحساب والدفعات — بيانات تجريبية",
+   "en": "Bill and payments — demo data"
+  },
+  "order": 7
+ },
+ "08-reservations.webp": {
+  "alt": {
+   "ar": "حجوزات الطاولات",
+   "en": "Table reservations"
+  },
+  "order": 8
+ },
+ "09-staff-permissions.webp": {
+  "alt": {
+   "ar": "الفريق والصلاحيات",
+   "en": "Team and permissions"
+  },
+  "order": 9
+ },
+ "10-menu-themes.webp": {
+  "alt": {
+   "ar": "الثيمات والهوية البصرية للمنيو",
+   "en": "Menu themes and branding"
+  },
+  "order": 10
+ },
+ "11-analytics-reports.webp": {
+  "alt": {
+   "ar": "التقارير — بيانات تجريبية",
+   "en": "Reports — demo data"
+  },
+  "order": 11
+ },
+ "12-desktop-digital-menu.webp": {
+  "alt": {
+   "ar": "المنيو الإلكتروني على الكمبيوتر",
+   "en": "Digital menu on desktop"
+  },
+  "order": 12
+ }
+}

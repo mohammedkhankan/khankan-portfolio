@@ -1,0 +1,90 @@
+{
+ "00-altayf-hero.webp": {
+  "alt": {
+   "ar": "موقع الطيف المعمارية على اللابتوب والجوال",
+   "en": "AL TAYF site on laptop and mobile"
+  },
+  "order": 0,
+  "role": "hero"
+ },
+ "01-homepage-desktop.webp": {
+  "alt": {
+   "ar": "الصفحة الرئيسية",
+   "en": "Home page"
+  },
+  "order": 1
+ },
+ "02-projects-gallery.webp": {
+  "alt": {
+   "ar": "معرض الأعمال",
+   "en": "Projects gallery"
+  },
+  "order": 2
+ },
+ "03-project-details.webp": {
+  "alt": {
+   "ar": "معرض قسم الزجاج المعشق",
+   "en": "Stained-glass gallery"
+  },
+  "order": 3
+ },
+ "04-project-lightbox.webp": {
+  "alt": {
+   "ar": "عارض الصور المكبّر",
+   "en": "Image lightbox"
+  },
+  "order": 4
+ },
+ "05-services.webp": {
+  "alt": {
+   "ar": "الخدمات",
+   "en": "Services"
+  },
+  "order": 5
+ },
+ "06-methodology.webp": {
+  "alt": {
+   "ar": "منهجية العمل",
+   "en": "Methodology"
+  },
+  "order": 6
+ },
+ "07-about-company.webp": {
+  "alt": {
+   "ar": "عن الشركة",
+   "en": "About the company"
+  },
+  "order": 7
+ },
+ "08-homepage-mobile.webp": {
+  "alt": {
+   "ar": "الرئيسية على الجوال",
+   "en": "Home on mobile"
+  },
+  "order": 8,
+  "role": "mobile"
+ },
+ "09-projects-mobile.webp": {
+  "alt": {
+   "ar": "الأعمال على الجوال",
+   "en": "Projects on mobile"
+  },
+  "order": 9,
+  "role": "mobile"
+ },
+ "10-services-mobile.webp": {
+  "alt": {
+   "ar": "الخدمات على الجوال",
+   "en": "Services on mobile"
+  },
+  "order": 10,
+  "role": "mobile"
+ },
+ "11-responsive-showcase.webp": {
+  "alt": {
+   "ar": "الكمبيوتر والتابلت والجوال",
+   "en": "Desktop, tablet and mobile"
+  },
+  "order": 11
+ }
+}

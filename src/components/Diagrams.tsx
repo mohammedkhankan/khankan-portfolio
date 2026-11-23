@@ -7,6 +7,8 @@ import { ui } from "@/content/site";
    no infrastructure secrets, hostnames or admin paths.
    ------------------------------------------------------------------ */
 
+const figLabel = ui.labels.figure;
+
 type N = { label: L; sub?: L; tone?: "project" | "muted" | "pending" };
 const n = (ar: string, en: string, sub?: [string, string], tone?: N["tone"]): N => ({
   label: { ar, en },
@@ -17,16 +19,16 @@ const n = (ar: string, en: string, sub?: [string, string], tone?: N["tone"]): N 
 function Node({ node, locale, className = "" }: { node: N; locale: Locale; className?: string }) {
   const tone =
     node.tone === "project"
-      ? "border-project bg-project/10"
+      ? "border-transparent bg-project/15 ring-1 ring-project/50"
       : node.tone === "pending"
         ? "border-dashed border-line-strong"
         : node.tone === "muted"
           ? "border-line bg-transparent text-muted"
-          : "border-line-strong bg-surface";
+          : "border-line bg-bg";
   return (
-    <div className={`rounded-sm border px-3 py-2.5 ${tone} ${className}`}>
+    <div className={`rounded-[var(--radius-sm)] border px-3 py-2.5 ${tone} ${className}`}>
       <div className="text-sm font-medium leading-snug">{node.label[locale]}</div>
-      {node.sub && <div className={`mt-0.5 leading-snug text-muted ${locale === "ar" ? "text-xs" : "font-mono text-[0.7rem]"}`}>{node.sub[locale]}</div>}
+      {node.sub && <div className="mt-0.5 text-xs leading-snug text-muted">{node.sub[locale]}</div>}
     </div>
   );
 }
@@ -48,7 +50,7 @@ function Flow({ steps, locale }: { steps: N[]; locale: Locale }) {
       {steps.map((s, i) => (
         <li key={i} className="flex flex-col lg:flex-1 lg:flex-row lg:items-center">
           <div className="flex items-start gap-3 lg:block lg:w-full">
-            <span className="mt-2.5 font-mono text-[0.7rem] text-muted lg:mb-2 lg:mt-0 lg:block" dir="ltr">{String(i + 1).padStart(2, "0")}</span>
+            <span className="mt-2.5 text-xs tabular-nums text-muted lg:mb-2 lg:mt-0 lg:block" dir="ltr">{String(i + 1).padStart(2, "0")}</span>
             <Node node={s} locale={locale} className="flex-1" />
           </div>
           {i < steps.length - 1 && (
@@ -79,7 +81,7 @@ function Layers({ rows, locale }: { rows: { name: L; items: N[] }[]; locale: Loc
       {rows.map((r, i) => (
         <div key={i}>
           <div className="grid gap-3 md:grid-cols-[9rem_1fr] md:items-center">
-            <div className="annot annot-ar">{r.name[locale]}</div>
+            <div className="text-sm text-muted">{r.name[locale]}</div>
             <div className={`grid gap-2 ${COLS[Math.min(r.items.length, 5)]}`}>
               {r.items.map((it, j) => <Node key={j} node={it} locale={locale} />)}
             </div>
@@ -93,10 +95,10 @@ function Layers({ rows, locale }: { rows: { name: L; items: N[] }[]; locale: Loc
 
 function Fig({ n: num, title, caption, locale, children }: { n: number; title: L; caption?: L; locale: Locale; children: React.ReactNode }) {
   return (
-    <figure className="grid-paper overflow-hidden rounded-md border border-line bg-bg" data-reveal>
+    <figure className="overflow-hidden rounded-[var(--radius-lg)] bg-surface ring-1 ring-line">
       <div className="flex items-baseline justify-between gap-4 border-b border-line px-4 py-3 md:px-6">
         <span className="text-sm font-medium">{title[locale]}</span>
-        <span className="font-mono text-[0.7rem] text-muted" dir="ltr">FIG. {String(num).padStart(2, "0")}</span>
+        <span className="text-xs text-muted">{figLabel[locale]} {num}</span>
       </div>
       <div className="p-4 md:p-8">{children}</div>
       {caption && <figcaption className="border-t border-line px-4 py-3 text-sm text-muted md:px-6">{caption[locale]}</figcaption>}
@@ -309,7 +311,7 @@ const defs: Record<DiagramKey, { title: L; caption?: L; body: (l: Locale) => Rea
           n("النشر", "Deployment", undefined, "project"),
         ].map((s, i) => (
           <li key={i} className="flex items-baseline gap-3 bg-bg px-4 py-4">
-            <span className="font-mono text-xs text-muted" dir="ltr">{String(i + 1).padStart(2, "0")}</span>
+            <span className="text-xs tabular-nums text-muted" dir="ltr">{i + 1}</span>
             <span className={`text-sm ${s.tone === "project" ? "text-project font-medium" : ""}`}>{s.label[l]}</span>
           </li>
         ))}
@@ -327,4 +329,3 @@ export function Diagram({ id, n: num, locale }: { id: DiagramKey; n: number; loc
   );
 }
 
-export const figLabel = ui.labels.figure;

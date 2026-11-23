@@ -17,45 +17,50 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ContactPage({ params }: Props) {
   const locale = (await params).locale as Locale;
+  const rtl = locale === "ar";
   const channels = [
-    { name: "WhatsApp", url: links.whatsapp, d: contact.channels.whatsapp, handle: "+966 51 037 1924", primary: true },
+    { name: "WhatsApp", url: links.whatsapp, d: contact.channels.whatsapp, handle: "+966 51 037 1924" },
     { name: "LinkedIn", url: links.linkedin, d: contact.channels.linkedin, handle: "mohammed-tarek-533a2a214" },
     { name: "GitHub", url: links.github, d: contact.channels.github, handle: "mohammedkhankan" },
   ];
   return (
-    <div className="container-page pb-24 pt-12 md:pt-20">
-      <header className="grid gap-6 pb-14 md:grid-cols-12" data-reveal>
-        <div className="md:col-span-3"><p className="annot annot-ar">{ui.nav.contact[locale]}</p></div>
-        <div className="md:col-span-9">
-          <h1 className="text-display leading-[1.05]">{contact.title[locale]}</h1>
-          <p className="mt-6 max-w-2xl text-lead text-muted">{contact.lead[locale]}</p>
-        </div>
+    <div className="container-page pb-24 pt-14 md:pt-20">
+      <header className="max-w-4xl pb-14">
+        <p className="text-sm text-muted">{ui.nav.contact[locale]}</p>
+        <h1 className="mt-4 text-h1">{contact.title[locale]}</h1>
+        <p className="mt-6 max-w-2xl text-lead text-muted">{contact.lead[locale]}</p>
       </header>
 
-      <ul className="border-t border-line">
-        {channels.map((c) => (
-          <li key={c.name} className="border-b border-line" data-reveal>
-            <ExternalLink locale={locale} href={c.url} className="group grid gap-2 py-8 md:grid-cols-12 md:items-center md:gap-8">
-              <span className="md:col-span-3 text-sm text-muted">{c.d[locale]}</span>
-              <span className={`md:col-span-5 font-display ${c.primary ? "text-h1" : "text-h2"} transition-colors group-hover:text-accent`}>{c.name}</span>
-              <span className="flex items-center justify-between gap-4 md:col-span-4">
-                <span className="font-mono text-xs text-muted" dir="ltr">{c.handle}</span>
-                <ArrowUpRight className="flip-rtl transition-transform group-hover:-translate-y-0.5" />
+      <ul className="grid gap-4 md:grid-cols-3">
+        {channels.map((c, i) => (
+          <li key={c.name}>
+            <ExternalLink
+              locale={locale}
+              href={c.url}
+              className={`group flex h-full min-h-56 flex-col justify-between rounded-[var(--radius-xl)] p-7 transition-colors ${i === 0 ? "bg-ink text-bg hover:bg-glow hover:text-night" : "bg-surface ring-1 ring-line hover:ring-ink"}`}
+            >
+              <span className="flex items-start justify-between gap-4">
+                <span className="text-sm opacity-75">{c.d[locale]}</span>
+                <ArrowUpRight className={rtl ? "-scale-x-100" : ""} />
+              </span>
+              <span>
+                <span className="block font-display text-h2">{c.name}</span>
+                <span className="mt-1 block text-sm opacity-75" dir="ltr">{c.handle}</span>
               </span>
             </ExternalLink>
           </li>
         ))}
       </ul>
 
-      <section className="mt-20 grid ruled md:grid-cols-3" aria-label={person.name[locale]}>
+      <section className="mt-20 grid gap-10 md:grid-cols-3" aria-label={person.name[locale]}>
         {contact.audiences.map((a) => (
-          <div key={a.t.en} className="bg-bg p-6 md:p-8" data-reveal>
+          <div key={a.t.en} className="border-t border-line pt-5">
             <h2 className="font-display text-h4">{a.t[locale]}</h2>
-            <p className="mt-2 text-sm text-muted">{a.d[locale]}</p>
+            <p className="mt-2 text-muted">{a.d[locale]}</p>
           </div>
         ))}
       </section>
-      <p className="mt-8 text-sm text-muted">{person.location[locale]}</p>
+      <p className="mt-10 text-sm text-muted">{person.location[locale]}</p>
     </div>
   );
 }

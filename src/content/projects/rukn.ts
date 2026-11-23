@@ -36,6 +36,13 @@ export const rukn: Project = {
     { name: "Bunny", note: { ar: "تخزين وتوصيل الوسائط", en: "media storage & delivery" } },
   ],
   accent: { dark: "#86b98f", light: "#2f6b3b" },
+  chapter: { bg: "linear-gradient(160deg,#eef3ec 0%,#d3e2d6 60%,#b3c6b8 100%)", ink: "#123d26", sub: "#3f5c4a", dark: false },
+  proof: [
+    { value: { ar: "متعدد التجار", en: "Multi-merchant" }, label: { ar: "منصة واحدة تخدم متاجر كثيرة ببيانات معزولة", en: "One platform, many stores, isolated data" } },
+    { value: { ar: "30 يوماً", en: "30 days" }, label: { ar: "تجربة مجانية قبل الاشتراك", en: "Free trial before subscribing" } },
+    { value: { ar: ".NET 10", en: ".NET 10" }, label: { ar: "نواة ASP.NET Core مع PostgreSQL", en: "ASP.NET Core core on PostgreSQL" } },
+  ],
+  mediaNote: { ar: "لقطات من المنصة. حزمة صور مؤقتة وستُحدَّث.", en: "Screens from the platform. A provisional image set, to be updated." },
   facts: [
     { label: { ar: "النموذج التجاري", en: "Business model" }, value: { ar: "اشتراكات شهرية وسنوية بباقات متعددة", en: "Monthly & yearly plans, multiple tiers" } },
     { label: { ar: "التجربة المجانية", en: "Free trial" }, value: { ar: "30 يوماً", en: "30 days" } },

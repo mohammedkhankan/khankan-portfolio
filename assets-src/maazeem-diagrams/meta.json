@@ -1,0 +1,18 @@
+{
+ "architecture.webp": {
+  "alt": {
+   "ar": "معمارية معازيم: أربع عمليات من قاعدة كود واحدة",
+   "en": "MAAZEEM architecture: four processes, one codebase"
+  },
+  "order": 0,
+  "role": "gallery"
+ },
+ "invitation-lifecycle.webp": {
+  "alt": {
+   "ar": "دورة حياة الدعوة",
+   "en": "Invitation lifecycle"
+  },
+  "order": 1,
+  "role": "gallery"
+ }
+}

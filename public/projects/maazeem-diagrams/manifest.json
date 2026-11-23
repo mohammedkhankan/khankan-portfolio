@@ -1,0 +1,38 @@
+[
+  {
+    "file": "architecture",
+    "width": 3200,
+    "height": 2056,
+    "sizes": [
+      640,
+      1280,
+      1920
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "معمارية معازيم: أربع عمليات من قاعدة كود واحدة",
+      "en": "MAAZEEM architecture: four processes, one codebase"
+    },
+    "role": "gallery",
+    "order": 0,
+    "blur": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACQAQCdASoQAAoAA4BaJZwAAudLMAQA/vcQVwXDtaiBfUppSoNQsJ/KwfFQAAAA"
+  },
+  {
+    "file": "invitation-lifecycle",
+    "width": 3200,
+    "height": 1800,
+    "sizes": [
+      640,
+      1280,
+      1920
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "دورة حياة الدعوة",
+      "en": "Invitation lifecycle"
+    },
+    "role": "gallery",
+    "order": 1,
+    "blur": "data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAABQAQCdASoQAAkAA4BaJaQABDOAAP7zWdOpr+P8/tGBgA6AAAA="
+  }
+]

@@ -24,6 +24,7 @@ export const rafdFinance: Project = {
   },
   stack: [],
   accent: { dark: "#a5bd86", light: "#4b6427" },
+  chapter: { bg: "linear-gradient(160deg,#16231a 0%,#22362a 100%)", ink: "#eef5ea", sub: "#b4c7ad", dark: true },
   facts: [
     { label: { ar: "المستخدمون", en: "Users" }, value: { ar: "إدارة رفد", en: "RAFD management" } },
     { label: { ar: "العملات", en: "Currencies" }, value: { ar: "الدولار، الريال، الليرة السورية", en: "USD, SAR, SYP" } },

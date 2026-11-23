@@ -9,7 +9,6 @@ import { SITE_URL } from "@/lib/seo";
 import { asset } from "@/lib/base";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Reveal } from "@/components/Reveal";
 import { JsonLd } from "@/components/JsonLd";
 import { AccentStyles } from "@/components/AccentStyles";
 
@@ -88,7 +87,6 @@ export default async function LocaleLayout({
           {children}
         </main>
         <Footer locale={locale} />
-        <Reveal />
       </body>
     </html>
   );
