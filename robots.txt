@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://mohammedkhankan.github.io/khankan-portfolio/sitemap.xml
