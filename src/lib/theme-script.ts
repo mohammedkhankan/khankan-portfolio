@@ -1,0 +1,2 @@
+// Runs before paint: applies saved/system theme and marks JS availability (enables reveal animations).
+export const themeScript = `(function(){try{var d=document.documentElement;d.classList.add('js');var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}d.setAttribute('data-theme',t);localStorage.setItem('lang',d.lang)}catch(e){}})();`;
