@@ -1,0 +1,144 @@
+[
+  {
+    "file": "00-rukn-hero",
+    "width": 2560,
+    "height": 1600,
+    "sizes": [
+      640,
+      1280,
+      1920
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "واجهة ركن على اللابتوب والجوال",
+      "en": "RUKN on laptop and mobile"
+    },
+    "role": "hero",
+    "order": 0,
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAAAQAgCdASoQAAoAA4BaJZwAAugw4Z9Qdt4AAP7tqhGttn3OuqA88LZKkGK/j6MhoYP1BBlJEM/uImnR/xSKwmv7hAFSwi+GXgA="
+  },
+  {
+    "file": "01-dashboard",
+    "width": 1930,
+    "height": 1200,
+    "sizes": [
+      640,
+      1280,
+      1920
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "لوحة تحكم التاجر",
+      "en": "Merchant dashboard"
+    },
+    "role": "gallery",
+    "order": 1,
+    "blur": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAAAwAQCdASoQAAoAA4BaJaQAA3AA/vQIN7N9OvnLpyPJX93Yl/fLfL02gAA="
+  },
+  {
+    "file": "02-products",
+    "width": 1930,
+    "height": 1200,
+    "sizes": [
+      640,
+      1280,
+      1920
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "إدارة المنتجات",
+      "en": "Product management"
+    },
+    "role": "gallery",
+    "order": 2,
+    "blur": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAABwAQCdASoQAAoAA4BaJaVefAGIAAD+88txzQdRVj3aEB/xUfKelHSAAAA="
+  },
+  {
+    "file": "03-inventory",
+    "width": 1930,
+    "height": 1200,
+    "sizes": [
+      640,
+      1280,
+      1920
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "المخزون",
+      "en": "Inventory"
+    },
+    "role": "gallery",
+    "order": 3,
+    "blur": "data:image/webp;base64,UklGRi4AAABXRUJQVlA4ICIAAADQAQCdASoQAAoAA4BaJaQAAudfYKZxAAD+9+kJ7FxtgAAA"
+  },
+  {
+    "file": "04-orders",
+    "width": 1930,
+    "height": 1200,
+    "sizes": [
+      640,
+      1280,
+      1920
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "الطلبات",
+      "en": "Orders"
+    },
+    "role": "gallery",
+    "order": 4,
+    "blur": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACQAQCdASoQAAoAA4BaJaQAAqzUJmAA/vZeeLBhZbHJH1ilSKi+h9sUAAA="
+  },
+  {
+    "file": "05-store-editor",
+    "width": 1930,
+    "height": 1200,
+    "sizes": [
+      640,
+      1280,
+      1920
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "محرر المتجر",
+      "en": "Store editor"
+    },
+    "role": "gallery",
+    "order": 5,
+    "blur": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAAAwAQCdASoQAAoAA4BaJaQAA3AA/vPL3cmKjv5ev2+EMC7olXaMZWBWYg5gAAAA"
+  },
+  {
+    "file": "06-analytics",
+    "width": 1930,
+    "height": 1200,
+    "sizes": [
+      640,
+      1280,
+      1920
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "الإحصائيات",
+      "en": "Analytics"
+    },
+    "role": "gallery",
+    "order": 6,
+    "blur": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAAAwAQCdASoQAAoAA4BaJaQAA3AA/vRCLK/9+otG7SlSyHdgVrREAAAA"
+  },
+  {
+    "file": "07-mobile-storefront",
+    "width": 832,
+    "height": 1876,
+    "sizes": [
+      640
+    ],
+    "orientation": "portrait",
+    "alt": {
+      "ar": "واجهة المتجر على الجوال",
+      "en": "Mobile storefront"
+    },
+    "role": "mobile",
+    "order": 7,
+    "blur": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAAAQBQCdASoQACQAPu1kqk6ppaOiKqwBMB2JZQDDNYx2lE8l8XTKOI54zkLtHyMA+6QAAP6ahOkbG+nfBS0v9enW76PpCACln30WdxTki7JN6b67AHLdCJHh5DYkJnhNWARo4/Hz4jwaCraUpwopJwpKLYZLa09/EvTCr+PvhA9Gsj/XRc8W7FfnQsj5vpkw32+dHBCfwxB8cYb7ftABbxsxkzaIu0oMu8l/nR/eM+pg/EDrLQjyZIiIIGmKuLo2cAAAAA=="
+  }
+]

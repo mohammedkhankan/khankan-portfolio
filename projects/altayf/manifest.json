@@ -1,0 +1,205 @@
+[
+  {
+    "file": "00-altayf-hero",
+    "width": 2600,
+    "height": 1800,
+    "sizes": [
+      640,
+      1280,
+      1920
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "موقع الطيف المعمارية على اللابتوب والجوال",
+      "en": "AL TAYF site on laptop and mobile"
+    },
+    "role": "hero",
+    "order": 0,
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwAQCdASoQAAsAA4BaJQBOgCG8VBKrqoAA/tedRHRwOUyljrfwnWQmdoY4McWy/Bf6ewzfAC3cgnbsq8hLxE/SQXxeljCDQz0jkE+QATudL5ADnSgAAA=="
+  },
+  {
+    "file": "01-homepage-desktop",
+    "width": 1440,
+    "height": 1000,
+    "sizes": [
+      640,
+      1280
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "الصفحة الرئيسية",
+      "en": "Home page"
+    },
+    "role": "gallery",
+    "order": 1,
+    "blur": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoQAAsAA4BaJbACdAEfSpq9aXwAAP6tQ6tn0+GcR+7AXPq4Z2LIcsZf/2bUG8bGiWYsgdRFXTpufNqVI7D+WAeULM8e4E/MF61SJ9HfpjAAAA=="
+  },
+  {
+    "file": "02-projects-gallery",
+    "width": 1440,
+    "height": 1000,
+    "sizes": [
+      640,
+      1280
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "معرض الأعمال",
+      "en": "Projects gallery"
+    },
+    "role": "gallery",
+    "order": 2,
+    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAQCdASoQAAsAA4BaJYgCdAEPSIKdcAD+85t7EoKax+/RFHhP6UpElqdVDRBn14ottsVUSlta1lMYCSrq3vI33YI5OoppLivtHjtlGwbak0qW//h8UXMPXoAAAA=="
+  },
+  {
+    "file": "03-project-details",
+    "width": 1440,
+    "height": 1000,
+    "sizes": [
+      640,
+      1280
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "معرض قسم الزجاج المعشق",
+      "en": "Stained-glass gallery"
+    },
+    "role": "gallery",
+    "order": 3,
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAsAA4BaJZwAAujGuCP7zYAA/vYscKTU1We0bZWrna+jErvibnP23oyAD1+deCpXZUDPP+QCPwDH40NkolW2AAA="
+  },
+  {
+    "file": "04-project-lightbox",
+    "width": 1440,
+    "height": 1000,
+    "sizes": [
+      640,
+      1280
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "عارض الصور المكبّر",
+      "en": "Image lightbox"
+    },
+    "role": "gallery",
+    "order": 4,
+    "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQAQCdASoQAAsAA4BaJZACdADwoKzkAAD+9dpJFpj+bc95F0nnMdKa/Ta/H3yDcse4EnjwXgpdAMn4uuH9rfZafpHZNSlSe7i2I2hq7vpZ5G+OcmlgJiaTVgAAAA=="
+  },
+  {
+    "file": "05-services",
+    "width": 1440,
+    "height": 1000,
+    "sizes": [
+      640,
+      1280
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "الخدمات",
+      "en": "Services"
+    },
+    "role": "gallery",
+    "order": 5,
+    "blur": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoQAAsAA4BaJYgCdAELY/pTkiVQAP7wjh38D+p/ZkVjuu5OBaivr+pTprvS2NwFzg/XyDjBxm4JvdTXb6KpbApVoBDwAAAA"
+  },
+  {
+    "file": "06-methodology",
+    "width": 1440,
+    "height": 1000,
+    "sizes": [
+      640,
+      1280
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "منهجية العمل",
+      "en": "Methodology"
+    },
+    "role": "gallery",
+    "order": 6,
+    "blur": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoQAAsAA4BaJZQCsAEVzZGk8gAA/uiiTSTMaR9Zlu2gnl0SZ40aBNOFIsoiXnJuEIjp0ooT8GVhqAAA"
+  },
+  {
+    "file": "07-about-company",
+    "width": 1440,
+    "height": 1000,
+    "sizes": [
+      640,
+      1280
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "عن الشركة",
+      "en": "About the company"
+    },
+    "role": "gallery",
+    "order": 7,
+    "blur": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAQCdASoQAAsAA4BaJQBOgCPQIyW8fAD+sCfX3ar44jG9Db8Q45KD0maltf7T6SR30VlpuIeG3DTKJpEiEjXeguCuXy43VoAAAA=="
+  },
+  {
+    "file": "08-homepage-mobile",
+    "width": 390,
+    "height": 844,
+    "sizes": [
+      390
+    ],
+    "orientation": "portrait",
+    "alt": {
+      "ar": "الرئيسية على الجوال",
+      "en": "Home on mobile"
+    },
+    "role": "mobile",
+    "order": 8,
+    "blur": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAQBQCdASoQACMAPulgp02pJaOiNVgIASAdCWIAnTMhglrPrTZhPdV9yg4QOz/MrQcAAP5hD3ej3tIXjlzlVWp6CHd113bQTDi5t1rxw8kpWZjdYYeALPDPwVOPn6Z7J3/nUmdsZh+abcihUDIZa47bbo3QYH1Bt9bNg0mHLh+wUqbL7TTJERPp09cAAA=="
+  },
+  {
+    "file": "09-projects-mobile",
+    "width": 390,
+    "height": 844,
+    "sizes": [
+      390
+    ],
+    "orientation": "portrait",
+    "alt": {
+      "ar": "الأعمال على الجوال",
+      "en": "Projects on mobile"
+    },
+    "role": "mobile",
+    "order": 9,
+    "blur": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAADwBACdASoQACMAPu1kqk6ppaOiKqwBMB2JQBOgtZpAgxkKU92oWTU/Pbt8x6PH7gAA/vVKd0ixltnVhPkVOgN6Ce/N93wcgMIhQEDpNfurT98kTfATy7gL4uoqr+Ex+XrTMpqZXPO1eLPDIsC1h0HI4loyWlbI+7YnLMWaUCgk2t5v8doullpMHACNVtDhYOT44Y/g3TSIMy0/wy1P9Ql6KGK6IdWQmEByuoeNcJaXKvp7KNBvAr2wMSURPiano85wIr6Ru/ZmPdgHz3A9eeIM6joXlF5gqaAAAA=="
+  },
+  {
+    "file": "10-services-mobile",
+    "width": 390,
+    "height": 844,
+    "sizes": [
+      390
+    ],
+    "orientation": "portrait",
+    "alt": {
+      "ar": "الخدمات على الجوال",
+      "en": "Services on mobile"
+    },
+    "role": "mobile",
+    "order": 10,
+    "blur": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAADQBACdASoQACMAPuleqE2pJSOiNVgIASAdCWMAuzKAAje0oB9kYMjBdTtl+OPbAAD+7jjcTnJcOZil2VP/ULAEZoxtl6dMOYyFlHQiJ9gJqsv5QuZzNmOqnTWeH+u9m/68oUjDilUf8zkO2pqY44LtBhT7f/oKB0mcQQG3dBigL7pfT9DXRUgEIZXxytusrIGCMbIT2nZWBwkCxYz7Rm9imOjcsAAA"
+  },
+  {
+    "file": "11-responsive-showcase",
+    "width": 2600,
+    "height": 1800,
+    "sizes": [
+      640,
+      1280,
+      1920
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "الكمبيوتر والتابلت والجوال",
+      "en": "Desktop, tablet and mobile"
+    },
+    "role": "gallery",
+    "order": 11,
+    "blur": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwAgCdASoQAAsAA4BaJZQCsAERHw1025r/AAD+7bJVQWIEpUx8nZKP7P9yMKnE7YgsghiSXb52Aa0Ph/1U1Qco/HQjgIGwG5pYAFMGIANUgAAA"
+  }
+]

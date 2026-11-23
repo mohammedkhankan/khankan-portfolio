@@ -1,0 +1,222 @@
+[
+  {
+    "file": "00-ofoq-hero-desktop-mobile",
+    "width": 2600,
+    "height": 1700,
+    "sizes": [
+      640,
+      1280,
+      1920
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "لوحة المطعم والمنيو الإلكتروني — لقطات حقيقية ببيانات تجريبية",
+      "en": "Restaurant dashboard and digital menu — real screens, demo data"
+    },
+    "role": "hero",
+    "order": 0,
+    "blur": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoQAAoAA4BaJZwAAuiuZ9hgAAD+84pjBNYCFxymqv2IxEhZr7mAIzws9PMGk522fqXU0Io0tRuPQ6mWmSHwOLMIAAA="
+  },
+  {
+    "file": "01-admin-dashboard",
+    "width": 1440,
+    "height": 900,
+    "sizes": [
+      640,
+      1280
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "لوحة صاحب المطعم",
+      "en": "Owner dashboard"
+    },
+    "role": "gallery",
+    "order": 1,
+    "blur": "data:image/webp;base64,UklGRi4AAABXRUJQVlA4ICIAAAAwAQCdASoQAAoAA4BaJaQAA3AA/vPP5ptLc7EUNLbNQAAA"
+  },
+  {
+    "file": "02-cashier-tables",
+    "width": 1440,
+    "height": 900,
+    "sizes": [
+      640,
+      1280
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "الكاشير وإدارة الطاولات",
+      "en": "Cashier and table management"
+    },
+    "role": "gallery",
+    "order": 2,
+    "blur": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACQAQCdASoQAAoAA4BaJZQAAuQL34AA/vfoF0N91zZecxuGJsS7uJD/BVwPvhDLejYJwAAA"
+  },
+  {
+    "file": "03-waiter-interface",
+    "width": 1440,
+    "height": 900,
+    "sizes": [
+      640,
+      1280
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "واجهة النادل والطلبات الجاهزة للاستلام",
+      "en": "Waiter view with orders ready for pickup"
+    },
+    "role": "gallery",
+    "order": 3,
+    "blur": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoQAAoAA4BaJZQAAxZcU7JQAP72Woy66N1+2MfMPwUfJ9Zb9k3fbkfUFLG1oUsYegA="
+  },
+  {
+    "file": "04-kitchen-stations",
+    "width": 1440,
+    "height": 900,
+    "sizes": [
+      640,
+      1280
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "شاشة المطبخ — طلبات جديدة وقيد التحضير",
+      "en": "Kitchen display — new and in-progress orders"
+    },
+    "role": "gallery",
+    "order": 4,
+    "blur": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoQAAoAA4BaJaQAAudaSCLRwAD++FGV0R3EkqKnk9qr+vnrcSLXPnSwF49su/NbB8ayY49wowAAAA=="
+  },
+  {
+    "file": "05-mobile-digital-menu",
+    "width": 390,
+    "height": 844,
+    "sizes": [
+      390
+    ],
+    "orientation": "portrait",
+    "alt": {
+      "ar": "المنيو الإلكتروني على الجوال",
+      "en": "Digital menu on mobile"
+    },
+    "role": "mobile",
+    "order": 5,
+    "blur": "data:image/webp;base64,UklGRvwAAABXRUJQVlA4IPAAAABwBQCdASoQACMAPu1aqU2ppKOiNVgIATAdiWYAnTLiGDXACBsMBaj8I/FCjRDUYUfgfHsAAP7Bm43NqrxqPgljvulqxWt0wK1VUlH70Uj+EcvipLZNnckKIII4MtaZbmnki88VvO2L9TVS/7/hurAA8TkhppuKOvUjXB4B8bkamWnBZbErn1K9amvCGK/pHRFobFqYtBi3H1abZTeDSCxy4B+JAUh4HcIWsniZmoky+Wq3QLczJLfZEXWXnRbsq6hqeXijpdLGkY8CS+5SLl+3452Gaukr8pw5j2cYk87boAaETe3vqUT1fofaioEqAAA="
+  },
+  {
+    "file": "06-mobile-menu-category",
+    "width": 390,
+    "height": 844,
+    "sizes": [
+      390
+    ],
+    "orientation": "portrait",
+    "alt": {
+      "ar": "قسم من المنيو على الجوال",
+      "en": "A menu category on mobile"
+    },
+    "role": "mobile",
+    "order": 6,
+    "blur": "data:image/webp;base64,UklGRu4AAABXRUJQVlA4IOIAAABQBgCdASoQACMAPulip02pJaOiNVgIASAdCWYAuzKDIhGBBgDvQtCfeXOlpLLnXbvxrBsj4I37vsBpAAD+6Vf6eA8r61TnA0PFfs3S2i89EOUq3zWOWLB0ssHns1oExDzlMHeBrnFW/7P4hZpACDFbDTnmbp9uS4gt5hwRWBeEg93N3Gv3PqVeqEtxvwouKH78X2i5u1isA3jEqYbtGbe00U5A/pbnYHbUnxB8vnJJgK08yZoVeBcqjYXbvcGcJziJttIOQjddO5KIHQaLY24iCy+t966j9V67K+0lfR0R8AAA"
+  },
+  {
+    "file": "07-payments-and-billing",
+    "width": 1440,
+    "height": 900,
+    "sizes": [
+      640,
+      1280
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "الحساب والدفعات — بيانات تجريبية",
+      "en": "Bill and payments — demo data"
+    },
+    "role": "gallery",
+    "order": 7,
+    "blur": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoQAAoAA4BaJZQAAudcL6+0AAD+9wIg1FeEEHvjJdyNbwy/y2OhqMZAgAA="
+  },
+  {
+    "file": "08-reservations",
+    "width": 1440,
+    "height": 900,
+    "sizes": [
+      640,
+      1280
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "حجوزات الطاولات",
+      "en": "Table reservations"
+    },
+    "role": "gallery",
+    "order": 8,
+    "blur": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAAAwAQCdASoQAAoAA4BaJZwAA3AA/vPT/7W8QZ/LQBJmlFDbAEFk0w3ABigAAA=="
+  },
+  {
+    "file": "09-staff-permissions",
+    "width": 1440,
+    "height": 900,
+    "sizes": [
+      640,
+      1280
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "الفريق والصلاحيات",
+      "en": "Team and permissions"
+    },
+    "role": "gallery",
+    "order": 9,
+    "blur": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAAAwAQCdASoQAAoAA4BaJZQAA3AA/vQQY2TzvFQ0sSDS5zw77W3+AAAA"
+  },
+  {
+    "file": "10-menu-themes",
+    "width": 1440,
+    "height": 900,
+    "sizes": [
+      640,
+      1280
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "الثيمات والهوية البصرية للمنيو",
+      "en": "Menu themes and branding"
+    },
+    "role": "gallery",
+    "order": 10,
+    "blur": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAoAA4BaJaQAArIyQq05bIAA/mtjY3wyJ3LYTuT/UgbGaoX8e/gddfjuzYDV6AsMw+9LgnffGHBl8+gPndmxE7UbxEwAAAA="
+  },
+  {
+    "file": "11-analytics-reports",
+    "width": 1440,
+    "height": 900,
+    "sizes": [
+      640,
+      1280
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "التقارير — بيانات تجريبية",
+      "en": "Reports — demo data"
+    },
+    "role": "gallery",
+    "order": 11,
+    "blur": "data:image/webp;base64,UklGRiYAAABXRUJQVlA4IBoAAAAwAQCdASoQAAoAA4BaJaQAA3AA/vQJdyiAAA=="
+  },
+  {
+    "file": "12-desktop-digital-menu",
+    "width": 1440,
+    "height": 900,
+    "sizes": [
+      640,
+      1280
+    ],
+    "orientation": "landscape",
+    "alt": {
+      "ar": "المنيو الإلكتروني على الكمبيوتر",
+      "en": "Digital menu on desktop"
+    },
+    "role": "gallery",
+    "order": 12,
+    "blur": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADQAQCdASoQAAoAA4BaJbACsAChckOLAAD+9pPmsgxyX9dTTb9U23Nxfr8WtkbltYAfZZ9BKXcZqNBmS0o1g6LMsh9pPVuk0eZnPTUnBUG/6e46fi5MiT4DwgpTIcpMKfbVgAAA"
+  }
+]
