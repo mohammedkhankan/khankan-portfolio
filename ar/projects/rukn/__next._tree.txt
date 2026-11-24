@@ -8,9 +8,9 @@
 :HL["/khankan-portfolio/_next/static/media/ibm_plex_sans_arabic_latin_400_normal.p.1qbt_niprsjgn.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/khankan-portfolio/_next/static/media/ibm_plex_sans_arabic_latin_500_normal.p.44jhk7eqxey7l.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/khankan-portfolio/_next/static/media/ibm_plex_sans_arabic_latin_600_normal.p.3a4qjieizncgf.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/khankan-portfolio/projects/rukn/00-rukn-hero-1280.webp","image",{"imageSrcSet":"/khankan-portfolio/projects/rukn/00-rukn-hero-640.webp 640w, /khankan-portfolio/projects/rukn/00-rukn-hero-1280.webp 1280w, /khankan-portfolio/projects/rukn/00-rukn-hero-1920.webp 1920w","imageSizes":"(min-width: 1440px) 1360px, 100vw","fetchPriority":"high"}]
+:HL["/khankan-portfolio/projects/rukn/00-rukn-hero-desktop-mobile-1280.webp","image",{"imageSrcSet":"/khankan-portfolio/projects/rukn/00-rukn-hero-desktop-mobile-640.webp 640w, /khankan-portfolio/projects/rukn/00-rukn-hero-desktop-mobile-1280.webp 1280w, /khankan-portfolio/projects/rukn/00-rukn-hero-desktop-mobile-1920.webp 1920w","imageSizes":"(min-width: 1440px) 1360px, 100vw","fetchPriority":"high"}]
 4:[["children",{"s":"__PAGE__","h":160}]]
 3:[["children",{"s":{"n":"slug","t":"d","k":"rukn","s":[]},"h":65632,"c":"$Q4"}]]
 2:[["children",{"s":"projects","h":131136,"c":"$Q3"}]]
 1:[["children",{"s":{"n":"locale","t":"d","k":"ar","s":[]},"h":196640,"c":"$Q2"}]]
-0:{"b":"O80K2x6dpxGAYMecDyuhO","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}
+0:{"b":"GxRqHL9Hsi48_Y7eI10TE","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}
