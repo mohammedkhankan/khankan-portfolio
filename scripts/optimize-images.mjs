@@ -103,12 +103,11 @@ async function processProject(slug) {
     const m = await sharp(input).metadata();
     const name = slugify(f);
     const sizes = [];
-    for (const w of WIDTHS) {
-      if (w > m.width && sizes.length) break;
-      const real = Math.min(w, m.width);
+    // Every standard width below the source, plus the source width itself (capped at 1920).
+    const widths = [...WIDTHS.filter((w) => w < m.width), Math.min(m.width, 1920)].filter((w, i, a) => a.indexOf(w) === i);
+    for (const real of widths) {
       await sharp(input).resize({ width: real, withoutEnlargement: true }).webp({ quality: 80 }).toFile(path.join(out, `${name}-${real}.webp`));
       sizes.push(real);
-      if (real === m.width) break;
     }
     const ratio = m.width / m.height;
     const info = meta[f] ?? {};

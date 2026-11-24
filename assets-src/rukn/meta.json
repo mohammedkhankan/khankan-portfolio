@@ -1,60 +1,96 @@
 {
- "00-rukn-hero.webp": {
+ "00-rukn-hero-desktop-mobile.png": {
   "alt": {
-   "ar": "واجهة ركن على اللابتوب والجوال",
-   "en": "RUKN on laptop and mobile"
+   "ar": "لوحة تحكم التاجر على اللابتوب، وواجهة متجر روان على الجوال",
+   "en": "Merchant dashboard on laptop, and Rawan's storefront on mobile"
   },
   "order": 0,
   "role": "hero"
  },
- "01-dashboard.webp": {
+ "01-dashboard.png": {
   "alt": {
-   "ar": "لوحة تحكم التاجر",
-   "en": "Merchant dashboard"
+   "ar": "لوحة التحكم: حالة النشر، ومؤشرات الطلبات والدفع والمخزون والسلات المتروكة",
+   "en": "Dashboard: publish status, orders, payments, stock and abandoned-cart indicators"
   },
   "order": 1
  },
- "02-products.webp": {
+ "02-store-editor.png": {
   "alt": {
-   "ar": "إدارة المنتجات",
-   "en": "Product management"
+   "ar": "المحرر البصري: إعدادات الصفحة بجانب معاينة حية على الكمبيوتر والجوال",
+   "en": "Visual editor: page settings beside a live desktop/mobile preview"
   },
   "order": 2
  },
- "03-inventory.webp": {
+ "03-theme-customization.png": {
   "alt": {
-   "ar": "المخزون",
-   "en": "Inventory"
+   "ar": "الهوية والثيم: معاينة مباشرة واختيار شخصية المتجر",
+   "en": "Brand and theme: live preview and choosing the store's character"
   },
   "order": 3
  },
- "04-orders.webp": {
+ "04-products.png": {
   "alt": {
-   "ar": "الطلبات",
-   "en": "Orders"
+   "ar": "إدارة المنتجات: الحالة والفلاتر والسعر والمخزون والظهور",
+   "en": "Products: status tabs, filters, price, stock and visibility"
   },
   "order": 4
  },
- "05-store-editor.webp": {
+ "05-inventory.png": {
   "alt": {
-   "ar": "محرر المتجر",
-   "en": "Store editor"
+   "ar": "المخزون: المنخفض والنافد وحد التنبيه لكل SKU",
+   "en": "Inventory: low and out of stock, alert threshold per SKU"
   },
   "order": 5
  },
- "06-analytics.webp": {
+ "06-orders.png": {
   "alt": {
-   "ar": "الإحصائيات",
-   "en": "Analytics"
+   "ar": "إدارة الطلبات حسب المرحلة (بريد العميل مطموس)",
+   "en": "Orders by stage (customer email blurred)"
   },
   "order": 6
  },
- "07-mobile-storefront.webp": {
+ "07-payments.png": {
   "alt": {
-   "ar": "واجهة المتجر على الجوال",
-   "en": "Mobile storefront"
+   "ar": "وسائل الدفع: شام كاش (رقم الحساب مخفي من النظام نفسه)",
+   "en": "Payment methods: Sham Cash (account number hidden by the system)"
   },
-  "order": 7,
+  "order": 7
+ },
+ "08-staff-permissions.png": {
+  "alt": {
+   "ar": "الموظفون والصلاحيات: الدعوات والأدوار",
+   "en": "Staff and permissions: invitations and roles"
+  },
+  "order": 8
+ },
+ "09-analytics.png": {
+  "alt": {
+   "ar": "الإحصائيات حسب الفترة الزمنية",
+   "en": "Analytics by time period"
+  },
+  "order": 9
+ },
+ "10-storefront-desktop.png": {
+  "alt": {
+   "ar": "واجهة متجر روان على الكمبيوتر",
+   "en": "Rawan's storefront on desktop"
+  },
+  "order": 10
+ },
+ "11-storefront-mobile-showcase.png": {
+  "alt": {
+   "ar": "متجر روان على الجوال",
+   "en": "Rawan's store on mobile"
+  },
+  "order": 11,
+  "role": "mobile"
+ },
+ "12-storefront-product-mobile-showcase.png": {
+  "alt": {
+   "ar": "صفحة منتج مع شريط شراء ثابت",
+   "en": "Product page with a sticky buy bar"
+  },
+  "order": 12,
   "role": "mobile"
  }
 }

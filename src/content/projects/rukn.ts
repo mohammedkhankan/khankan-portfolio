@@ -20,10 +20,10 @@ export const rukn: Project = {
     ar: "المؤسس — قيادة المنتج والمعمارية والتطوير",
     en: "Founder — product, architecture & engineering lead",
   },
-  status: "in-development",
+  status: "live",
   statusNote: {
-    ar: "المنصة في مرحلة التطوير والتجهيز، والصور الحالية مؤقتة.",
-    en: "The platform is in active development; current visuals are provisional.",
+    ar: "المنصة تعمل، ومن المتاجر الحقيقية عليها متجر روان للخدمات المكتبية.",
+    en: "The platform is live; among the real stores running on it is Rawan Office Services.",
   },
   stack: [
     { name: "ASP.NET Core / .NET 10" },
@@ -32,17 +32,17 @@ export const rukn: Project = {
     { name: "PostgreSQL" },
     { name: "Entity Framework Core" },
     { name: "Docker" },
-    { name: "Cloudflare", note: { ar: "طبقة الحافة", en: "edge layer" } },
-    { name: "Bunny", note: { ar: "تخزين وتوصيل الوسائط", en: "media storage & delivery" } },
+        { name: "Cloudflare", note: { ar: "طبقة الحافة", en: "edge layer" } },
+        { name: "Bunny", note: { ar: "تخزين وتوصيل الوسائط", en: "media storage & delivery" } },
   ],
   accent: { dark: "#86b98f", light: "#2f6b3b" },
-  chapter: { bg: "linear-gradient(160deg,#eef3ec 0%,#d3e2d6 60%,#b3c6b8 100%)", ink: "#123d26", sub: "#3f5c4a", dark: false },
+  chapter: { bg: "linear-gradient(180deg,#f5f3ef 0%,#e5eae6 100%)", ink: "#123d26", sub: "#4a5d52", dark: false },
   proof: [
     { value: { ar: "متعدد التجار", en: "Multi-merchant" }, label: { ar: "منصة واحدة تخدم متاجر كثيرة ببيانات معزولة", en: "One platform, many stores, isolated data" } },
     { value: { ar: "30 يوماً", en: "30 days" }, label: { ar: "تجربة مجانية قبل الاشتراك", en: "Free trial before subscribing" } },
-    { value: { ar: ".NET 10", en: ".NET 10" }, label: { ar: "نواة ASP.NET Core مع PostgreSQL", en: "ASP.NET Core core on PostgreSQL" } },
+    { value: { ar: "متجر حقيقي", en: "A live store" }, label: { ar: "روان للخدمات المكتبية يعمل على المنصة", en: "Rawan Office Services runs on the platform" } },
   ],
-  mediaNote: { ar: "لقطات من المنصة. حزمة صور مؤقتة وستُحدَّث.", en: "Screens from the platform. A provisional image set, to be updated." },
+  mediaNote: { ar: "لقطات حقيقية من ركن: لوحة حساب تاجر تجريبي، وواجهة متجر روان. البيانات الخاصة مطموسة.", en: "Real screens from RUKN: a demo merchant account's dashboard and Rawan's storefront. Private data is blurred." },
   facts: [
     { label: { ar: "النموذج التجاري", en: "Business model" }, value: { ar: "اشتراكات شهرية وسنوية بباقات متعددة", en: "Monthly & yearly plans, multiple tiers" } },
     { label: { ar: "التجربة المجانية", en: "Free trial" }, value: { ar: "30 يوماً", en: "30 days" } },
@@ -82,23 +82,24 @@ export const rukn: Project = {
   },
   solution: {
     ar: [
-      "لوحة تحكم للتاجر تجمع إدارة المتجر والكتالوج والعمليات اليومية، وواجهة متجر يتصفحها العميل النهائي على الجوال والكمبيوتر، ومحرر لتخصيص مظهر المتجر دون كتابة كود.",
+      "لوحة تحكم للتاجر تجمع حالة النشر والطلبات والمخزون والدفع في شاشة واحدة، ومحرر بصري يعرض معاينة حية للمتجر على الكمبيوتر والجوال، واختيار لشخصية الثيم وهوية المتجر — ثم واجهة متجر حقيقية يتسوق منها العملاء، كمتجر روان للخدمات المكتبية.",
     ],
     en: [
-      "A merchant dashboard that brings store management, catalogue and daily operations together; a customer-facing storefront for mobile and desktop; and a store editor for customizing the look without writing code.",
+      "A merchant dashboard that brings publish status, orders, stock and payments into one screen; a visual editor with a live desktop and mobile preview; a choice of theme character and brand — and then a real storefront customers shop from, such as Rawan Office Services.",
     ],
   },
   features: [
-    { title: { ar: "إدارة المتاجر", en: "Store management" } },
+    { title: { ar: "لوحة تحكم وحالة النشر", en: "Dashboard & publish status" } },
     { title: { ar: "المنتجات والتصنيفات", en: "Products & categories" } },
-    { title: { ar: "المخزون", en: "Inventory" } },
-    { title: { ar: "الطلبات", en: "Orders" } },
-    { title: { ar: "العملاء", en: "Customers" } },
-    { title: { ar: "الدفع والشحن", en: "Payments & shipping" } },
-    { title: { ar: "المظهر ومحرر المتجر", en: "Themes & store editor" } },
-    { title: { ar: "التقارير والإحصائيات", en: "Reports & analytics" } },
-    { title: { ar: "الموظفون وصلاحياتهم", en: "Staff & permissions" } },
-    { title: { ar: "صلاحيات المنصة", en: "Platform administration" } },
+    { title: { ar: "المخزون ومواقع التخزين", en: "Inventory & storage locations" } },
+    { title: { ar: "الطلبات حسب المرحلة", en: "Orders by stage" } },
+    { title: { ar: "السلات المتروكة", en: "Abandoned carts" } },
+    { title: { ar: "الدفع عبر شام كاش", en: "Payments via Sham Cash" } },
+    { title: { ar: "التوصيل والاستلام", en: "Delivery & pickup" } },
+    { title: { ar: "المحرر البصري للمتجر", en: "Visual store editor" } },
+    { title: { ar: "الهوية والثيمات", en: "Brand & themes" } },
+    { title: { ar: "الإحصائيات", en: "Analytics" } },
+    { title: { ar: "الموظفون والصلاحيات", en: "Staff & permissions" } },
     { title: { ar: "الاشتراكات والباقات", en: "Subscriptions & plans" } },
   ],
   engineering: {
@@ -173,15 +174,17 @@ export const rukn: Project = {
   ],
   results: {
     ar: [
-      "لا توجد بعد أرقام تشغيلية منشورة للمنصة، ولن تُعرض أي مؤشرات قبل قياسها فعلياً.",
+      "المنصة تعمل، ومتجر روان للخدمات المكتبية متجر حقيقي قائم عليها.",
+      "لا تُعرض أرقام مبيعات أو أعداد متاجر لعدم وجود بيانات موثقة للنشر.",
     ],
     en: [
-      "There are no published operating metrics for the platform yet, and none will be shown here before they are actually measured.",
+      "The platform is live, and Rawan Office Services is a real store running on it.",
+      "No sales figures or store counts are shown, as no verified data is available for publication.",
     ],
   },
   currentStatus: {
-    ar: ["قيد التطوير والتجهيز للإطلاق. الصور المعروضة مؤقتة وستُستبدل بحزمة مصورة جديدة."],
-    en: ["In development and preparing for launch. Current visuals are provisional and will be replaced with a new screenshot set."],
+    ar: ["منشورة وتعمل، مع استمرار التطوير."],
+    en: ["Live, with development ongoing."],
   },
   next: {
     ar: ["استكمال تجهيز الإطلاق، ثم توسيع خيارات الدفع والشحن المحلية ومحرر المتجر بناءً على ملاحظات التجار الأوائل."],
@@ -197,8 +200,5 @@ export const rukn: Project = {
     { key: "analytics", label: { ar: "الإحصائيات", en: "Analytics" } },
     { key: "storefront-mobile", label: { ar: "واجهة المتجر على الجوال", en: "Mobile storefront" } },
   ],
-  pendingMedia: {
-    ar: "حزمة صور ركن (RUKN_Portfolio_Enhanced) لم تُرفق بعد. بمجرد إضافتها تظهر هنا تلقائياً.",
-    en: "The RUKN image set (RUKN_Portfolio_Enhanced) hasn't been added yet. Once it is, it appears here automatically.",
-  },
+
 };
