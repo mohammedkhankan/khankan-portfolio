@@ -21,6 +21,7 @@ export const rafd: Project = {
     en: "Founder & CEO",
   },
   status: "live",
+  url: "https://rafd6.netlify.app/",
   statusNote: {
     ar: "المنصة تعمل؛ تطبيقا سطح المكتب وأندرويد متاحان، وتطبيق iOS قيد التطوير ضمن فريق رفد.",
     en: "The platform is operating; desktop and Android apps are available, and an iOS app is in development within the RAFD team.",

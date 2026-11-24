@@ -159,6 +159,9 @@ export default async function Home({ params }: Props) {
             <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2">
               <Link href={href(locale, "/projects/rafd")} className="link">{ui.cta.readCase[locale]}</Link>
               <Link href={href(locale, "/projects/rafd-finance")} className="link">{P("rafd-finance").name[locale]}</Link>
+              {rafd.url && (
+                <ExternalLink locale={locale} href={rafd.url} className="link">{ui.cta.visitSite[locale]}</ExternalLink>
+              )}
             </div>
           </div>
         </div>
