@@ -1,4 +1,4 @@
-:HL["/khankan-portfolio/_next/static/chunks/16c8p-neuzme9.css","style"]
+:HL["/khankan-portfolio/_next/static/chunks/0zg5c_9_xdn-b.css","style"]
 :HL["/khankan-portfolio/_next/static/chunks/10f_fics6i9bc.css","style"]
 :HL["/khankan-portfolio/_next/static/media/alexandria_arabic_wght_normal-s.p.15gko1wbbmx8e.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/khankan-portfolio/_next/static/media/alexandria_latin_wght_normal.p.2elfkxnho06a1.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -11,4 +11,4 @@
 :HL["/khankan-portfolio/portrait/cutout-900.webp","image",{"imageSrcSet":"/khankan-portfolio/portrait/cutout-520.webp 520w, /khankan-portfolio/portrait/cutout-900.webp 900w, /khankan-portfolio/portrait/cutout-1122.webp 1122w","imageSizes":"(min-width: 1024px) 44vw, 90vw","fetchPriority":"high"}]
 2:[["children",{"s":"__PAGE__","h":128}]]
 1:[["children",{"s":{"n":"locale","t":"d","k":"en","s":[]},"h":65568,"c":"$Q2"}]]
-0:{"b":"GxRqHL9Hsi48_Y7eI10TE","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}
+0:{"b":"Nm7u8W_94xC0StY-bfO3S","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}
