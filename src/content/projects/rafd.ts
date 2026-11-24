@@ -12,8 +12,8 @@ export const rafd: Project = {
     en: "A supplementary learning platform for Syrian Virtual University students",
   },
   summary: {
-    ar: "منصة تعليمية تجمع خبرة الطلاب في طبيعة المقررات مع خبرة الكفاءات الأكاديمية، وتقدّم شرحاً أكثر تنظيماً عبر تطبيقات سطح المكتب وأندرويد.",
-    en: "A learning platform that pairs students' knowledge of how courses really work with academic expertise, delivering structured teaching through desktop and Android apps.",
+    ar: "«من طالب، لأجل طالب»: كورسات وملفات وكويزات ومحاكي تسجيل وأدوات أكاديمية في تجربة واحدة، على الويب وتطبيقي Windows وأندرويد — بأكثر من 2,000 مشترك.",
+    en: "\"By a student, for students\": courses, files, quizzes, a registration simulator and academic tools in one experience, on the web and Windows and Android apps — with 2,000+ subscribers.",
   },
   kind: { ar: "منصة تعليمية وتطبيقات", en: "Learning platform & apps" },
   role: {
@@ -27,10 +27,16 @@ export const rafd: Project = {
   },
   stack: [],
   accent: { dark: "#86ade0", light: "#2a5a96" },
+  proof: [
+    { value: { ar: "+2,000", en: "2,000+" }, label: { ar: "مشترك في المنصة", en: "platform subscribers" } },
+    { value: { ar: "+4,000", en: "4,000+" }, label: { ar: "طالب ومستفيد", en: "students and learners reached" } },
+    { value: { ar: "+700", en: "700+" }, label: { ar: "فيديو تعليمي", en: "teaching videos" } },
+    { value: { ar: "+5", en: "5+" }, label: { ar: "أكاديميين مختصين", en: "specialist academics" } },
+  ],
   chapter: { bg: "linear-gradient(160deg,#0f2140 0%,#16305c 100%)", ink: "#eaf1fb", sub: "#a9bcd8", dark: true },
   facts: [
     { label: { ar: "الجمهور", en: "Audience" }, value: { ar: "طلاب الجامعة الافتراضية السورية", en: "Syrian Virtual University students" } },
-    { label: { ar: "التطبيقات", en: "Apps" }, value: { ar: "سطح المكتب · أندرويد · iOS (قيد التطوير)", en: "Desktop · Android · iOS (in development)" } },
+    { label: { ar: "التطبيقات", en: "Apps" }, value: { ar: "Windows وأندرويد، وiOS قيد التطوير", en: "Windows and Android; iOS in development" } },
     { label: { ar: "طبيعة العلاقة بالجامعة", en: "Relationship to the university" }, value: { ar: "منصة مستقلة للتعليم المساند", en: "Independent supplementary platform" } },
   ],
   context: {
@@ -67,13 +73,21 @@ export const rafd: Project = {
   },
   solution: {
     ar: [
-      "تطبيق سطح مكتب لحضور الجلسات ومشاهدة المحتوى، ونسخة مخصصة لأجهزة أندرويد، وتطبيق iOS قيد التطوير ضمن فريق رفد.",
+      "منصة ويب تجمع الكورسات والمكتبة والكويزات وأدوات الطالب — محاكي التسجيل والحاسبات والتقويم — في حساب واحد، ورحلة من ثلاث خطوات: اختر المادة، افتح المحتوى، ادرس واختبر نفسك.",
+      "وتطبيقات رسمية: Windows (الإصدار 2.5) لتجربة دراسة كاملة، وأندرويد (الإصدار 1.28) للوصول السريع من الجوال، مع تنزيل لا يظهر إلا بعد التحقق من حجم الحزمة وبصمتها. وتطبيق iOS قيد التطوير ضمن فريق رفد.",
     ],
     en: [
-      "A desktop app for attending sessions and watching content, a dedicated Android version, and an iOS app in development within the RAFD team.",
+      "A web platform that brings courses, the library, quizzes and student tools — registration simulator, calculators and calendar — into one account, around a three-step journey: pick a course, open the content, study and test yourself.",
+      "Plus official apps: Windows (v2.5) for a full study experience and Android (v1.28) for quick access on the phone, with downloads shown only after the package size and checksum are verified. An iOS app is in development within the RAFD team.",
     ],
   },
   features: [
+    { title: { ar: "كورسات بجلسات مسجلة وأونلاين", en: "Courses with recorded and live sessions" } },
+    { title: { ar: "مكتبة ملفات وملخصات حسب المادة", en: "A library of files and summaries by course" } },
+    { title: { ar: "الكويزات", en: "Quizzes" } },
+    { title: { ar: "محاكي التسجيل", en: "Registration simulator" } },
+    { title: { ar: "الحاسبات الأكاديمية", en: "Academic calculators" } },
+    { title: { ar: "تقويم المحاضرات والمواعيد", en: "Lecture and deadline calendar" } },
     { title: { ar: "مشاهدة الجلسات", en: "Session playback" } },
     { title: { ar: "تحميل بعض المحتوى للاستخدام دون اتصال وفق الصلاحيات", en: "Offline download for permitted content" } },
     { title: { ar: "التحكم بسرعة التشغيل", en: "Playback speed control" } },
@@ -113,8 +127,14 @@ export const rafd: Project = {
     },
   ],
   results: {
-    ar: ["لا تُعرض أعداد طلاب أو مؤشرات هنا قبل توفر بيانات موثقة للنشر."],
-    en: ["No student numbers or metrics are shown here until verified data is available for publication."],
+    ar: [
+      "وصلت رفد إلى أكثر من 2,000 مشترك في المنصة، وأكثر من 4,000 طالب ومستفيد.",
+      "ويضم محتواها أكثر من 700 فيديو تعليمي يقدمها أكثر من 5 أكاديميين مختصين.",
+    ],
+    en: [
+      "RAFD has passed 2,000 platform subscribers and reached more than 4,000 students and learners.",
+      "Its content includes 700+ teaching videos delivered by 5+ specialist academics.",
+    ],
   },
   currentStatus: {
     ar: [

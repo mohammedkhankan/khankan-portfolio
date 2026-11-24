@@ -143,11 +143,19 @@ export default async function Home({ params }: Props) {
           <div className="lg:col-span-6 lg:col-start-7">
             <p className="font-display text-h3 font-normal leading-snug">{rafd.tagline[locale]}</p>
             <p className="mt-5 text-lead" style={{ color: rafd.chapter.sub }}>{rafd.summary[locale]}</p>
-            <ul className="mt-8 flex flex-wrap gap-2">
-              {rafd.facts?.map((f) => (
-                <li key={f.label.en} className="rounded-full border border-white/15 px-4 py-2 text-sm">{f.value[locale]}</li>
-              ))}
-            </ul>
+            {rafd.proof && (
+              <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6">
+                {rafd.proof.map((f) => (
+                  <div key={f.label.en} className="border-t border-white/15 pt-4">
+                    <dt className="sr-only">{f.label[locale]}</dt>
+                    <dd>
+                      <span className="block font-display text-h2 font-semibold tabular-nums"><bdi>{f.value[locale]}</bdi></span>
+                      <span className="mt-1 block text-sm" style={{ color: rafd.chapter.sub }}>{f.label[locale]}</span>
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            )}
             <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2">
               <Link href={href(locale, "/projects/rafd")} className="link">{ui.cta.readCase[locale]}</Link>
               <Link href={href(locale, "/projects/rafd-finance")} className="link">{P("rafd-finance").name[locale]}</Link>

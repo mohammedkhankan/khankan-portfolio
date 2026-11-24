@@ -141,7 +141,7 @@ export default async function CaseStudy({ params }: Props) {
 
       <div className={`container-page ${hasImage ? "pt-36 md:pt-56" : "pt-6"}`}>
         {p.proof && (
-          <dl className="grid gap-8 pb-14 sm:grid-cols-3">
+          <dl className={`grid gap-8 pb-14 sm:grid-cols-2 ${p.proof.length === 4 ? "lg:grid-cols-4" : "lg:grid-cols-3"}`}>
             {p.proof.map((f) => (
               <div key={f.label.en}>
                 <dt className="sr-only">{f.label[locale]}</dt>
