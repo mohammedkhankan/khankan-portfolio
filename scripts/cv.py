@@ -20,8 +20,8 @@ D = {
    loc="المملكة العربية السعودية",
    summary="أبني منتجات رقمية تحل مشكلات أعمال حقيقية، وأقودها من الفكرة حتى الإطلاق.",
    h_lead="القيادة", lead=[
-     ("شركة أفق للحلول التقنية والرقمنة", "مؤسس ومدير تنفيذي", "منصات رقمية للأعمال باشتراكات شهرية: ركن للمتاجر، وأفق للمطاعم، ومعازيم للمناسبات."),
-     ("منصة رفد التعليمية", "مؤسس ومدير تنفيذي", "منصة «من طالب، لأجل طالب» بأكثر من 2,000 مشترك و4,000 طالب ومستفيد، وتطبيقا Windows وأندرويد."),
+     ("شركة أفق للحلول التقنية والرقمنة", "مؤسس ومدير تنفيذي", "شركة برمجيات سورية تبني منصات SaaS قابلة للتوسع، مثل ركن وأفق للمطاعم ومعازيم، وتنفّذ مشاريع خاصة حسب طلب العميل."),
+     ("منصة رفد التعليمية", "مؤسس ومدير تنفيذي", "منصة تعليمية تجمع خبرتنا كطلاب مع خبرة الدكاترة في الشرح، وقدّمت نموذجاً ناجحاً للتعليم الجامعي المساند. طوّرنا لها تطبيقات خاصة لويندوز وأندرويد، وتضم أكثر من 2,000 مشترك."),
    ],
    h_proj="مشاريع مختارة", proj=[
      ("ركن", "منصة متاجر إلكترونية", "منصة سورية تتيح للتجار إنشاء متاجرهم الإلكترونية بسهولة: أسعار بالليرة السورية، ودفع عبر شام كاش، ومتجر جاهز للجوال.", "ASP.NET Core · React · PostgreSQL — ruknshop.com"),
@@ -43,8 +43,8 @@ D = {
    loc="Saudi Arabia",
    summary="I build digital products that solve real business problems, and lead them from idea to launch.",
    h_lead="Leadership", lead=[
-     ("OFOQ Technical Solutions & Digitalization", "Founder & CEO", "Subscription platforms for businesses: RUKN for stores, OFOQ for restaurants and MAAZEEM for events."),
-     ("RAFD Educational Platform", "Founder & CEO", "A “by a student, for students” platform with 2,000+ subscribers, 4,000+ learners, and Windows and Android apps."),
+     ("OFOQ Technical Solutions & Digitalization", "Founder & CEO", "A Syrian software company building scalable SaaS platforms such as RUKN, OFOQ for Restaurants and MAAZEEM, and delivering custom projects to client order."),
+     ("RAFD Educational Platform", "Founder & CEO", "A learning platform that combines our experience as students with lecturers' teaching expertise, and became a successful model for university learning support. We built dedicated Windows and Android apps for it; it has 2,000+ subscribers."),
    ],
    h_proj="Selected projects", proj=[
      ("RUKN", "E-commerce platform", "A Syrian platform that lets merchants open their own online store easily: prices in Syrian pounds, payment via Sham Cash, mobile-ready.", "ASP.NET Core · React · PostgreSQL — ruknshop.com"),

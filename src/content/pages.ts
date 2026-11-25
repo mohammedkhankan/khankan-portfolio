@@ -67,8 +67,8 @@ export const leadership = [
     org: { ar: "شركة أفق للحلول التقنية والرقمنة", en: "OFOQ Technical Solutions & Digitalization" } as L,
     role: { ar: "مؤسس ومدير تنفيذي", en: "Founder & CEO" } as L,
     body: {
-      ar: "منتجات SaaS تحل مشكلات متكررة لدى الأعمال الصغيرة والمتوسطة، بباقات بأسعار مناسبة.",
-      en: "SaaS products for problems small and mid-sized businesses face again and again, in fairly priced plans.",
+      ar: "شركة برمجيات سورية تبني منصات SaaS قابلة للتوسع، مثل ركن وأفق للمطاعم ومعازيم، وتنفّذ مشاريع خاصة حسب طلب العميل.",
+      en: "A Syrian software company building scalable SaaS platforms such as RUKN, OFOQ for Restaurants and MAAZEEM, and delivering custom projects to client order.",
     } as L,
     points: {
       ar: ["رؤية المنتجات واستراتيجيتها", "المعمارية والقرارات الهندسية", "قيادة التطوير والاختبار والنشر", "النموذج التجاري والباقات"],
@@ -80,8 +80,8 @@ export const leadership = [
     org: { ar: "رفد التعليمية", en: "RAFD Educational Platform" } as L,
     role: { ar: "مؤسس ومدير تنفيذي", en: "Founder & CEO" } as L,
     body: {
-      ar: "منصة تعليمية «من طالب، لأجل طالب» لطلاب الجامعة الافتراضية السورية، بأكثر من 2,000 مشترك.",
-      en: "A \"by a student, for students\" learning platform for Syrian Virtual University students, with 2,000+ subscribers.",
+      ar: "منصة تعليمية تجمع خبرتنا كطلاب مع خبرة الدكاترة في الشرح، وقدّمت نموذجاً ناجحاً للتعليم الجامعي المساند. طوّرنا لها تطبيقات خاصة لويندوز وأندرويد، وتضم أكثر من 2,000 مشترك.",
+      en: "A learning platform that combines our experience as students with lecturers' teaching expertise, and became a successful model for university learning support. We built dedicated Windows and Android apps for it; it has 2,000+ subscribers.",
     } as L,
     points: {
       ar: ["التخطيط والقرارات الاستراتيجية", "التواصل مع الأكاديميين والتعاقدات", "قيادة تطوير الخدمات والتطبيقات", "تصميم وتطوير النظام المالي الداخلي"],
@@ -127,8 +127,8 @@ export const about = {
       k: { ar: "التأسيس", en: "Founding" },
       t: { ar: "رفد", en: "RAFD" },
       p: {
-        ar: ["أسس رفد للتعليم المساند، وصارت تضم أكثر من 2,000 مشترك. دور قيادي بقدر ما هو تقني: أكاديميون وتعاقدات وتطبيقات ونظام مالي داخلي بناه بنفسه."],
-        en: ["He founded RAFD for supplementary learning; it now has 2,000+ subscribers. As much leadership as engineering: academics, contracts, apps and an internal finance system he built himself."],
+        ar: ["أسس رفد، منصة تعليمية تجمع خبرة الطلاب مع خبرة الدكاترة في الشرح، وقدّمت نموذجاً ناجحاً للتعليم الجامعي المساند بأكثر من 2,000 مشترك. قاد التعاقد مع الأكاديميين، وتطوير تطبيقات ويندوز وأندرويد، وبنى النظام المالي الداخلي بنفسه."],
+        en: ["He founded RAFD, a learning platform combining students' experience with lecturers' teaching expertise, which became a successful model for university learning support with 2,000+ subscribers. He led work with academics, built the Windows and Android apps, and wrote the internal finance system himself."],
       },
     },
     {
@@ -136,11 +136,11 @@ export const about = {
       t: { ar: "شركة أفق للحلول التقنية والرقمنة", en: "OFOQ Technical Solutions & Digitalization" },
       p: {
         ar: [
-          "ثم أسس شركة أفق للحلول التقنية والرقمنة لبناء منتجات SaaS: ركن للمتاجر، وأفق للمطاعم، ومعازيم للمناسبات.",
+          "ثم أسس شركة أفق للحلول التقنية والرقمنة، شركة برمجيات سورية تبني منصات SaaS قابلة للتوسع (ركن للمتاجر، وأفق للمطاعم، ومعازيم للمناسبات) وتنفّذ مشاريع خاصة حسب طلب العميل مثل موقع الطيف.",
           "الفكرة ليست بيع برنامج لمرة واحدة، بل منتجات تحل مشكلات متكررة، يستخدمها عدة عملاء، بباقات مناسبة، وتستمر في التطور مع الحفاظ على جودة هندسية عالية ونمو تجاري طويل المدى.",
         ],
         en: [
-          "Then he founded OFOQ Technical Solutions & Digitalization to build SaaS products: RUKN for stores, OFOQ for restaurants and MAAZEEM for events.",
+          "Then he founded OFOQ Technical Solutions & Digitalization, a Syrian software company building scalable SaaS platforms (RUKN for stores, OFOQ for restaurants, MAAZEEM for events) and custom projects to client order, such as the AL TAYF website.",
           "The idea isn't one-off software sales but products that solve recurring problems, serve many customers in fair tiers, and keep evolving — with high engineering standards and long-term commercial growth.",
         ],
       },
