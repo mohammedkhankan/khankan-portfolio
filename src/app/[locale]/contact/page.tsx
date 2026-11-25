@@ -46,7 +46,7 @@ export default async function ContactPage({ params }: Props) {
                 <ArrowUpRight className={rtl ? "-scale-x-100" : ""} />
               </span>
               <span>
-                <span className="block font-display text-h2">{c.name}</span>
+                <span className="block font-display text-h3 font-semibold">{c.name}</span>
                 <span className="mt-1 block text-sm opacity-75" dir="ltr">{c.handle}</span>
               </span>
             </ExternalLink>

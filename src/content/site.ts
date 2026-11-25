@@ -28,7 +28,7 @@ export const nameVariants = ["Mohammed Khankan", "محمد خانكان", "Moham
 
 export const links = {
   /** Work email. Leave empty to hide it everywhere; set it and rebuild to show it. */
-  email: "",
+  email: "engmohammedkhankan@gmail.com",
   github: "https://github.com/mohammedkhankan",
   linkedin: "https://www.linkedin.com/in/mohammed-tarek-533a2a214/",
   whatsapp: "https://wa.me/966510371924",
