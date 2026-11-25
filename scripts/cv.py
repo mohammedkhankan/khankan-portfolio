@@ -8,7 +8,9 @@ FONTS = ROOT / "src" / "fonts"
 OUT = ROOT / "public" / "cv"; OUT.mkdir(parents=True, exist_ok=True)
 PORTRAIT = ROOT / "public" / "portrait" / "portrait-480.webp"
 SITE = "mohammedkhankan.github.io/khankan-portfolio"
-EMAIL = ""  # set when the personal email is ready
+import re as _re
+_site = (ROOT / "src" / "content" / "site.ts").read_text(encoding="utf-8")
+EMAIL = (_re.search(r'email: "([^"]*)"', _site) or [None, ""])[1]  # from links.email in site.ts
 
 D = {
  "ar": dict(dir="rtl", name="محمد خانكان", title="مؤسس ومدير تنفيذي · مهندس برمجيات ومطوّر منتجات SaaS",

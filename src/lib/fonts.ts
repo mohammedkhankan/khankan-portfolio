@@ -19,21 +19,21 @@ export const displayAr = localFont({
 export const bodyLatin = localFont({
   src: [
     { path: "../fonts/ibm-plex-sans-arabic-latin-400-normal.woff2", weight: "400" },
-    { path: "../fonts/ibm-plex-sans-arabic-latin-500-normal.woff2", weight: "500" },
     { path: "../fonts/ibm-plex-sans-arabic-latin-600-normal.woff2", weight: "600" },
   ],
   variable: "--font-body-latin",
   display: "swap",
   adjustFontFallback: false,
+  preload: false,
 });
 export const bodyAr = localFont({
   src: [
     { path: "../fonts/ibm-plex-sans-arabic-arabic-400-normal.woff2", weight: "400" },
-    { path: "../fonts/ibm-plex-sans-arabic-arabic-500-normal.woff2", weight: "500" },
     { path: "../fonts/ibm-plex-sans-arabic-arabic-600-normal.woff2", weight: "600" },
   ],
   variable: "--font-body-ar",
   display: "swap",
+  preload: false,
 });
 
 export const fontVars = [displayLatin, displayAr, bodyLatin, bodyAr].map((f) => f.variable).join(" ");

@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const p = getProject(slug);
   if (!p || !isLocale(locale)) return {};
-  return pageMeta({ locale, path: `/projects/${slug}`, title: `${p.name[locale]} — ${p.tagline[locale]}`, description: p.summary[locale], ogImage: `/og/${slug}.png` });
+  return pageMeta({ locale, path: `/projects/${slug}`, title: `${p.name[locale]} — ${p.tagline[locale]}`, description: p.summary[locale], ogImage: `/og/${slug}-${locale}.png` });
 }
 
 function Block({ id, label, children, locale, wide = false }: { id: string; label: L; children: React.ReactNode; locale: Locale; wide?: boolean }) {

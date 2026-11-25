@@ -35,7 +35,7 @@ export function Footer({ locale }: { locale: Locale }) {
         <div className="md:col-span-4">
           <p className="mb-3 text-sm text-muted">{ui.nav.contact[locale]}</p>
           <ul className="grid gap-1 text-sm">
-            {([["WhatsApp", links.whatsapp], ["LinkedIn", links.linkedin], ["GitHub", links.github]] as const).map(([label, url]) => (
+            {([["WhatsApp", links.whatsapp], ...(links.email ? [["Email", `mailto:${links.email}`] as const] : []), ["LinkedIn", links.linkedin], ["GitHub", links.github]] as const).map(([label, url]) => (
               <li key={label}>
                 <ExternalLink locale={locale} href={url} className="inline-flex min-h-9 items-center hover:text-glow">{label}</ExternalLink>
               </li>

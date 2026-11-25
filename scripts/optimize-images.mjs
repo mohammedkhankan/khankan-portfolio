@@ -72,10 +72,10 @@ async function processPortrait() {
   if (files.includes("cutout.png")) {
     const cut = await sharp(path.join(dir, "cutout.png")).trim({ threshold: 1 }).toBuffer({ resolveWithObject: true });
     const cs = [];
-    for (const width of [520, 900, cut.info.width]) {
+    for (const width of [520, 700, 900, cut.info.width]) {
       const real = Math.min(width, cut.info.width);
       if (cs.includes(real)) continue;
-      await sharp(cut.data).resize({ width: real }).webp({ quality: 86, alphaQuality: 90 }).toFile(path.join(out, `cutout-${real}.webp`));
+      await sharp(cut.data).resize({ width: real }).webp({ quality: 78, alphaQuality: 85, effort: 6 }).toFile(path.join(out, `cutout-${real}.webp`));
       cs.push(real);
     }
     cutout = { width: cut.info.width, height: cut.info.height, sizes: cs };

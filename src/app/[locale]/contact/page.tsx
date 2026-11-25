@@ -21,6 +21,7 @@ export default async function ContactPage({ params }: Props) {
   const rtl = locale === "ar";
   const channels = [
     { name: "WhatsApp", url: links.whatsapp, d: contact.channels.whatsapp, handle: "+966 51 037 1924" },
+    ...(links.email ? [{ name: locale === "ar" ? "البريد" : "Email", url: `mailto:${links.email}`, d: { ar: "للعمل والتعاون", en: "For work and partnerships" }, handle: links.email }] : []),
     { name: "LinkedIn", url: links.linkedin, d: contact.channels.linkedin, handle: "mohammed-tarek-533a2a214" },
     { name: "GitHub", url: links.github, d: contact.channels.github, handle: "mohammedkhankan" },
   ];
@@ -32,7 +33,7 @@ export default async function ContactPage({ params }: Props) {
         <p className="mt-6 max-w-2xl text-lead text-muted">{contact.lead[locale]}</p>
       </header>
 
-      <ul className="grid gap-4 md:grid-cols-3">
+      <ul className={`grid gap-4 sm:grid-cols-2 ${links.email ? "lg:grid-cols-4" : "md:grid-cols-3"}`}>
         {channels.map((c, i) => (
           <li key={c.name}>
             <ExternalLink

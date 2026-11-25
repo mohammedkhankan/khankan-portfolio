@@ -23,7 +23,12 @@ export const person = {
   portrait: true as boolean,
 };
 
+/** Other ways people write the name — used in structured data so search engines connect them. */
+export const nameVariants = ["Mohammed Khankan", "محمد خانكان", "Mohamed Khankan", "Muhammad Khankan", "Mohammad Khankan", "Mohammed Tarek Khankan", "محمد طارق خانكان"];
+
 export const links = {
+  /** Work email. Leave empty to hide it everywhere; set it and rebuild to show it. */
+  email: "",
   github: "https://github.com/mohammedkhankan",
   linkedin: "https://www.linkedin.com/in/mohammed-tarek-533a2a214/",
   whatsapp: "https://wa.me/966510371924",

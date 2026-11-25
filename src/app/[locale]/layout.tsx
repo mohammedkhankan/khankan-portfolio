@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { locales, type Locale } from "@/content/types";
-import { person, links, ui } from "@/content/site";
+import { person, links, nameVariants, ui } from "@/content/site";
 import { dirOf, isLocale } from "@/lib/i18n";
 import { fontVars } from "@/lib/fonts";
 import { themeScript } from "@/lib/theme-script";
@@ -37,7 +37,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     authors: [{ name: person.name.en }],
     creator: person.name.en,
     formatDetection: { telephone: false },
-    icons: { icon: asset("/favicon.svg") },
+    icons: { icon: [{ url: asset("/favicon.svg"), type: "image/svg+xml" }, { url: asset("/icon-192.png"), sizes: "192x192", type: "image/png" }], apple: asset("/apple-touch-icon.png") },
+    manifest: asset("/manifest.webmanifest"),
   };
 }
 
@@ -55,7 +56,8 @@ export default async function LocaleLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     name: person.name[locale],
-    alternateName: person.name[locale === "ar" ? "en" : "ar"],
+    alternateName: nameVariants.filter((n) => n !== person.name[locale]),
+    ...(links.email ? { email: `mailto:${links.email}` } : {}),
     jobTitle: locale === "ar" ? "مؤسس ومدير تنفيذي، مهندس برمجيات" : "Founder & CEO, Software Engineer",
     url: `${SITE_URL}/${locale}/`,
     image: person.portrait ? `${SITE_URL}/portrait/portrait-800.webp` : undefined,

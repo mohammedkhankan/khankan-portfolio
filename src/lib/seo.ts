@@ -15,7 +15,7 @@ export function pageMeta(opts: {
 }): Metadata {
   const { locale, path, title, description } = opts;
   const url = SITE_URL + href(locale, path);
-  const og = SITE_URL + (opts.ogImage ?? "/og/default.png");
+  const og = SITE_URL + (opts.ogImage ?? `/og/default-${locale}.png`);
   return {
     title,
     description,
