@@ -22,8 +22,8 @@ export const ofoq: Project = {
   },
   status: "trial",
   statusNote: {
-    ar: "منشور للتجربة، وجرى اختباره في مطعم فعلي.",
-    en: "Deployed for trial and tested in a working restaurant.",
+    ar: "في مرحلة التجربة، و7 مطاعم تعمل عليه حالياً.",
+    en: "In trial, with 7 restaurants running on it now.",
   },
   stack: [
     { name: "Next.js 16" },
@@ -40,13 +40,13 @@ export const ofoq: Project = {
   proof: [
     { value: { ar: "4 واجهات", en: "4 role views" }, label: { ar: "الإدارة، الكاشير، النادل، والمطبخ", en: "Owner, cashier, waiter and kitchen" } },
     { value: { ar: "6 كيانات", en: "6 entities" }, label: { ar: "طاولة، جلسة، طلب، تذكرة، حساب، دفعة", en: "Table, session, order, ticket, bill, payment" } },
-    { value: { ar: "مطعم فعلي", en: "A real restaurant" }, label: { ar: "منشور للتجربة ومختبر في التشغيل", en: "Deployed for trial and field-tested" } },
+    { value: { ar: "7 مطاعم", en: "7 restaurants" }, label: { ar: "تعمل عليه حالياً ضمن التجربة", en: "running on it now in the trial" } },
   ],
   mediaNote: { ar: "لقطات حقيقية من التطبيق، ببيانات تجريبية لأغراض العرض.", en: "Real screens from the app, with demo data for display." },
   facts: [
     { label: { ar: "النموذج التجاري", en: "Business model" }, value: { ar: "اشتراكات شهرية وسنوية بباقات متعددة", en: "Monthly & yearly plans, multiple tiers" } },
     { label: { ar: "التجربة المجانية", en: "Free trial" }, value: { ar: "30 يوماً", en: "30 days" } },
-    { label: { ar: "الاختبار", en: "Field test" }, value: { ar: "مطعم فعلي", en: "A working restaurant" } },
+    { label: { ar: "المطاعم", en: "Restaurants" }, value: { ar: "7 ضمن التجربة حالياً", en: "7 in the current trial" } },
   ],
   context: {
     ar: [
@@ -161,17 +161,17 @@ export const ofoq: Project = {
   ],
   results: {
     ar: [
-      "النظام منشور للتجربة، وجرى اختباره في مطعم فعلي.",
+      "7 مطاعم تعمل على أفق حالياً ضمن مرحلة التجربة.",
       "لا تُعرض هنا أرقام أداء أو قدرة تحمّل محددة لأنها لم تُقَس بعد بشكل موثق.",
     ],
     en: [
-      "The system is deployed for trial and has been tested in a working restaurant.",
+      "7 restaurants are running on OFOQ in the current trial.",
       "No performance or load figures are shown here because none have been formally measured yet.",
     ],
   },
   currentStatus: {
-    ar: ["منشور للتجربة ومتاح للمطاعم ضمن فترة تجربة مجانية."],
-    en: ["Deployed for trial and available to restaurants on a free trial."],
+    ar: ["في مرحلة التجربة مع 7 مطاعم، ومتاح بتجربة مجانية 30 يوماً."],
+    en: ["In trial with 7 restaurants, and available with a 30-day free trial."],
   },
   next: {
     ar: ["قياس الأداء بصورة موثقة تحت أحمال تشغيلية واقعية، وتوسيع التقارير، وتطوير التجربة بناءً على ملاحظات المطاعم المستخدمة."],

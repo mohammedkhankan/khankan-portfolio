@@ -249,3 +249,35 @@ export const privacy = {
     ],
   } as LL,
 };
+
+/** What Mohammed builds for clients, and how working together starts. */
+export const services = {
+  title: { ar: "ماذا أبني لك", en: "What I build for you" } as L,
+  items: [
+    {
+      t: { ar: "منتج SaaS", en: "A SaaS product" },
+      d: { ar: "منصة اشتراكات تخدم عملاء كثيرين، مثل ركن وأفق ومعازيم.", en: "A subscription platform serving many customers, like RUKN, OFOQ and MAAZEEM." },
+    },
+    {
+      t: { ar: "نظام أعمال", en: "A business system" },
+      d: { ar: "نظام داخلي يرتب عملياتك وأموالك وفريقك، مثل النظام المالي لرفد.", en: "An internal system for your operations, money and team, like RAFD's finance system." },
+    },
+    {
+      t: { ar: "موقع شركة", en: "A company website" },
+      d: { ar: "هوية رقمية سريعة تعرض أعمالك وتظهر في البحث، مثل موقع الطيف.", en: "A fast digital identity that shows your work and is found in search, like AL TAYF." },
+    },
+  ] as { t: L; d: L }[],
+  stepsTitle: { ar: "كيف نبدأ", en: "How we start" } as L,
+  steps: [
+    { ar: "محادثة قصيرة لفهم احتياجك", en: "A short call to understand your need" },
+    { ar: "نطاق عمل وعرض واضح", en: "A clear scope and proposal" },
+    { ar: "بناء وإطلاق ومتابعة", en: "Build, launch and support" },
+  ] as L[],
+};
+
+/**
+ * Client testimonials. The section appears on the home page only when this list
+ * has entries. Add real quotes only, with the client's permission.
+ * Example: { quote: { ar: "…", en: "…" }, name: { ar: "…", en: "…" }, role: { ar: "صاحب متجر روان", en: "Owner, Rawan" }, project: "rukn" }
+ */
+export const testimonials: { quote: L; name: L; role: L; project?: string }[] = [];

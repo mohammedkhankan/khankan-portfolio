@@ -63,6 +63,7 @@ export const ui = {
     github: { ar: "GitHub", en: "GitHub" },
     nextProject: { ar: "المشروع التالي", en: "Next project" },
     moreAbout: { ar: "القصة كاملة", en: "The full story" },
+    cv: { ar: "تحميل السيرة الذاتية (PDF)", en: "Download CV (PDF)" },
   },
   labels: {
     type: { ar: "نوع المنتج", en: "Product type" },

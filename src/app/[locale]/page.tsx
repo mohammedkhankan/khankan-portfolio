@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import type { Locale, Project } from "@/content/types";
 import { links, person, ui } from "@/content/site";
-import { home, leadership } from "@/content/pages";
+import { home, leadership, services, testimonials } from "@/content/pages";
 import { getProject, projects } from "@/content/projects";
 import { href, isLocale } from "@/lib/i18n";
 import { pageMeta } from "@/lib/seo";
@@ -165,6 +165,53 @@ export default async function Home({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* ───────── WHAT I BUILD FOR YOU ───────── */}
+      <section className="section-y" aria-labelledby="services">
+        <div className="container-page">
+          <h2 id="services" className="text-h2">{services.title[locale]}</h2>
+          <ul className="mt-12 grid gap-4 md:grid-cols-3">
+            {services.items.map((s) => (
+              <li key={s.t.en} className="flex flex-col rounded-[var(--radius-xl)] bg-surface p-7 ring-1 ring-line md:p-9">
+                <h3 className="font-display text-h3">{s.t[locale]}</h3>
+                <p className="mt-3 text-muted">{s.d[locale]}</p>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-12 grid items-center gap-8 border-t border-line pt-10 lg:grid-cols-12">
+            <h3 className="font-display text-h4 lg:col-span-2">{services.stepsTitle[locale]}</h3>
+            <ol className="grid gap-6 sm:grid-cols-3 lg:col-span-7">
+              {services.steps.map((st, i) => (
+                <li key={st.en} className="flex items-baseline gap-3">
+                  <span className="grid size-8 shrink-0 place-items-center rounded-full bg-glow text-sm font-semibold text-night">{i + 1}</span>
+                  <span>{st[locale]}</span>
+                </li>
+              ))}
+            </ol>
+            <div className="lg:col-span-3 lg:text-end">
+              <ExternalLink locale={locale} href={links.whatsapp} className="btn btn-solid">{ui.cta.whatsapp[locale]}</ExternalLink>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────── CLIENTS (only when real quotes exist) ───────── */}
+      {testimonials.length > 0 && (
+        <section className="section-y bg-surface" aria-labelledby="clients">
+          <div className="container-page">
+            <h2 id="clients" className="text-h2">{locale === "ar" ? "ماذا يقول العملاء" : "What clients say"}</h2>
+            <ul className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {testimonials.map((q, i) => (
+                <li key={i} className="flex flex-col rounded-[var(--radius-xl)] bg-bg p-7 ring-1 ring-line">
+                  <blockquote className="text-lead">“{q.quote[locale]}”</blockquote>
+                  <p className="mt-6 font-medium">{q.name[locale]}</p>
+                  <p className="text-sm text-muted">{q.role[locale]}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* ───────── HOW I WORK ───────── */}
       <section className="section-y bg-surface">

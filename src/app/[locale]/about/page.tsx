@@ -6,6 +6,7 @@ import { about } from "@/content/pages";
 import { href, isLocale } from "@/lib/i18n";
 import { pageMeta } from "@/lib/seo";
 import { CutoutPortrait } from "@/components/Media";
+import { asset } from "@/lib/base";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -51,6 +52,7 @@ export default async function AboutPage({ params }: Props) {
       <div className="container-page mt-6 flex flex-wrap gap-3">
         <Link href={href(locale, "/projects")} className="btn btn-solid">{ui.cta.viewWork[locale]}</Link>
         <Link href={href(locale, "/experience")} className="btn btn-line">{ui.nav.experience[locale]}</Link>
+        <a href={asset(`/cv/mohammed-khankan-cv-${locale}.pdf`)} download className="btn btn-line">{ui.cta.cv[locale]}</a>
       </div>
     </div>
   );

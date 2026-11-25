@@ -38,9 +38,9 @@ export const rukn: Project = {
   accent: { dark: "#86b98f", light: "#2f6b3b" },
   chapter: { bg: "linear-gradient(180deg,#f5f3ef 0%,#e5eae6 100%)", ink: "#123d26", sub: "#4a5d52", dark: false },
   proof: [
-    { value: { ar: "متعدد التجار", en: "Multi-merchant" }, label: { ar: "منصة واحدة تخدم متاجر كثيرة ببيانات معزولة", en: "One platform, many stores, isolated data" } },
-    { value: { ar: "30 يوماً", en: "30 days" }, label: { ar: "تجربة مجانية قبل الاشتراك", en: "Free trial before subscribing" } },
-    { value: { ar: "متجر حقيقي", en: "A live store" }, label: { ar: "روان للخدمات المكتبية يعمل على المنصة", en: "Rawan Office Services runs on the platform" } },
+    { value: { ar: "10 متاجر", en: "10 stores" }, label: { ar: "خلال الانطلاق الأول", en: "in the first launch" } },
+    { value: { ar: "30 يوماً", en: "30 days" }, label: { ar: "تجربة مجانية قبل الاشتراك", en: "free trial before subscribing" } },
+    { value: { ar: "متعدد التجار", en: "Multi-merchant" }, label: { ar: "منصة واحدة ببيانات معزولة لكل متجر", en: "one platform, isolated data per store" } },
   ],
   mediaNote: { ar: "لقطات حقيقية من ركن: لوحة حساب تاجر تجريبي، وواجهة متجر روان. البيانات الخاصة مطموسة.", en: "Real screens from RUKN: a demo merchant account's dashboard and Rawan's storefront. Private data is blurred." },
   facts: [
@@ -174,11 +174,11 @@ export const rukn: Project = {
   ],
   results: {
     ar: [
-      "المنصة تعمل، ومتجر روان للخدمات المكتبية متجر حقيقي قائم عليها.",
+      "وصلت ركن إلى 10 متاجر خلال انطلاقها الأول، منها متجر روان للخدمات المكتبية.",
       "لا تُعرض أرقام مبيعات أو أعداد متاجر لعدم وجود بيانات موثقة للنشر.",
     ],
     en: [
-      "The platform is live, and Rawan Office Services is a real store running on it.",
+      "RUKN reached 10 stores in its first launch, including Rawan Office Services.",
       "No sales figures or store counts are shown, as no verified data is available for publication.",
     ],
   },

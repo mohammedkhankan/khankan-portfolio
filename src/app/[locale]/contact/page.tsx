@@ -6,6 +6,7 @@ import { isLocale } from "@/lib/i18n";
 import { pageMeta } from "@/lib/seo";
 import { ExternalLink } from "@/components/Footer";
 import { ArrowUpRight } from "@/components/Icons";
+import { asset } from "@/lib/base";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -60,7 +61,10 @@ export default async function ContactPage({ params }: Props) {
           </div>
         ))}
       </section>
-      <p className="mt-10 text-sm text-muted">{person.location[locale]}</p>
+      <div className="mt-10 flex flex-wrap items-center justify-between gap-4">
+        <p className="text-sm text-muted">{person.location[locale]}</p>
+        <a href={asset(`/cv/mohammed-khankan-cv-${locale}.pdf`)} download className="btn btn-line">{ui.cta.cv[locale]}</a>
+      </div>
     </div>
   );
 }
