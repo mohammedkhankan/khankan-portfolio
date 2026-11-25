@@ -50,21 +50,21 @@ export const ofoq: Project = {
   ],
   context: {
     ar: [
-      "كثير من الأنظمة المعروضة للمطاعم تتوقف عند المنيو الإلكتروني أو نقطة البيع. لكن المطعم في ساعة الذروة منظومة كاملة: طاولات تُفتح وتُغلق، نُدُل يضيفون طلبات، مطبخ يحضّر، وكاشير يحاسب — وكل ذلك في الوقت نفسه.",
+      "المطعم في ساعة الذروة منظومة كاملة: طاولات وطلبات ومطبخ وكاشير في الوقت نفسه. أفق يقدم أدوات تشغيل احترافية بتكلفة مناسبة.",
       "أفق صُمم ليقدم أدوات تشغيل احترافية للمطاعم بتكلفة مناسبة، مع تركيز خاص على المطاعم ذات الضغط التشغيلي المرتفع.",
     ],
     en: [
-      "Many restaurant products stop at a digital menu or a point of sale. But a restaurant at peak hour is a whole system: tables opening and closing, waiters adding items, a kitchen preparing, a cashier settling — all at once.",
+      "A restaurant at peak hour is a whole system: tables, orders, kitchen and cashier at once. OFOQ gives it professional operating tools at a fair price.",
       "OFOQ was designed to give restaurants professional operating tools at a fair price, with particular attention to high-pressure service.",
     ],
   },
   challenge: {
     ar: [
-      "الخطأ الشائع في أنظمة المطاعم هو اعتبار الطاولة والحساب شيئاً واحداً. عندها يصبح تحرير الطاولة لزبون جديد مخاطرة بفقدان حساب الزبون السابق، أو خلط زيارتين في فاتورة واحدة.",
+      "معظم الأنظمة تعتبر الطاولة والحساب شيئاً واحداً، فيضيع حساب الزبون السابق أو تختلط زيارتان. وحالات الدفع المكرر وتعارض الحجوزات ليست نادرة.",
       "وفوق ذلك، الحالات الحدّية في المطعم ليست نادرة: دفعة تُضغط مرتين، حجزان على الطاولة نفسها، موظف تتغير صلاحياته أثناء الوردية، طبق ما زال يُحضَّر بعد أن دُفع الحساب.",
     ],
     en: [
-      "The classic mistake in restaurant software is treating a table and a bill as the same thing. Then freeing a table for new guests risks losing the previous party's bill, or merging two visits into one invoice.",
+      "Most systems treat a table and its bill as one thing, so bills get lost or two visits merge. Double payments and clashing reservations aren't rare either.",
       "And edge cases in a restaurant aren't rare: a payment tapped twice, two reservations for the same table, a staff member whose permissions change mid-shift, a dish still being prepared after the bill is paid.",
     ],
   },

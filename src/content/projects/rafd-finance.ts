@@ -31,19 +31,19 @@ export const rafdFinance: Project = {
   ],
   context: {
     ar: [
-      "مع نمو رفد أصبحت الجوانب المالية أكثر تشعباً: طلاب بحالات تسجيل واشتراك مختلفة، ومدفوعات تحتاج تفعيلاً، ومستحقات للمدرّسين، ومصاريف، وأرباح توزَّع بين الشركاء — وكل ذلك بأكثر من عملة.",
+      "مع نمو رفد تشعّبت أموالها: اشتراكات ومدفوعات ومستحقات مدرّسين ومصاريف وأرباح شركاء — بثلاث عملات.",
     ],
     en: [
-      "As RAFD grew, its finances branched out: students in different registration and subscription states, payments that need activating, teacher payouts, expenses, and profits split between partners — all in more than one currency.",
+      "As RAFD grew, its money branched out: subscriptions, payments, teacher payouts, expenses and partner profits — in three currencies.",
     ],
   },
   challenge: {
     ar: [
-      "عندما تُدار هذه العمليات يدوياً أو عبر جداول متفرقة، يصبح كل فصل دراسي جديد عبئاً، ويصعب على الإدارة أن ترى الصورة الكاملة: ماذا دخل؟ ماذا خرج؟ لمن المستحق؟ وما الذي تبقّى فعلاً؟",
+      "بالجداول المتفرقة يصعب أن ترى الصورة كاملة: ماذا دخل، وماذا خرج، ولمن المستحق.",
       "التعامل مع الدولار والريال والليرة السورية معاً يضيف طبقة أخرى من التعقيد في الحساب والتقارير.",
     ],
     en: [
-      "Run by hand or across scattered spreadsheets, every new term becomes a burden, and management struggles to see the whole picture: what came in, what went out, who is owed, and what actually remains.",
+      "Across scattered spreadsheets it's hard to see the whole picture: what came in, what went out, and who is owed.",
       "Handling USD, SAR and SYP together adds another layer of complexity to both the arithmetic and the reporting.",
     ],
   },
@@ -99,8 +99,8 @@ export const rafdFinance: Project = {
     },
   ],
   results: {
-    ar: ["القيمة الأساسية تشغيلية: تحويل عمليات مالية معقدة ومتكررة إلى منظومة موحدة تساعد الإدارة على فهم النتائج. لا تُنشر أي أرقام مالية."],
-    en: ["The core value is operational: turning complex, recurring financial work into one system that helps management understand results. No financial figures are published."],
+    ar: ["القيمة تشغيلية: منظومة واحدة تساعد الإدارة على فهم النتائج. لا تُنشر أي أرقام مالية."],
+    en: ["The value is operational: one system that helps management understand results. No financial figures are published."],
   },
   currentStatus: {
     ar: ["نظام داخلي مستخدم لدى فريق رفد."],

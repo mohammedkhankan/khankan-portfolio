@@ -79,6 +79,7 @@ export const ui = {
     projectsCount: { ar: "مشاريع", en: "projects" },
   },
   sections: {
+    story: { ar: "القصة", en: "The story" },
     context: { ar: "السياق", en: "Context" },
     challenge: { ar: "التحدي", en: "The challenge" },
     strategy: { ar: "استراتيجية المنتج", en: "Product strategy" },

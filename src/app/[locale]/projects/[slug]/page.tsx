@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { locales, type L, type LL, type Locale, type Project } from "@/content/types";
+import { locales, type L, type Locale, type Project } from "@/content/types";
 import { person, ui } from "@/content/site";
 import { getProject, nextProject, projects } from "@/content/projects";
 import { href, isLocale } from "@/lib/i18n";
@@ -11,6 +11,7 @@ import { Diagram } from "@/components/Diagrams";
 import { JsonLd } from "@/components/JsonLd";
 import { ExternalLink } from "@/components/Footer";
 import { ArrowUpRight } from "@/components/Icons";
+import { CountUp } from "@/components/CountUp";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -36,14 +37,6 @@ function Block({ id, label, children, locale, wide = false }: { id: string; labe
         <div className={wide ? "md:col-span-8 lg:col-span-9" : "md:col-span-8 lg:col-span-7"}>{children}</div>
       </div>
     </section>
-  );
-}
-
-function Paras({ v, locale, lead = false }: { v: LL; locale: Locale; lead?: boolean }) {
-  return (
-    <div className={`prose-case ${lead ? "text-lead" : ""}`}>
-      {v[locale].map((t, i) => <p key={i} className="text-ink/90">{t}</p>)}
-    </div>
   );
 }
 
@@ -146,7 +139,7 @@ export default async function CaseStudy({ params }: Props) {
               <div key={f.label.en}>
                 <dt className="sr-only">{f.label[locale]}</dt>
                 <dd>
-                  <span className="block font-display text-h2 font-semibold tabular-nums"><bdi>{f.value[locale]}</bdi></span>
+                  <span className="block font-display text-h2 font-semibold tabular-nums"><bdi><CountUp value={f.value[locale]} /></bdi></span>
                   <span className="mt-2 block text-muted">{f.label[locale]}</span>
                 </dd>
               </div>
@@ -154,14 +147,14 @@ export default async function CaseStudy({ params }: Props) {
           </dl>
         )}
 
-        <Block id="context" label={S.context} locale={locale}><Paras v={p.context} locale={locale} lead /></Block>
-        <Block id="challenge" label={S.challenge} locale={locale}><Paras v={p.challenge} locale={locale} /></Block>
-        <Block id="strategy" label={S.strategy} locale={locale}>
-          <ul className="prose-case">{p.strategy[locale].map((t, i) => <li key={i} className="text-ink/90">{t}</li>)}</ul>
+        {/* Story: the one-paragraph why, then what was hard. */}
+        <Block id="story" label={S.story} locale={locale}>
+          <p className="text-lead text-ink/90">{p.context[locale][0]}</p>
+          <p className="mt-5 text-muted">{p.challenge[locale][0]}</p>
         </Block>
         <Block id="solution" label={S.solution} locale={locale} wide>
-          <Paras v={p.solution} locale={locale} lead />
-          <ul className="mt-10 flex flex-wrap gap-2">
+          <p className="max-w-3xl text-lead text-ink/90">{p.solution[locale][0]}</p>
+          <ul className="mt-8 flex flex-wrap gap-2">
             {p.features.map((f, i) => <li key={i} className="rounded-full bg-raise px-4 py-2 text-sm">{f.title[locale]}</li>)}
           </ul>
         </Block>
@@ -179,55 +172,57 @@ export default async function CaseStudy({ params }: Props) {
 
       <div className="container-page">
         <Block id="engineering" label={S.engineering} locale={locale} wide>
-          <Paras v={p.engineering} locale={locale} />
+          <p className="max-w-3xl text-ink/90">{p.engineering[locale][0]}</p>
           {p.stack.length > 0 && (
-            <ul className="mt-8 flex flex-wrap gap-2" aria-label={ui.labels.stack[locale]}>
-              {p.stack.map((s) => (
-                <li key={s.name} className="tag">
-                  {s.name}
-                  {s.note && <span className="opacity-80" dir={locale === "ar" ? "rtl" : "ltr"}>({s.note[locale]})</span>}
-                </li>
-              ))}
+            <ul className="mt-6 flex flex-wrap gap-2" aria-label={ui.labels.stack[locale]}>
+              {p.stack.map((s) => <li key={s.name} className="tag">{s.name}</li>)}
             </ul>
           )}
           {p.engineeringTopics && (
-            <dl className="mt-12 grid gap-x-10 gap-y-8 md:grid-cols-2">
+            <dl className="mt-10 grid gap-x-10 gap-y-6 md:grid-cols-2">
               {p.engineeringTopics.map((t, i) => (
                 <div key={i} className="border-t border-line pt-4">
                   <dt className="font-display text-h4">{t.title[locale]}</dt>
-                  {t.body && <dd className="mt-2 text-muted">{t.body[locale]}</dd>}
+                  {t.body && <dd className="mt-1.5 text-sm text-muted">{t.body[locale]}</dd>}
                 </div>
               ))}
             </dl>
           )}
           {p.diagrams.length > 0 && (
-            <div className="mt-12 grid gap-6">
-              {p.diagrams.map((d) => <Diagram key={d} id={d} n={++fig} locale={locale} />)}
+            <div className="mt-10 grid gap-6">
+              {p.diagrams.slice(0, 2).map((d) => <Diagram key={d} id={d} n={++fig} locale={locale} />)}
             </div>
           )}
-          {slug === "maazeem" && <div className="mt-12"><ExtraGallery slug="maazeem-diagrams" locale={locale} /></div>}
+          {slug === "maazeem" && <div className="mt-10"><ExtraGallery slug="maazeem-diagrams" locale={locale} /></div>}
         </Block>
 
         <Block id="decisions" label={S.decisions} locale={locale} wide>
-          <ol className="grid gap-10 md:grid-cols-2">
+          <ol className="grid gap-8 md:grid-cols-3">
             {p.decisions.map((d, i) => (
               <li key={i}>
                 <h3 className="font-display text-h4">{d.title[locale]}</h3>
-                <p className="mt-2 text-muted">{d.body[locale]}</p>
+                <p className="mt-2 text-sm text-muted">{d.body[locale]}</p>
               </li>
             ))}
           </ol>
         </Block>
 
-        <Block id="results" label={S.results} locale={locale}><Paras v={p.results} locale={locale} /></Block>
-        <Block id="status" label={S.status} locale={locale}>
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-raise px-4 py-2 text-sm">
-            <span className="size-2 rounded-full" style={{ background: p.accent.dark }} aria-hidden />
-            {ui.status[p.status][locale]}
-          </p>
-          <Paras v={p.currentStatus} locale={locale} />
-        </Block>
-        <Block id="next" label={S.next} locale={locale}><Paras v={p.next} locale={locale} /></Block>
+        {/* Where it stands: results, status and next step side by side, one line each. */}
+        <section aria-labelledby="where-h" className="border-t border-line py-14 md:py-20">
+          <h2 id="where-h" className="sr-only">{S.status[locale]}</h2>
+          <dl className="grid gap-8 md:grid-cols-3">
+            {[
+              { k: S.results, v: p.results[locale][0] },
+              { k: S.status, v: p.currentStatus[locale][0] },
+              { k: S.next, v: p.next[locale][0] },
+            ].map((r) => (
+              <div key={r.k.en}>
+                <dt className="font-display text-h4">{r.k[locale]}</dt>
+                <dd className="mt-2 text-muted">{r.v}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
       </div>
 
       <nav aria-label={ui.cta.nextProject[locale]} data-theme={next.chapter.dark ? "dark" : "light"} style={{ background: next.chapter.bg, color: next.chapter.ink }}>

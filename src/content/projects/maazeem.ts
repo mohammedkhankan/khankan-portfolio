@@ -111,12 +111,12 @@ export const maazeem: Project = {
   ],
   engineering: {
     ar: [
-      "معازيم Modular Monolith: قاعدة كود واحدة بـ TypeScript تعمل كأربع عمليات — الويب، والعامل الخلفي، وبوت واتساب، والترحيل — فوق PostgreSQL 17 بـ 32 جدولاً عبر Drizzle ORM، ومنشورة بـ Docker Compose على خادم VPS.",
+      "قاعدة كود TypeScript واحدة تعمل كأربع عمليات — الويب والعامل الخلفي وبوت واتساب والترحيل — فوق PostgreSQL 17 بـ 32 جدولاً، ومنشورة بـ Docker Compose.",
       "كل النماذج تعمل عبر Next.js Server Actions بلا REST منفصل، وكل المدخلات ومتغيرات البيئة يُتحقق منها بـ Zod. وتُرسم الدعوة العربية على الخادم بـ Sharp وPango بنفس خطوط المحرر، فيطابق التصدير ما يراه المستخدم.",
       "التحقق: 52 اختبار وحدة وتكامل ناجحاً على PostgreSQL حقيقي معزول، وTypeScript بلا أخطاء، وبناء إنتاجي ناجح.",
     ],
     en: [
-      "MAAZEEM is a modular monolith: one TypeScript codebase running as four processes — web, background worker, WhatsApp bot and migrations — on PostgreSQL 17 with 32 tables via Drizzle ORM, deployed with Docker Compose on a VPS.",
+      "One TypeScript codebase running as four processes — web, worker, WhatsApp bot and migrations — on PostgreSQL 17 with 32 tables, deployed with Docker Compose.",
       "Every form runs through Next.js Server Actions with no separate REST layer, and all input and environment variables are validated with Zod. Arabic invitations are rendered on the server with Sharp and Pango using the editor's own fonts, so the export matches what the user designed.",
       "Verified: 52 passing unit and integration tests on an isolated real PostgreSQL, a clean TypeScript build and a successful production build.",
     ],
@@ -175,12 +175,12 @@ export const maazeem: Project = {
     en: ["MAAZEEM has been used for real events.", "Event and guest counts aren't shown because no verified figures are available for publication."],
   },
   currentStatus: {
-    ar: ["المنصة مستخدمة في مناسبات حقيقية. الإرسال اليدوي والبوت مكتملان، والإرسال الرسمي عبر Meta مكتمل في الكود وتفعيله بانتظار موافقة القالب."],
-    en: ["The platform is used for real events. Manual and bot sending are complete; official Meta sending is complete in code and awaits template approval."],
+    ar: ["مستخدمة في مناسبات حقيقية، والإرسال الرسمي عبر Meta بانتظار موافقة القالب."],
+    en: ["Used for real events; official Meta sending awaits template approval."],
   },
   next: {
-    ar: ["تفعيل الإرسال الرسمي بعد موافقة Meta، ثم باقة احترافية مخطط لها: فئات المدعوين وأرقام الطاولات، وتفعيل موظفي الاستقبال، والتذكيرات المجدولة، وشاشة حضور مباشرة."],
-    en: ["Switch on official sending once Meta approves, then a planned professional tier: guest categories and table numbers, reception staff accounts, scheduled reminders and a live attendance screen."],
+    ar: ["تفعيل الإرسال الرسمي، ثم فئات المدعوين والتذكيرات المجدولة وشاشة حضور مباشرة."],
+    en: ["Switch on official sending, then guest categories, scheduled reminders and a live attendance screen."],
   },
   diagrams: ["maazeem-workflow", "maazeem-checkin", "maazeem-architecture"],
   shots: [

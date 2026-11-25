@@ -9,6 +9,7 @@ import { pageMeta } from "@/lib/seo";
 import { CutoutPortrait, ProjectHeroImage } from "@/components/Media";
 import { ExternalLink } from "@/components/Footer";
 import { ArrowUpRight } from "@/components/Icons";
+import { CountUp } from "@/components/CountUp";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -39,7 +40,7 @@ function Chapter({ p, locale, flip }: { p: Project; locale: Locale; flip: boolea
                 <div key={f.label.en} className="border-t pt-4" style={{ borderColor: `color-mix(in srgb, ${c.ink} 18%, transparent)` }}>
                   <dt className="sr-only">{f.label[locale]}</dt>
                   <dd>
-                    <span className="block font-display text-h3 font-semibold tabular-nums"><bdi>{f.value[locale]}</bdi></span>
+                    <span className="block font-display text-h3 font-semibold tabular-nums"><bdi><CountUp value={f.value[locale]} /></bdi></span>
                     <span className="mt-1 block text-sm" style={{ color: c.sub }}>{f.label[locale]}</span>
                   </dd>
                 </div>
@@ -124,7 +125,6 @@ export default async function Home({ params }: Props) {
           <h2 className="text-h2 lg:col-span-5">{home.selectedTitle[locale]}</h2>
           <div className="lg:col-span-6 lg:col-start-7">
             <p className="text-lead text-ink/90">{home.intro[locale]}</p>
-            <p className="mt-5 text-muted">{home.selectedLead[locale]}</p>
           </div>
         </div>
       </section>
@@ -142,14 +142,13 @@ export default async function Home({ params }: Props) {
           </div>
           <div className="lg:col-span-6 lg:col-start-7">
             <p className="font-display text-h3 font-normal leading-snug">{rafd.tagline[locale]}</p>
-            <p className="mt-5 text-lead" style={{ color: rafd.chapter.sub }}>{rafd.summary[locale]}</p>
             {rafd.proof && (
               <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6">
                 {rafd.proof.map((f) => (
                   <div key={f.label.en} className="border-t border-white/15 pt-4">
                     <dt className="sr-only">{f.label[locale]}</dt>
                     <dd>
-                      <span className="block font-display text-h2 font-semibold tabular-nums"><bdi>{f.value[locale]}</bdi></span>
+                      <span className="block font-display text-h2 font-semibold tabular-nums"><bdi><CountUp value={f.value[locale]} /></bdi></span>
                       <span className="mt-1 block text-sm" style={{ color: rafd.chapter.sub }}>{f.label[locale]}</span>
                     </dd>
                   </div>
@@ -170,12 +169,9 @@ export default async function Home({ params }: Props) {
       {/* ───────── HOW I WORK ───────── */}
       <section className="section-y bg-surface">
         <div className="container-page">
-          <div className="grid gap-6 lg:grid-cols-12">
-            <h2 className="text-h2 lg:col-span-5">{home.philosophyTitle[locale]}</h2>
-            <p className="text-lead text-muted lg:col-span-6 lg:col-start-7">{home.philosophyLead[locale]}</p>
-          </div>
+          <h2 className="text-h2">{home.philosophyTitle[locale]}</h2>
           <ul className="mt-16 grid gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-            {home.principles.map((p, i) => (
+            {home.principles.filter((_, i) => [0, 1, 2, 3, 7, 8].includes(i)).map((p, i) => (
               <li key={i} className="border-t border-line pt-5">
                 <h3 className="font-display text-h4">{p.t[locale]}</h3>
                 <p className="mt-2 text-muted">{p.d[locale]}</p>
@@ -195,9 +191,6 @@ export default async function Home({ params }: Props) {
                 <p className="text-sm text-muted">{o.role[locale]}</p>
                 <h3 className="mt-2 text-h3">{o.org[locale]}</h3>
                 <p className="mt-4 text-lead text-ink/85">{o.body[locale]}</p>
-                <ul className="mt-6 grid gap-2 text-muted">
-                  {o.points[locale].map((pt) => <li key={pt}>{pt}</li>)}
-                </ul>
                 <div className="mt-8 flex flex-wrap gap-2">
                   {o.projects.map((s) => {
                     const p = getProject(s)!;

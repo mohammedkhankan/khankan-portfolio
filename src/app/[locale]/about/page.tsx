@@ -38,13 +38,11 @@ export default async function AboutPage({ params }: Props) {
 
       <ol className="container-page mt-16">
         {about.chapters.map((c, i) => (
-          <li key={i} className="grid gap-6 border-t border-line py-14 md:grid-cols-12 md:gap-10 md:py-20">
+          <li key={i} className="grid gap-4 border-t border-line py-10 md:grid-cols-12 md:gap-10 md:py-14">
             <p className="text-sm text-muted md:col-span-3">{c.k[locale]}</p>
             <div className="md:col-span-8 lg:col-span-7">
               <h2 className="text-h2">{c.t[locale]}</h2>
-              <div className="prose-case mt-6 text-lead text-ink/90">
-                {c.p[locale].map((t, j) => <p key={j}>{t}</p>)}
-              </div>
+              <p className="mt-5 text-lead text-ink/90">{c.p[locale][0]}</p>
             </div>
           </li>
         ))}

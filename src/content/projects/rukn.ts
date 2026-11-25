@@ -50,21 +50,21 @@ export const rukn: Project = {
   ],
   context: {
     ar: [
-      "خلال الإقامة في السعودية والاحتكاك اليومي بتجارب تسوق رقمية ناضجة، اتضحت فرصة حقيقية: كثير من التجار والأعمال الصغيرة في سوريا يملكون منتجات وعملاء، لكن الأدوات المتاحة لبيعها رقمياً إما مجتزأة أو مكلفة أو صعبة التشغيل.",
+      "تجار كثيرون في سوريا لديهم منتجات وعملاء، لكن أدوات البيع الرقمي مجتزأة أو مكلفة. ركن منصة واحدة يطلق منها التاجر متجره ويديره بتكلفة تناسبه.",
       "ركن هو محاولة لتقديم منصة واحدة متكاملة يستطيع فيها التاجر إطلاق متجره وإدارته من مكان واحد، بتكلفة تناسب حجم عمله.",
     ],
     en: [
-      "Living in Saudi Arabia and using mature digital commerce every day made an opportunity obvious: many merchants and small businesses in Syria already have products and customers, but the tools for selling online are fragmented, expensive or hard to operate.",
+      "Many Syrian merchants have products and customers, but online-selling tools are fragmented or costly. RUKN is one platform to launch and run a store at a fair price.",
       "RUKN is an attempt to offer one integrated platform where a merchant can launch and run a store from a single place, at a cost that fits the size of the business.",
     ],
   },
   challenge: {
     ar: [
-      "منصة التجارة متعددة التجار لا تُقاس بعدد الشاشات، بل بمدى صلابة ما تحتها: كل تاجر يجب أن يرى بياناته فقط، وكل موظف يجب أن يملك ما يحتاجه من صلاحيات ولا شيء أكثر، وكل طلب يجب أن يبقى صحيحاً حتى عندما تتزامن العمليات على المخزون نفسه.",
+      "كل تاجر يرى بياناته فقط، وكل موظف يملك صلاحياته فقط، وكل طلب يبقى صحيحاً حتى لو تزامنت العمليات — مع تجربة بسيطة لتاجر يفتح متجره الأول.",
       "وفي الوقت ذاته، يجب أن تبقى التجربة بسيطة بما يكفي لتاجر يفتح متجره الرقمي الأول.",
     ],
     en: [
-      "A multi-merchant commerce platform is judged less by its screens than by what sits beneath them: every merchant must see only their own data, every staff member must hold exactly the permissions they need, and every order must stay correct even when operations hit the same stock at the same moment.",
+      "Every merchant sees only their data, every staff member only their permissions, and every order stays correct under concurrency — while staying simple for a first-time merchant.",
       "At the same time, the experience has to stay simple enough for a merchant opening their first online store.",
     ],
   },
@@ -82,10 +82,10 @@ export const rukn: Project = {
   },
   solution: {
     ar: [
-      "لوحة تحكم للتاجر تجمع حالة النشر والطلبات والمخزون والدفع في شاشة واحدة، ومحرر بصري يعرض معاينة حية للمتجر على الكمبيوتر والجوال، واختيار لشخصية الثيم وهوية المتجر — ثم واجهة متجر حقيقية يتسوق منها العملاء، كمتجر روان للخدمات المكتبية.",
+      "لوحة تحكم تجمع الطلبات والمخزون والدفع، ومحرر بصري بمعاينة حية، وواجهة متجر حقيقية يتسوق منها العملاء.",
     ],
     en: [
-      "A merchant dashboard that brings publish status, orders, stock and payments into one screen; a visual editor with a live desktop and mobile preview; a choice of theme character and brand — and then a real storefront customers shop from, such as Rawan Office Services.",
+      "A dashboard for orders, stock and payments, a visual editor with live preview, and a real storefront customers shop from.",
     ],
   },
   features: [

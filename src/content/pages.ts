@@ -16,8 +16,8 @@ export const home = {
     en: "I build digital products that solve real business problems — and keep working long after launch.",
   } as L,
   intro: {
-    ar: "مؤسس شركة أفق للحلول التقنية والرقمنة ومنصة رفد التعليمية. أقود المنتج من أول محادثة حتى التشغيل: فهم المشكلة، وتصميم النظام، وكتابة الكود واختباره، ثم نشره — لمطاعم وتجار ومنظمي مناسبات وطلاب.",
-    en: "Founder of OFOQ Technical Solutions & Digitalization and the RAFD learning platform. I lead products from the first conversation to production — understanding the problem, designing the system, building and testing it, then shipping — for restaurants, merchants, event organizers and students.",
+    ar: "أقود المنتج من الفكرة حتى التشغيل: أفهم المشكلة، أصمم النظام، أبنيه وأختبره، ثم أطلقه — لتجار ومطاعم ومنظمي مناسبات وطلاب.",
+    en: "I take products from idea to production: understand the problem, design the system, build and test it, then ship — for merchants, restaurants, event organizers and students.",
   } as L,
   indexTitle: { ar: "فهرس الأعمال", en: "Index of work" } as L,
   selectedTitle: { ar: "أعمال مختارة", en: "Selected work" } as L,
@@ -57,8 +57,8 @@ export const home = {
   ] as L[],
   ctaTitle: { ar: "لديك نظام تحتاج بناءه؟", en: "Have a system that needs building?" } as L,
   ctaBody: {
-    ar: "سواء كنت صاحب عمل يبحث عن حل متكامل، أو شريكاً مهتماً بالمنتجات، أو فريقاً تقنياً يريد التعاون — يسعدني الحديث.",
-    en: "Whether you run a business that needs an integrated solution, are a potential partner interested in the products, or a technical team looking to collaborate — I'd be glad to talk.",
+    ar: "صاحب عمل، أو شريك، أو فريق تقني — يسعدني الحديث.",
+    en: "Business owner, partner or technical team — I'd be glad to talk.",
   } as L,
 };
 
@@ -67,8 +67,8 @@ export const leadership = [
     org: { ar: "شركة أفق للحلول التقنية والرقمنة", en: "OFOQ Technical Solutions & Digitalization" } as L,
     role: { ar: "مؤسس ومدير تنفيذي", en: "Founder & CEO" } as L,
     body: {
-      ar: "شركة حلول تقنية ورقمنة تبني منتجات SaaS تحل مشكلات متكررة لدى الأعمال الصغيرة والمتوسطة — منتجات يستخدمها عملاء كثيرون، بباقات بأسعار مناسبة، وتستمر في التطور.",
-      en: "A technology and digitalization company building SaaS products for problems that small and mid-sized businesses face again and again — products used by many customers, priced in fair tiers, and continuously improved.",
+      ar: "منتجات SaaS تحل مشكلات متكررة لدى الأعمال الصغيرة والمتوسطة، بباقات بأسعار مناسبة.",
+      en: "SaaS products for problems small and mid-sized businesses face again and again, in fairly priced plans.",
     } as L,
     points: {
       ar: ["رؤية المنتجات واستراتيجيتها", "المعمارية والقرارات الهندسية", "قيادة التطوير والاختبار والنشر", "النموذج التجاري والباقات"],
@@ -80,8 +80,8 @@ export const leadership = [
     org: { ar: "رفد التعليمية", en: "RAFD Educational Platform" } as L,
     role: { ar: "مؤسس ومدير تنفيذي", en: "Founder & CEO" } as L,
     body: {
-      ar: "منصة تعليم مساند لطلاب الجامعة الافتراضية السورية تجمع خبرة الطلاب في المقررات مع خبرة الكفاءات الأكاديمية.",
-      en: "A supplementary learning platform for Syrian Virtual University students, pairing student insight into the courses with academic expertise.",
+      ar: "منصة تعليمية «من طالب، لأجل طالب» لطلاب الجامعة الافتراضية السورية، بأكثر من 2,000 مشترك.",
+      en: "A \"by a student, for students\" learning platform for Syrian Virtual University students, with 2,000+ subscribers.",
     } as L,
     points: {
       ar: ["التخطيط والقرارات الاستراتيجية", "التواصل مع الأكاديميين والتعاقدات", "قيادة تطوير الخدمات والتطبيقات", "تصميم وتطوير النظام المالي الداخلي"],
@@ -105,8 +105,8 @@ export const about = {
       k: { ar: "الأساس", en: "Foundation" },
       t: { ar: "الهندسة أولاً", en: "Engineering first" },
       p: {
-        ar: ["درس محمد هندسة المعلوماتية في الجامعة الافتراضية السورية، ومن هناك بدأ اهتمامه بالأنظمة لا بالشاشات فقط: كيف تُصمم البيانات، وكيف تُحمى، وكيف تبقى سريعة حين يزداد الاستخدام."],
-        en: ["Mohammed studied Informatics Engineering at the Syrian Virtual University, where his interest in systems — not just screens — took shape: how data is modelled, how it's protected, and how it stays fast as usage grows."],
+        ar: ["درس هندسة المعلوماتية في الجامعة الافتراضية السورية، ومن هناك بدأ اهتمامه بالأنظمة: كيف تُصمَّم البيانات وتُحمى وتبقى سريعة."],
+        en: ["He studied Informatics Engineering at the Syrian Virtual University, where his interest in systems took shape: how data is modelled, protected and kept fast."],
       },
     },
     {
@@ -114,11 +114,11 @@ export const about = {
       t: { ar: "من السعودية، نظرة إلى سوريا", en: "From Saudi Arabia, looking at Syria" },
       p: {
         ar: [
-          "أتاحت له الإقامة في المملكة العربية السعودية الاطلاع اليومي على تجارب رقمية متقدمة في التجارة الإلكترونية والخدمات وإدارة الأعمال.",
+          "في السعودية رأى يومياً تجارب رقمية متقدمة، ورأى معها فرصة حقيقية لتقريب هذه الأدوات من المشاريع الصغيرة والمتوسطة في سوريا.",
           "ومن هذه التجربة اتضحت له فرص حقيقية لتطوير الخدمات الرقمية في سوريا، وأراد أن يساهم بما يملكه من خبرة تقنية في تقريب هذه الأدوات من المشاريع الصغيرة والمتوسطة، بأدوات عملية وأسعار مناسبة.",
         ],
         en: [
-          "Living in Saudi Arabia gave him daily exposure to advanced digital experiences in e-commerce, services and business management.",
+          "In Saudi Arabia he used advanced digital services daily — and saw a real opportunity to bring such tools to small and mid-sized businesses in Syria.",
           "That experience made clear the real opportunities to develop digital services in Syria, and he wanted to contribute his technical skills to bringing such tools within reach of small and mid-sized businesses — practical tools at fair prices.",
         ],
       },
@@ -127,8 +127,8 @@ export const about = {
       k: { ar: "التأسيس", en: "Founding" },
       t: { ar: "رفد", en: "RAFD" },
       p: {
-        ar: ["أسس رفد لتحسين تجربة التعليم المساند لطلاب الجامعة الافتراضية السورية — وهي تجربة قيادية بقدر ما هي تقنية: تعاقدات مع أكاديميين، وقرارات استراتيجية، وتطبيقات على أكثر من منصة، ونظام مالي داخلي صممه وطوره بنفسه."],
-        en: ["He founded RAFD to improve supplementary learning for Syrian Virtual University students — as much a leadership role as a technical one: agreements with academics, strategic decisions, apps across platforms, and an internal finance system he designed and built himself."],
+        ar: ["أسس رفد للتعليم المساند، وصارت تضم أكثر من 2,000 مشترك. دور قيادي بقدر ما هو تقني: أكاديميون وتعاقدات وتطبيقات ونظام مالي داخلي بناه بنفسه."],
+        en: ["He founded RAFD for supplementary learning; it now has 2,000+ subscribers. As much leadership as engineering: academics, contracts, apps and an internal finance system he built himself."],
       },
     },
     {
@@ -136,11 +136,11 @@ export const about = {
       t: { ar: "شركة أفق للحلول التقنية والرقمنة", en: "OFOQ Technical Solutions & Digitalization" },
       p: {
         ar: [
-          "ثم أسس شركة أفق للحلول التقنية والرقمنة لبناء منتجات SaaS: ركن للتجارة الإلكترونية، وأفق لإدارة المطاعم، ومعازيم للدعوات وإدارة المناسبات.",
+          "ثم أسس شركة أفق للحلول التقنية والرقمنة لبناء منتجات SaaS: ركن للمتاجر، وأفق للمطاعم، ومعازيم للمناسبات.",
           "الفكرة ليست بيع برنامج لمرة واحدة، بل منتجات تحل مشكلات متكررة، يستخدمها عدة عملاء، بباقات مناسبة، وتستمر في التطور مع الحفاظ على جودة هندسية عالية ونمو تجاري طويل المدى.",
         ],
         en: [
-          "He then founded OFOQ Technical Solutions & Digitalization to build SaaS products: RUKN for e-commerce, OFOQ for restaurant operations, and MAAZEEM for invitations and event management.",
+          "Then he founded OFOQ Technical Solutions & Digitalization to build SaaS products: RUKN for stores, OFOQ for restaurants and MAAZEEM for events.",
           "The idea isn't one-off software sales but products that solve recurring problems, serve many customers in fair tiers, and keep evolving — with high engineering standards and long-term commercial growth.",
         ],
       },
@@ -149,16 +149,16 @@ export const about = {
       k: { ar: "المسؤولية", en: "Ownership" },
       t: { ar: "من الفكرة حتى التشغيل", en: "From idea to production" },
       p: {
-        ar: ["قاد محمد مشاريعه من الفكرة إلى التخطيط والتصميم والبرمجة والاختبار والنشر، مستعيناً بأدوات الذكاء الاصطناعي ومساهمات تقنية عند الحاجة. دوره ليس دور مطور واجهات، بل دور من يملك المنتج كاملاً ويتحمل قراراته."],
-        en: ["Mohammed has led his projects from idea through planning, design, development, testing and deployment — using AI tools and technical contributors where it made sense. His role isn't that of a front-end developer, but of someone who owns the whole product and its decisions."],
+        ar: ["يقود كل مشروع من الفكرة حتى النشر، مستعيناً بأدوات الذكاء الاصطناعي ومساهمات تقنية عند الحاجة — ويملك المنتج كاملاً وقراراته."],
+        en: ["He leads each project from idea to launch, using AI tools and technical contributors where it helps — and owns the whole product and its decisions."],
       },
     },
     {
       k: { ar: "الاستمرار", en: "Continuing" },
       t: { ar: "التعلم لا يتوقف", en: "Always learning" },
       p: {
-        ar: ["الأمان والأداء ليسا مرحلة في نهاية المشروع، بل طريقة تفكير من بدايته. ومع كل منتج جديد تتسع المعرفة وتتحسن الأدوات — والتعلم المستمر جزء من العمل نفسه."],
-        en: ["Security and performance aren't a phase at the end of a project but a way of thinking from the start. Every new product widens the knowledge and sharpens the tools — continuous learning is part of the work itself."],
+        ar: ["الأمان والأداء طريقة تفكير من أول يوم، لا مرحلة أخيرة. ومع كل منتج يتعلم أكثر."],
+        en: ["Security and performance are a mindset from day one, not a final phase. Every product teaches something new."],
       },
     },
   ] as { k: L; t: L; p: LL }[],

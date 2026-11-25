@@ -52,11 +52,11 @@ export const rafd: Project = {
   },
   challenge: {
     ar: [
-      "رفد ليست مشروعاً برمجياً فقط؛ هي مؤسسة تعليمية صغيرة. نجاحها يعتمد على جودة الأكاديميين، ووضوح التعاقدات، وثقة الطلاب، وتقديم المحتوى بطريقة تحمي جهد المدرّسين.",
+      "رفد مؤسسة تعليمية قبل أن تكون كوداً: نجاحها يعتمد على جودة الأكاديميين وثقة الطلاب وحماية جهد المدرّسين.",
       "وتقنياً: تقديم الجلسات والمحتوى عبر أجهزة متعددة، مع قيود وصول تحترم الاشتراكات، دون أن تصبح الحماية عائقاً أمام الطالب الملتزم.",
     ],
     en: [
-      "RAFD isn't only a software project; it's a small educational organization. Its success depends on the quality of its academics, clear agreements, students' trust, and delivering content in a way that protects teachers' work.",
+      "RAFD is an educational organization before it is code: it depends on great academics, student trust and protecting teachers' work.",
       "Technically: delivering sessions and content across several devices with access controls that respect subscriptions — without protection getting in the way of a genuine student.",
     ],
   },
@@ -74,11 +74,11 @@ export const rafd: Project = {
   },
   solution: {
     ar: [
-      "منصة ويب تجمع الكورسات والمكتبة والكويزات وأدوات الطالب — محاكي التسجيل والحاسبات والتقويم — في حساب واحد، ورحلة من ثلاث خطوات: اختر المادة، افتح المحتوى، ادرس واختبر نفسك.",
+      "منصة ويب تجمع الكورسات والمكتبة والكويزات ومحاكي التسجيل في حساب واحد، وتطبيقا Windows وأندرويد، وiOS قيد التطوير.",
       "وتطبيقات رسمية: Windows (الإصدار 2.5) لتجربة دراسة كاملة، وأندرويد (الإصدار 1.28) للوصول السريع من الجوال، مع تنزيل لا يظهر إلا بعد التحقق من حجم الحزمة وبصمتها. وتطبيق iOS قيد التطوير ضمن فريق رفد.",
     ],
     en: [
-      "A web platform that brings courses, the library, quizzes and student tools — registration simulator, calculators and calendar — into one account, around a three-step journey: pick a course, open the content, study and test yourself.",
+      "A web platform with courses, library, quizzes and a registration simulator in one account, plus Windows and Android apps, with iOS in development.",
       "Plus official apps: Windows (v2.5) for a full study experience and Android (v1.28) for quick access on the phone, with downloads shown only after the package size and checksum are verified. An iOS app is in development within the RAFD team.",
     ],
   },
@@ -139,11 +139,11 @@ export const rafd: Project = {
   },
   currentStatus: {
     ar: [
-      "المنصة تعمل بقيادة محمد كمؤسس ومدير تنفيذي؛ يتولى التخطيط، والتواصل مع الأكاديميين، والتعاقدات، والقرارات الاستراتيجية، وقيادة تطوير الخدمات.",
+      "المنصة تعمل بقيادة محمد كمؤسس ومدير تنفيذي، وهي مستقلة وليست شراكة رسمية مع الجامعة.",
       "رفد منصة مستقلة، وليست شراكة رسمية مع الجامعة.",
     ],
     en: [
-      "The platform operates under Mohammed's leadership as founder and CEO; he handles planning, academic relationships, contracts, strategic decisions and leads service development.",
+      "Live under Mohammed's leadership as founder and CEO; independent, not an official university partnership.",
       "RAFD is an independent platform, not an official partnership with the university.",
     ],
   },

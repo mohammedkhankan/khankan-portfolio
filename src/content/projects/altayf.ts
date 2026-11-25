@@ -46,11 +46,11 @@ export const altayf: Project = {
   ],
   context: {
     ar: [
-      "الطيف المعمارية شركة مقاولات في المملكة العربية السعودية تعمل في الزجاج المعشّق والقباب السماوية والتشطيبات، بدأت باسم «ألوان الطيف للديكور» قبل أن تصبح «الطيف المعمارية للمقاولات».",
+      "شركة مقاولات في السعودية متخصصة بالزجاج المعشّق والقباب السماوية والتشطيبات. أعمالها تُباع بالصورة أولاً، فكان الموقع معرض أعمال قبل أن يكون صفحة تعريفية.",
       "أعمال هذا النوع تُباع بالصورة أولاً: العميل يريد أن يرى جودة التنفيذ قبل أن يتصل. لذلك كان الموقع امتداداً لمعرض أعمال الشركة، لا مجرد صفحة تعريفية.",
     ],
     en: [
-      "AL TAYF Architecture is a contracting company in Saudi Arabia working in stained glass, skylight domes and finishes. It began as \"Alwan Al Tayf Decor\" before becoming \"AL TAYF Architecture Contracting\".",
+      "A Saudi contractor specialising in stained glass, skylight domes and finishes. Its work sells through images first, so the site is a portfolio before a brochure.",
       "Work like this sells through images first: clients want to see execution quality before they call. So the site had to be an extension of the company's portfolio, not just a brochure page.",
     ],
   },
@@ -92,12 +92,12 @@ export const altayf: Project = {
   ],
   engineering: {
     ar: [
-      "الموقع مبني بـ Next.js 16 (App Router) وReact 19 وTypeScript، بتصميم يعتمد على CSS مخصص وModules. الصفحات والتخطيط تُرسم على الخادم، والمكونات التفاعلية فقط — المعرض والرأس وظهور الأقسام — تعمل في المتصفح.",
+      "Next.js 16 وReact 19 وTypeScript، مع رسم الصفحات على الخادم، وصور WebP عبر next/image، واستضافة Netlify، وبيانات منظمة لمحركات البحث.",
       "في الإنتاج تُقدَّم الصور بصيغة WebP عبر مسار تحسين next/image بمقاسات وجودة محددة، والاستضافة على Netlify مع ضغط Brotli وتخزين مؤقت على الحافة. وتشمل البيانات المنظمة LocalBusiness وGeneralContractor وBreadcrumbList وImageGallery.",
       "معارض الأقسام تقرأ manifest يُولَّد وقت البناء بدل قراءة مجلدات الصور أثناء الطلب، وهو إصلاح قلّص اعتماد حزمة خادم Netlify على ملفات الصور.",
     ],
     en: [
-      "Built with Next.js 16 (App Router), React 19 and TypeScript, styled with custom CSS and modules. Pages and layout render on the server; only the interactive parts — gallery, header, section reveals — run in the browser.",
+      "Next.js 16, React 19 and TypeScript, server-rendered pages, WebP images through next/image, Netlify hosting and structured data for search.",
       "In production, images are served as WebP through next/image's optimizer at set sizes and quality, hosted on Netlify with Brotli and edge caching. Structured data covers LocalBusiness, GeneralContractor, BreadcrumbList and ImageGallery.",
       "Category galleries read a manifest generated at build time instead of scanning image folders per request — a fix that cut the Netlify server bundle's dependence on image files.",
     ],
