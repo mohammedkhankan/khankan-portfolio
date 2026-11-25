@@ -25,9 +25,9 @@ D = {
      ("النظام المالي لرفد", "نظام داخلي", "الاشتراكات والمستحقات والمصاريف وحصص الشركاء بثلاث عملات.", ""),
      ("الطيف المعمارية", "موقع شركة", "تصميم وبناء ونشر وتحسين لمحركات البحث.", "Next.js 16 · React 19 · altayf-sa.com"),
    ],
-   h_prev="خبرات سابقة", prev=[
-     ("Bolt", "العمليات وتفعيل الكباتن · 2021–2024، ومن 2025", "قيادة جزء من عمليات التفعيل اليومية، وتدريب الموظفين الجدد، وتطوير الإجراءات الداخلية، ومعالجة الحالات المعقدة. عاد في 2025 لتطوير أداء الفريق."),
-     ("Blink", "تفعيل حسابات الكباتن · 2023–الآن", "طرق تفعيل جديدة قلّصت زمن التفعيل، ودعم جودة الخدمة."),
+   h_prev="الخبرة الميدانية", prev=[
+     ("Bolt", "العمليات وتفعيل الكباتن · 2021–2024، ومن 2025 حتى الآن", "قيادة جزء من عمليات التفعيل اليومية، وتدريب الموظفين الجدد، وتطوير الإجراءات الداخلية، ومعالجة الحالات المعقدة. عاد في 2025 لتطوير أداء الفريق."),
+     ("Blink", "تفعيل حسابات الكباتن · 2023–2025", "طرق تفعيل جديدة قلّصت زمن التفعيل، ودعم جودة الخدمة."),
      ("الكشري سنت", "مبيعات · 2024–2025", "بناء علاقات مع العملاء والمساهمة في رفع المبيعات."),
    ],
    h_skills="مجالات العمل", skills="تطوير SaaS · هندسة Full-Stack · أنظمة الأعمال · معمارية قواعد البيانات · الصلاحيات وعزل البيانات · هندسة الأداء · استراتيجية المنتج · UI/UX · النشر بـ Docker",
@@ -48,9 +48,9 @@ D = {
      ("RAFD Financial System", "Internal tool", "Subscriptions, payouts, expenses and partner shares across three currencies.", ""),
      ("AL TAYF Architecture", "Company website", "Design, build, deployment and SEO.", "Next.js 16 · React 19 · altayf-sa.com"),
    ],
-   h_prev="Previous experience", prev=[
-     ("Bolt", "Operations & driver onboarding · 2021–2024, 2025–", "Led part of daily activation operations, trained new team members, improved internal procedures and handled escalated cases. Returned in 2025 to raise team performance."),
-     ("Blink", "Driver account activation · 2023–present", "New activation approaches that shortened activation time; supported service quality."),
+   h_prev="Field experience", prev=[
+     ("Bolt", "Operations & driver onboarding · 2021–2024, 2025–present", "Led part of daily activation operations, trained new team members, improved internal procedures and handled escalated cases. Returned in 2025 to raise team performance."),
+     ("Blink", "Driver account activation · 2023–2025", "New activation approaches that shortened activation time; supported service quality."),
      ("Al Koshary Cent", "Sales · 2024–2025", "Built customer relationships and helped grow sales."),
    ],
    h_skills="Areas of practice", skills="SaaS development · Full-stack engineering · Business systems · Database architecture · Access control & tenant isolation · Performance engineering · Product strategy · UI/UX · Docker deployment",

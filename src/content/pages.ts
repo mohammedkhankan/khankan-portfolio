@@ -284,7 +284,7 @@ export const testimonials: { quote: L; name: L; role: L; project?: string }[] = 
 
 /** Field experience before founding — shown on the Experience page and in the CV. */
 export const fieldExperience = {
-  title: { ar: "خبرة ميدانية قبل التأسيس", en: "Field experience before founding" } as L,
+  title: { ar: "الخبرة الميدانية", en: "Field experience" } as L,
   lead: {
     ar: "سنوات في عمليات شركات معروفة علّمتني كيف تتعطل العمليات وكيف يفكر العميل — وهذا ما تُبنى عليه منتجاتي.",
     en: "Years inside the operations of well-known companies taught me where processes break and how customers think — the ground my products are built on.",
@@ -293,7 +293,7 @@ export const fieldExperience = {
     {
       org: { ar: "Bolt", en: "Bolt" },
       role: { ar: "العمليات وتفعيل الكباتن", en: "Operations & driver onboarding" },
-      period: { ar: "2021–2024، ثم من 2025 حتى الآن", en: "2021–2024, then 2025–present" },
+      period: { ar: "2021–2024، ومن 2025 حتى الآن", en: "2021–2024, and 2025–present" },
       points: {
         ar: [
           "قيادة جزء من عمليات تفعيل الكباتن اليومية وتنسيق العمل داخل الفريق.",
@@ -314,7 +314,7 @@ export const fieldExperience = {
     {
       org: { ar: "Blink", en: "Blink" },
       role: { ar: "تفعيل حسابات الكباتن", en: "Driver account activation" },
-      period: { ar: "2023 حتى الآن", en: "2023–present" },
+      period: { ar: "2023–2025", en: "2023–2025" },
       points: {
         ar: ["تطوير طرق جديدة لتفعيل الحسابات قلّصت زمن التفعيل.", "دعم جودة الخدمة وكفاءة العمليات."],
         en: ["Developed new activation approaches that shortened activation time.", "Supported service quality and operational efficiency."],
