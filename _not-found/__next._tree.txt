@@ -1,5 +1,5 @@
-:HL["/khankan-portfolio/_next/static/chunks/0023z1wmby05d.css","style"]
-:HL["/khankan-portfolio/_next/static/chunks/10f_fics6i9bc.css","style"]
+:HL["/khankan-portfolio/_next/static/chunks/2lk-tivhl-m2w.css","style"]
+:HL["/khankan-portfolio/_next/static/chunks/3jv8__z213ofi.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"MtHv0wWN8h5zBG0g4NdWq","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"29vBNh0XXyD_q8MVWL8Jb","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
