@@ -5,6 +5,9 @@ from playwright.async_api import async_playwright
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 FONTS = ROOT / "src" / "fonts"
+# Static (non-variable) heading weights: variable fonts get embedded in PDFs as Type 3,
+# which many viewers (phones, some desktop readers) render broken or blurry.
+CVF = ROOT / "scripts" / "cv-fonts"
 OUT = ROOT / "public" / "cv"; OUT.mkdir(parents=True, exist_ok=True)
 PORTRAIT = ROOT / "public" / "portrait" / "portrait-480.webp"
 SITE = "mohammedkhankan.github.io/khankan-portfolio"
@@ -68,10 +71,14 @@ def html(l):
     lead = "".join(f'<div class="item"><div class="row"><b>{o}</b><span>{r}</span></div><p>{t}</p></div>' for o, r, t in d["lead"])
     proj = "".join(f'<div class="item"><div class="row"><b>{n}</b><span>{k}</span></div><p>{t}</p>' + (f'<p class="tech" dir="ltr">{x}</p>' if x else '') + '</div>' for n, k, t, x in d["proj"])
     prev = "".join(f'<div class="item"><div class="row"><b>{o}</b><span>{r}</span></div><p>{t}</p></div>' for o, r, t in d["prev"])
-    cont = "".join(f'<li><span>{k}</span><bdi>{v}</bdi></li>' for k, v in contact)
+    # Let long values break only at natural points (after @ and /), never mid-word.
+    brk = lambda v: v.replace("@", "@<wbr>").replace("/", "/<wbr>")
+    cont = "".join(f'<li><span>{k}</span><bdi>{brk(v)}</bdi></li>' for k, v in contact)
     return f"""<!DOCTYPE html><html lang="{l}" dir="{d['dir']}"><head><meta charset="utf-8"><style>
-@font-face{{font-family:Alx;src:url('file://{FONTS}/alexandria-latin-wght-normal.woff2');font-weight:100 900}}
-@font-face{{font-family:Alx;src:url('file://{FONTS}/alexandria-arabic-wght-normal.woff2');font-weight:100 900;unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}}
+@font-face{{font-family:Alx;src:url('file://{CVF}/alexandria-latin-600.ttf');font-weight:600}}
+@font-face{{font-family:Alx;src:url('file://{CVF}/alexandria-latin-700.ttf');font-weight:700}}
+@font-face{{font-family:Alx;src:url('file://{CVF}/alexandria-arabic-600.ttf');font-weight:600;unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}}
+@font-face{{font-family:Alx;src:url('file://{CVF}/alexandria-arabic-700.ttf');font-weight:700;unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}}
 @font-face{{font-family:Plx;src:url('file://{FONTS}/ibm-plex-sans-arabic-latin-400-normal.woff2');font-weight:400}}
 @font-face{{font-family:Plx;src:url('file://{FONTS}/ibm-plex-sans-arabic-latin-600-normal.woff2');font-weight:600}}
 @font-face{{font-family:Plx;src:url('file://{FONTS}/ibm-plex-sans-arabic-arabic-400-normal.woff2');font-weight:400;unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}}
@@ -96,7 +103,7 @@ h2{{font:600 11.5pt Alx;margin:5mm 0 2.5mm;padding-bottom:1.5mm;border-bottom:1p
 .item p{{color:#3b4456;font-size:9.4pt;line-height:1.45}}
 .chips{{font-size:9.4pt;color:#3b4456}}
 .tech{{font-size:8.6pt;color:#6b7486;text-align:start}} [dir=rtl] .tech{{text-align:right}}
-aside li bdi{{direction:ltr;unicode-bidi:isolate;display:block;font-size:8.6pt;overflow-wrap:anywhere;word-break:normal}}
+aside li bdi{{direction:ltr;unicode-bidi:isolate;display:block;font-size:8.4pt;overflow-wrap:normal;word-break:normal}}
 </style></head><body>
 <aside>
   <img src="file://{PORTRAIT}" alt="">
