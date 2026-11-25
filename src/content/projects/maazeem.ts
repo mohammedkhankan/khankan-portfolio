@@ -12,8 +12,8 @@ export const maazeem: Project = {
     en: "Digital invitations and guest management, from design to the door",
   },
   summary: {
-    ar: "منصة SaaS لإنشاء الدعوات الإلكترونية وإدارة المناسبات والمدعوين والإرسال ومتابعة الردود وتسجيل الحضور عبر QR.",
-    en: "A SaaS platform for digital invitations: events, guest lists, sending, RSVP tracking and QR check-in at the venue.",
+    ar: "دعوة إلكترونية باسم كل ضيف وباركود خاص ترسلها على واتساب، وتستقبل الضيوف بمسح الباركود من الجوال.",
+    en: "A personal invitation with its own QR code for every guest, sent on WhatsApp, with check-in by scanning from a phone.",
   },
   kind: { ar: "منصة SaaS متعددة العملاء", en: "Multi-tenant SaaS platform" },
   role: {
@@ -21,6 +21,7 @@ export const maazeem: Project = {
     en: "Founder — product, architecture & engineering",
   },
   status: "in-use",
+  url: "https://maazeem.ofoqsy.com/",
   statusNote: {
     ar: "استُخدمت في مناسبات حقيقية.",
     en: "Used for real events.",

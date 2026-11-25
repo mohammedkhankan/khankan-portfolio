@@ -12,8 +12,8 @@ export const rukn: Project = {
     en: "A SaaS platform for building and running online stores",
   },
   summary: {
-    ar: "منصة متعددة التجار تسهّل على الأعمال الصغيرة والمتوسطة دخول التجارة الرقمية، بتركيز أساسي على السوق السوري.",
-    en: "A multi-merchant commerce platform that lowers the barrier to selling online for small and mid-sized businesses, focused first on the Syrian market.",
+    ar: "منصة سورية تتيح للتجار إنشاء متاجرهم الإلكترونية: أسعار بالليرة السورية، ودفع عبر شام كاش، ومتجر جاهز للجوال.",
+    en: "A Syrian platform that lets merchants open their own online store: prices in Syrian pounds, payment via Sham Cash, mobile-ready.",
   },
   kind: { ar: "منصة SaaS متعددة المستأجرين", en: "Multi-tenant SaaS platform" },
   role: {
@@ -21,6 +21,7 @@ export const rukn: Project = {
     en: "Founder — product, architecture & engineering lead",
   },
   status: "live",
+  url: "https://ruknshop.com/",
   statusNote: {
     ar: "المنصة تعمل، ومن المتاجر الحقيقية عليها متجر روان للخدمات المكتبية.",
     en: "The platform is live; among the real stores running on it is Rawan Office Services.",

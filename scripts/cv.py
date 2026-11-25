@@ -18,47 +18,47 @@ EMAIL = (_re.search(r'email: "([^"]*)"', _site) or [None, ""])[1]  # from links.
 D = {
  "ar": dict(dir="rtl", name="محمد خانكان", title="مؤسس ومدير تنفيذي · مهندس برمجيات ومطوّر منتجات SaaS",
    loc="المملكة العربية السعودية",
-   summary="أبني منتجات رقمية تحل مشكلات أعمال حقيقية وأقودها من الفكرة حتى التشغيل: فهم المشكلة، وتصميم النظام وقاعدة البيانات، والبناء والاختبار، ثم الإطلاق والتطوير المستمر.",
+   summary="أبني منتجات رقمية تحل مشكلات أعمال حقيقية، وأقودها من الفكرة حتى الإطلاق.",
    h_lead="القيادة", lead=[
-     ("شركة أفق للحلول التقنية والرقمنة", "مؤسس ومدير تنفيذي", "منتجات SaaS للأعمال الصغيرة والمتوسطة: ركن، وأفق للمطاعم، ومعازيم."),
+     ("شركة أفق للحلول التقنية والرقمنة", "مؤسس ومدير تنفيذي", "منصات رقمية للأعمال باشتراكات شهرية: ركن للمتاجر، وأفق للمطاعم، ومعازيم للمناسبات."),
      ("منصة رفد التعليمية", "مؤسس ومدير تنفيذي", "منصة «من طالب، لأجل طالب» بأكثر من 2,000 مشترك و4,000 طالب ومستفيد، وتطبيقا Windows وأندرويد."),
    ],
    h_proj="مشاريع مختارة", proj=[
-     ("ركن", "منصة SaaS للمتاجر الإلكترونية", "10 متاجر خلال الانطلاق الأول، ومنصة متعددة التجار ببيانات معزولة.", "ASP.NET Core (.NET 10) · React · PostgreSQL · EF Core"),
-     ("أفق لإدارة المطاعم", "نظام تشغيل للمطاعم", "7 مطاعم ضمن التجربة، وواجهات للنادل والكاشير والمطبخ.", "Next.js 16 · Prisma 7 · PostgreSQL"),
-     ("معازيم", "دعوات إلكترونية وتسجيل حضور", "52/52 اختباراً ناجحاً، واستيراد 10,000 ضيف في 1.84 ثانية.", "Next.js 16 · Drizzle · PostgreSQL 17"),
-     ("النظام المالي لرفد", "نظام داخلي", "الاشتراكات والمستحقات والمصاريف وحصص الشركاء بثلاث عملات.", ""),
-     ("الطيف المعمارية", "موقع شركة", "تصميم وبناء ونشر وتحسين لمحركات البحث.", "Next.js 16 · React 19 · altayf-sa.com"),
+     ("ركن", "منصة متاجر إلكترونية", "منصة سورية تتيح للتجار إنشاء متاجرهم الإلكترونية بسهولة: أسعار بالليرة السورية، ودفع عبر شام كاش، ومتجر جاهز للجوال.", "ASP.NET Core · React · PostgreSQL — ruknshop.com"),
+     ("أفق للمطاعم", "نظام إدارة مطاعم", "منصة تتيح للمطاعم نظاماً متكاملاً: منيو إلكتروني بالباركود، وكاشير، ونادل، ومحطات تحضير، وحسابات المطعم.", "Next.js · PostgreSQL — menu.ofoqsy.com"),
+     ("معازيم", "دعوات إلكترونية", "دعوة باسم كل ضيف وباركود خاص تُرسل على واتساب، مع تسجيل الحضور بمسح الباركود من الجوال.", "Next.js · PostgreSQL — maazeem.ofoqsy.com"),
+     ("النظام المالي لرفد", "نظام داخلي", "متابعة الاشتراكات والمدفوعات ومستحقات المدرّسين والمصاريف وأرباح الشركاء.", ""),
+     ("الطيف المعمارية", "موقع شركة", "موقع لشركة مقاولات معمارية (زجاج معشّق وقباب وتشطيبات) يعرض أعمالها ويظهر في محركات البحث.", "Next.js · React — altayf-sa.com"),
    ],
    h_prev="الخبرة الميدانية", prev=[
      ("Bolt", "العمليات وتفعيل الكباتن · 2021–2024، ومن 2025 حتى الآن", "قيادة جزء من عمليات التفعيل اليومية، وتدريب الموظفين الجدد، وتطوير الإجراءات الداخلية، ومعالجة الحالات المعقدة. عاد في 2025 لتطوير أداء الفريق."),
      ("Blink", "تفعيل حسابات الكباتن · 2023–2025", "طرق تفعيل جديدة قلّصت زمن التفعيل، ودعم جودة الخدمة."),
      ("الكشري سنت", "مبيعات · 2024–2025", "بناء علاقات مع العملاء والمساهمة في رفع المبيعات."),
    ],
-   h_skills="مجالات العمل", skills="تطوير SaaS · هندسة Full-Stack · أنظمة الأعمال · معمارية قواعد البيانات · الصلاحيات وعزل البيانات · هندسة الأداء · استراتيجية المنتج · UI/UX · النشر بـ Docker",
+   h_skills="مجالات العمل", skills="تطوير SaaS · هندسة Full-Stack · أنظمة الأعمال · تصميم قواعد البيانات · الصلاحيات · الأداء · استراتيجية المنتج · UI/UX",
    h_stack="تقنيات", stack="TypeScript · React · Next.js · ASP.NET Core · PostgreSQL · Prisma · Drizzle · EF Core · Tailwind CSS · Docker · Python · C++",
    h_edu="الدراسة", edu="هندسة المعلوماتية — الجامعة الافتراضية السورية",
    h_contact="تواصل"),
- "en": dict(dir="ltr", name="Mohammed Khankan", title="Founder & CEO · Software engineer and SaaS product builder",
+ "en": dict(dir="ltr", name="Mohammed Khankan", title="Founder & CEO · Software engineer & SaaS builder",
    loc="Saudi Arabia",
-   summary="I build digital products that solve real business problems and lead them from idea to production: understanding the problem, designing the system and data model, building and testing, then launching and improving.",
+   summary="I build digital products that solve real business problems, and lead them from idea to launch.",
    h_lead="Leadership", lead=[
-     ("OFOQ Technical Solutions & Digitalization", "Founder & CEO", "SaaS products for small and mid-sized businesses: RUKN, OFOQ Restaurant OS and MAAZEEM."),
+     ("OFOQ Technical Solutions & Digitalization", "Founder & CEO", "Subscription platforms for businesses: RUKN for stores, OFOQ for restaurants and MAAZEEM for events."),
      ("RAFD Educational Platform", "Founder & CEO", "A “by a student, for students” platform with 2,000+ subscribers, 4,000+ learners, and Windows and Android apps."),
    ],
    h_proj="Selected projects", proj=[
-     ("RUKN", "E-commerce SaaS platform", "10 stores in the first launch; multi-merchant with isolated data.", "ASP.NET Core (.NET 10) · React · PostgreSQL · EF Core"),
-     ("OFOQ Restaurant OS", "Restaurant operations", "7 restaurants in trial; waiter, cashier and kitchen views.", "Next.js 16 · Prisma 7 · PostgreSQL"),
-     ("MAAZEEM", "Digital invitations & check-in", "52/52 tests passing; 10,000 guests imported in 1.84 s.", "Next.js 16 · Drizzle · PostgreSQL 17"),
-     ("RAFD Financial System", "Internal tool", "Subscriptions, payouts, expenses and partner shares across three currencies.", ""),
-     ("AL TAYF Architecture", "Company website", "Design, build, deployment and SEO.", "Next.js 16 · React 19 · altayf-sa.com"),
+     ("RUKN", "E-commerce platform", "A Syrian platform that lets merchants open their own online store easily: prices in Syrian pounds, payment via Sham Cash, mobile-ready.", "ASP.NET Core · React · PostgreSQL — ruknshop.com"),
+     ("OFOQ for Restaurants", "Restaurant management", "A platform that gives restaurants a complete system: QR digital menu, cashier, waiter app, kitchen stations and billing.", "Next.js · PostgreSQL — menu.ofoqsy.com"),
+     ("MAAZEEM", "Digital invitations", "A personal invitation with its own QR code for every guest, sent on WhatsApp, with check-in by scanning from a phone.", "Next.js · PostgreSQL — maazeem.ofoqsy.com"),
+     ("RAFD Financial System", "Internal tool", "Tracks subscriptions, payments, teacher payouts, expenses and partner profits.", ""),
+     ("AL TAYF Architecture", "Company website", "Website for an architectural contractor (stained glass, domes, finishes) that showcases its work and ranks in search.", "Next.js · React — altayf-sa.com"),
    ],
    h_prev="Field experience", prev=[
-     ("Bolt", "Operations & driver onboarding · 2021–2024, 2025–present", "Led part of daily activation operations, trained new team members, improved internal procedures and handled escalated cases. Returned in 2025 to raise team performance."),
+     ("Bolt", "Operations & driver onboarding · 2021–2024, 2025–present", "Led part of daily activation operations, trained new staff, improved procedures and handled escalations. Returned in 2025 to raise team performance."),
      ("Blink", "Driver account activation · 2023–2025", "New activation approaches that shortened activation time; supported service quality."),
      ("Al Koshary Cent", "Sales · 2024–2025", "Built customer relationships and helped grow sales."),
    ],
-   h_skills="Areas of practice", skills="SaaS development · Full-stack engineering · Business systems · Database architecture · Access control & tenant isolation · Performance engineering · Product strategy · UI/UX · Docker deployment",
+   h_skills="Areas of practice", skills="SaaS development · Full-stack engineering · Business systems · Database design · Access control · Performance · Product strategy · UI/UX",
    h_stack="Technologies", stack="TypeScript · React · Next.js · ASP.NET Core · PostgreSQL · Prisma · Drizzle · EF Core · Tailwind CSS · Docker · Python · C++",
    h_edu="Education", edu="Informatics Engineering — Syrian Virtual University",
    h_contact="Contact"),
@@ -85,7 +85,7 @@ def html(l):
 @font-face{{font-family:Plx;src:url('file://{FONTS}/ibm-plex-sans-arabic-arabic-600-normal.woff2');font-weight:600;unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}}
 @page{{size:A4;margin:0}}
 *{{box-sizing:border-box;margin:0;padding:0}}
-body{{font:10pt/1.5 Plx,sans-serif;color:#121826;width:210mm;min-height:297mm;display:grid;grid-template-columns:62mm 1fr}}
+body{{font:10pt/1.5 Plx,sans-serif;color:#121826;width:210mm;height:297mm;overflow:hidden;display:grid;grid-template-columns:62mm 1fr}}
 aside{{background:#0c1322;color:#eef0f3;padding:12mm 8mm;position:relative}}
 aside img{{width:78%;margin-inline:auto;border-radius:10px;display:block}}
 aside .hz{{height:1px;margin:5mm 0;background:linear-gradient(90deg,transparent,#f4c98b,transparent);box-shadow:0 0 8px #f4c98b}}
@@ -93,11 +93,11 @@ aside h3{{font:600 10pt Alx;color:#f4c98b;margin-bottom:3mm}}
 aside ul{{list-style:none;display:grid;gap:2.5mm;font-size:9pt}}
 aside li span{{display:block;color:#a3acbd;font-size:8pt}}
 aside p{{font-size:9pt;color:#d5dae3}}
-main{{padding:12mm 11mm}}
+main{{padding:11mm 11mm 8mm}}
 h1{{font:700 24pt/1.1 Alx;letter-spacing:-.01em}}
 .t{{margin-top:2mm;color:#535d70;font-size:10.5pt}}
 .sum{{margin-top:4mm;font-size:10pt}}
-h2{{font:600 11.5pt Alx;margin:5mm 0 2.5mm;padding-bottom:1.5mm;border-bottom:1px solid #dde1e8}}
+h2{{font:600 11.5pt Alx;margin:4.2mm 0 2.2mm;padding-bottom:1.5mm;border-bottom:1px solid #dde1e8}}
 .item{{margin-bottom:2.4mm}} .row{{display:flex;justify-content:space-between;gap:4mm;align-items:baseline}}
 .row b{{font-weight:600}} .row span{{color:#535d70;font-size:9pt;white-space:nowrap}}
 .item p{{color:#3b4456;font-size:9.4pt;line-height:1.45}}

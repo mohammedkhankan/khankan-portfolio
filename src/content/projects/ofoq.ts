@@ -12,8 +12,8 @@ export const ofoq: Project = {
     en: "An operating system for restaurants — table to kitchen to bill",
   },
   summary: {
-    ar: "نظام SaaS لإدارة عمليات المطعم اليومية: الطاولات والطلبات والنادل والكاشير ومحطات التحضير والحجوزات والمنيو الإلكتروني.",
-    en: "A SaaS system for daily restaurant operations: tables, orders, waiters, cashier, prep stations, reservations and a digital menu.",
+    ar: "منصة تتيح للمطاعم نظاماً متكاملاً: منيو إلكتروني بالباركود، وكاشير، ونادل، ومحطات تحضير، وحسابات المطعم.",
+    en: "A platform that gives restaurants a complete system: QR digital menu, cashier, waiter app, kitchen stations and billing.",
   },
   kind: { ar: "نظام SaaS تشغيلي", en: "Operational SaaS" },
   role: {
@@ -21,6 +21,7 @@ export const ofoq: Project = {
     en: "Founder — product, architecture, engineering & field testing",
   },
   status: "trial",
+  url: "https://menu.ofoqsy.com/",
   statusNote: {
     ar: "في مرحلة التجربة، و7 مطاعم تعمل عليه حالياً.",
     en: "In trial, with 7 restaurants running on it now.",
