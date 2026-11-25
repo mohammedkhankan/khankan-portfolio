@@ -1,6 +1,10 @@
-# Mohammed Khankan — Personal Portfolio
+# khankan-portfolio
 
-A bilingual (Arabic RTL / English LTR) portfolio and case-study site. Static export: the whole site is generated at build time and runs on any static host with no server.
+Source for my personal site: **[mohammedkhankan.github.io/khankan-portfolio](https://mohammedkhankan.github.io/khankan-portfolio/en/)**
+
+![Mohammed Khankan portfolio](public/og/default-en.png)
+
+Bilingual (Arabic RTL / English LTR) portfolio with case studies for RUKN, OFOQ Restaurant OS, MAAZEEM, RAFD and AL TAYF. It's a static export: every page is generated at build time, so there's no server, database or tracking.
 
 ## Run
 
@@ -64,17 +68,13 @@ Its page, cards, footer link, sitemap entry and "next project" link are created 
 3. `npm run images` → WebP at 640/1280/1920, blur placeholders, `manifest.json`, OG images.
 4. `npm run build`.
 
-Projects with no images show an honest "awaiting screenshots" state listing the expected screens — never mock UIs.
+Projects without images show a placeholder that lists the expected screens.
 
-### Replace RUKN images later
-Delete `assets-src/rukn/`, drop the new set in, run `npm run images -- rukn` then `npm run build`. The output folder is fully regenerated; no code changes.
-
-### Add RAFD / RAFD Finance images
-Put them in `assets-src/rafd/` and `assets-src/rafd-finance/`. **Finance screenshots must be redacted or use sample data.** When the technical reports arrive, fill `stack` and `engineering` in the project files.
+To replace a project's images, empty `assets-src/<slug>/`, add the new set, then run `npm run images -- <slug>` and `npm run build`. Finance screenshots (RAFD) use redacted or sample data only.
 
 ### Portrait
-`assets-src/portrait/original.png` → `npm run images`. Gently processed (4:5 crop, slight contrast, light sharpening; no retouching). Set `person.portrait = false` in `site.ts` to fall back to a monogram.
+`assets-src/portrait/original.png` → `npm run images` (4:5 crop, light sharpening). Set `person.portrait = false` in `site.ts` to fall back to a monogram.
 
-## Deploy (later — not done)
+## Deploy
 
-Set `NEXT_PUBLIC_SITE_URL=https://your-domain` (used for canonical URLs, hreflang, sitemap, OG), run `npm run build`, upload `out/` to Netlify, Cloudflare Pages or any static host. `public/_headers` applies security headers on Netlify/Cloudflare Pages.
+Hosted on GitHub Pages from the `gh-pages` branch. Set `NEXT_PUBLIC_SITE_URL` (canonical URLs, hreflang, sitemap, OG), run `npm run build`, and publish `out/`. `public/_headers` carries the security headers for hosts that support it (Netlify, Cloudflare Pages).
