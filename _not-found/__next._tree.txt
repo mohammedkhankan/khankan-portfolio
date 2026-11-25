@@ -2,4 +2,4 @@
 :HL["/khankan-portfolio/_next/static/chunks/10f_fics6i9bc.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"a3OYPdN4ox5dZmmuVVfyv","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"MtHv0wWN8h5zBG0g4NdWq","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
