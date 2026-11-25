@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import type { Locale } from "@/content/types";
 import { ui } from "@/content/site";
-import { experience, home, leadership } from "@/content/pages";
+import { experience, fieldExperience, home, leadership } from "@/content/pages";
 import { getProject, projects } from "@/content/projects";
 import { href, isLocale } from "@/lib/i18n";
 import { pageMeta } from "@/lib/seo";
@@ -49,6 +49,27 @@ export default async function ExperiencePage({ params }: Props) {
           </section>
         ))}
       </div>
+
+      <section className="mt-20 grid gap-10 border-t border-line pt-14 lg:grid-cols-12" aria-labelledby="field">
+        <div className="lg:col-span-4">
+          <h2 id="field" className="text-h2">{fieldExperience.title[locale]}</h2>
+          <p className="mt-4 text-muted">{fieldExperience.lead[locale]}</p>
+        </div>
+        <ol className="grid gap-10 lg:col-span-7 lg:col-start-6">
+          {fieldExperience.jobs.map((j) => (
+            <li key={j.org.en} className="border-t border-line pt-5">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+                <h3 className="font-display text-h3">{j.org[locale]}</h3>
+                <span className="text-sm tabular-nums text-muted">{j.period[locale]}</span>
+              </div>
+              <p className="mt-1 text-muted">{j.role[locale]}</p>
+              <ul className="prose-case mt-4" style={{ ["--p" as string]: "#f4c98b" }}>
+                {j.points[locale].map((pt) => <li key={pt} className="text-ink/90">{pt}</li>)}
+              </ul>
+            </li>
+          ))}
+        </ol>
+      </section>
 
       <section className="mt-20 grid gap-10 border-t border-line pt-14 lg:grid-cols-12">
         <h2 className="text-h2 lg:col-span-4">{experience.practiceTitle[locale]}</h2>

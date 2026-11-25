@@ -25,8 +25,13 @@ D = {
      ("النظام المالي لرفد", "نظام داخلي", "الاشتراكات والمستحقات والمصاريف وحصص الشركاء بثلاث عملات.", ""),
      ("الطيف المعمارية", "موقع شركة", "تصميم وبناء ونشر وتحسين لمحركات البحث.", "Next.js 16 · React 19 · altayf-sa.com"),
    ],
+   h_prev="خبرات سابقة", prev=[
+     ("Bolt", "العمليات وتفعيل الكباتن · 2021–2024، ومن 2025", "قيادة جزء من عمليات التفعيل اليومية، وتدريب الموظفين الجدد، وتطوير الإجراءات الداخلية، ومعالجة الحالات المعقدة. عاد في 2025 لتطوير أداء الفريق."),
+     ("Blink", "تفعيل حسابات الكباتن · 2023–الآن", "طرق تفعيل جديدة قلّصت زمن التفعيل، ودعم جودة الخدمة."),
+     ("الكشري سنت", "مبيعات · 2024–2025", "بناء علاقات مع العملاء والمساهمة في رفع المبيعات."),
+   ],
    h_skills="مجالات العمل", skills="تطوير SaaS · هندسة Full-Stack · أنظمة الأعمال · معمارية قواعد البيانات · الصلاحيات وعزل البيانات · هندسة الأداء · استراتيجية المنتج · UI/UX · النشر بـ Docker",
-   h_stack="تقنيات", stack="TypeScript · React · Next.js · ASP.NET Core · PostgreSQL · Prisma · Drizzle · EF Core · Tailwind CSS · Docker",
+   h_stack="تقنيات", stack="TypeScript · React · Next.js · ASP.NET Core · PostgreSQL · Prisma · Drizzle · EF Core · Tailwind CSS · Docker · Python · C++",
    h_edu="الدراسة", edu="هندسة المعلوماتية — الجامعة الافتراضية السورية",
    h_contact="تواصل"),
  "en": dict(dir="ltr", name="Mohammed Khankan", title="Founder & CEO · Software engineer and SaaS product builder",
@@ -43,8 +48,13 @@ D = {
      ("RAFD Financial System", "Internal tool", "Subscriptions, payouts, expenses and partner shares across three currencies.", ""),
      ("AL TAYF Architecture", "Company website", "Design, build, deployment and SEO.", "Next.js 16 · React 19 · altayf-sa.com"),
    ],
+   h_prev="Previous experience", prev=[
+     ("Bolt", "Operations & driver onboarding · 2021–2024, 2025–", "Led part of daily activation operations, trained new team members, improved internal procedures and handled escalated cases. Returned in 2025 to raise team performance."),
+     ("Blink", "Driver account activation · 2023–present", "New activation approaches that shortened activation time; supported service quality."),
+     ("Al Koshary Cent", "Sales · 2024–2025", "Built customer relationships and helped grow sales."),
+   ],
    h_skills="Areas of practice", skills="SaaS development · Full-stack engineering · Business systems · Database architecture · Access control & tenant isolation · Performance engineering · Product strategy · UI/UX · Docker deployment",
-   h_stack="Technologies", stack="TypeScript · React · Next.js · ASP.NET Core · PostgreSQL · Prisma · Drizzle · EF Core · Tailwind CSS · Docker",
+   h_stack="Technologies", stack="TypeScript · React · Next.js · ASP.NET Core · PostgreSQL · Prisma · Drizzle · EF Core · Tailwind CSS · Docker · Python · C++",
    h_edu="Education", edu="Informatics Engineering — Syrian Virtual University",
    h_contact="Contact"),
 }
@@ -55,6 +65,7 @@ def html(l):
     if EMAIL: contact.insert(0, ("Email", EMAIL))
     lead = "".join(f'<div class="item"><div class="row"><b>{o}</b><span>{r}</span></div><p>{t}</p></div>' for o, r, t in d["lead"])
     proj = "".join(f'<div class="item"><div class="row"><b>{n}</b><span>{k}</span></div><p>{t}</p>' + (f'<p class="tech" dir="ltr">{x}</p>' if x else '') + '</div>' for n, k, t, x in d["proj"])
+    prev = "".join(f'<div class="item"><div class="row"><b>{o}</b><span>{r}</span></div><p>{t}</p></div>' for o, r, t in d["prev"])
     cont = "".join(f'<li><span>{k}</span><bdi>{v}</bdi></li>' for k, v in contact)
     return f"""<!DOCTYPE html><html lang="{l}" dir="{d['dir']}"><head><meta charset="utf-8"><style>
 @font-face{{font-family:Alx;src:url('file://{FONTS}/alexandria-latin-wght-normal.woff2');font-weight:100 900}}
@@ -65,22 +76,22 @@ def html(l):
 @font-face{{font-family:Plx;src:url('file://{FONTS}/ibm-plex-sans-arabic-arabic-600-normal.woff2');font-weight:600;unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}}
 @page{{size:A4;margin:0}}
 *{{box-sizing:border-box;margin:0;padding:0}}
-body{{font:10.5pt/1.55 Plx,sans-serif;color:#121826;width:210mm;min-height:297mm;display:grid;grid-template-columns:62mm 1fr}}
-aside{{background:#0c1322;color:#eef0f3;padding:14mm 9mm;position:relative}}
-aside img{{width:100%;border-radius:10px;display:block}}
-aside .hz{{height:1px;margin:7mm 0;background:linear-gradient(90deg,transparent,#f4c98b,transparent);box-shadow:0 0 8px #f4c98b}}
+body{{font:10pt/1.5 Plx,sans-serif;color:#121826;width:210mm;min-height:297mm;display:grid;grid-template-columns:62mm 1fr}}
+aside{{background:#0c1322;color:#eef0f3;padding:12mm 8mm;position:relative}}
+aside img{{width:78%;margin-inline:auto;border-radius:10px;display:block}}
+aside .hz{{height:1px;margin:5mm 0;background:linear-gradient(90deg,transparent,#f4c98b,transparent);box-shadow:0 0 8px #f4c98b}}
 aside h3{{font:600 10pt Alx;color:#f4c98b;margin-bottom:3mm}}
 aside ul{{list-style:none;display:grid;gap:2.5mm;font-size:9pt}}
 aside li span{{display:block;color:#a3acbd;font-size:8pt}}
 aside p{{font-size:9pt;color:#d5dae3}}
-main{{padding:14mm 12mm}}
-h1{{font:700 26pt/1.1 Alx;letter-spacing:-.01em}}
+main{{padding:12mm 11mm}}
+h1{{font:700 24pt/1.1 Alx;letter-spacing:-.01em}}
 .t{{margin-top:2mm;color:#535d70;font-size:10.5pt}}
-.sum{{margin-top:6mm;font-size:10.5pt}}
-h2{{font:600 12pt Alx;margin:7mm 0 3mm;padding-bottom:1.5mm;border-bottom:1px solid #dde1e8}}
-.item{{margin-bottom:3.2mm}} .row{{display:flex;justify-content:space-between;gap:4mm;align-items:baseline}}
+.sum{{margin-top:4mm;font-size:10pt}}
+h2{{font:600 11.5pt Alx;margin:5mm 0 2.5mm;padding-bottom:1.5mm;border-bottom:1px solid #dde1e8}}
+.item{{margin-bottom:2.4mm}} .row{{display:flex;justify-content:space-between;gap:4mm;align-items:baseline}}
 .row b{{font-weight:600}} .row span{{color:#535d70;font-size:9pt;white-space:nowrap}}
-.item p{{color:#3b4456;font-size:9.6pt}}
+.item p{{color:#3b4456;font-size:9.4pt;line-height:1.45}}
 .chips{{font-size:9.4pt;color:#3b4456}}
 .tech{{font-size:8.6pt;color:#6b7486;text-align:start}} [dir=rtl] .tech{{text-align:right}}
 aside li bdi{{direction:ltr;unicode-bidi:isolate;display:block;font-size:8.6pt;overflow-wrap:anywhere;word-break:normal}}
@@ -92,13 +103,14 @@ aside li bdi{{direction:ltr;unicode-bidi:isolate;display:block;font-size:8.6pt;o
   <div class="hz"></div>
   <h3>{d['h_edu']}</h3><p>{d['edu']}</p>
   <div class="hz"></div>
-  <h3>{d['h_stack']}</h3><p>{d['stack']}</p>
+  <h3>{d['h_stack']}</h3><p dir="ltr" style="text-align:{'right' if d['dir']=='rtl' else 'left'}">{d['stack']}</p>
 </aside>
 <main>
   <h1>{d['name']}</h1><p class="t">{d['title']} — {d['loc']}</p>
   <p class="sum">{d['summary']}</p>
   <h2>{d['h_lead']}</h2>{lead}
   <h2>{d['h_proj']}</h2>{proj}
+  <h2>{d['h_prev']}</h2>{prev}
   <h2>{d['h_skills']}</h2><p class="chips">{d['skills']}</p>
 </main></body></html>"""
 

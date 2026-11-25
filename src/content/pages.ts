@@ -281,3 +281,53 @@ export const services = {
  * Example: { quote: { ar: "…", en: "…" }, name: { ar: "…", en: "…" }, role: { ar: "صاحب متجر روان", en: "Owner, Rawan" }, project: "rukn" }
  */
 export const testimonials: { quote: L; name: L; role: L; project?: string }[] = [];
+
+/** Field experience before founding — shown on the Experience page and in the CV. */
+export const fieldExperience = {
+  title: { ar: "خبرة ميدانية قبل التأسيس", en: "Field experience before founding" } as L,
+  lead: {
+    ar: "سنوات في عمليات شركات معروفة علّمتني كيف تتعطل العمليات وكيف يفكر العميل — وهذا ما تُبنى عليه منتجاتي.",
+    en: "Years inside the operations of well-known companies taught me where processes break and how customers think — the ground my products are built on.",
+  } as L,
+  jobs: [
+    {
+      org: { ar: "Bolt", en: "Bolt" },
+      role: { ar: "العمليات وتفعيل الكباتن", en: "Operations & driver onboarding" },
+      period: { ar: "2021–2024، ثم من 2025 حتى الآن", en: "2021–2024, then 2025–present" },
+      points: {
+        ar: [
+          "قيادة جزء من عمليات تفعيل الكباتن اليومية وتنسيق العمل داخل الفريق.",
+          "تدريب الموظفين الجدد على إجراءات التفعيل والتعامل مع الحالات.",
+          "تطوير الإجراءات الداخلية واقتراح تحسينات رفعت سرعة التفعيل.",
+          "معالجة الحالات التقنية والتشغيلية المعقدة.",
+          "العودة في 2025 للمساهمة في تطوير أداء الفريق.",
+        ],
+        en: [
+          "Led part of daily driver-activation operations and coordinated work within the team.",
+          "Trained new team members on activation procedures and case handling.",
+          "Improved internal procedures and proposed changes that sped up activation.",
+          "Handled escalated technical and operational cases.",
+          "Returned in 2025 to help raise team performance.",
+        ],
+      } as LL,
+    },
+    {
+      org: { ar: "Blink", en: "Blink" },
+      role: { ar: "تفعيل حسابات الكباتن", en: "Driver account activation" },
+      period: { ar: "2023 حتى الآن", en: "2023–present" },
+      points: {
+        ar: ["تطوير طرق جديدة لتفعيل الحسابات قلّصت زمن التفعيل.", "دعم جودة الخدمة وكفاءة العمليات."],
+        en: ["Developed new activation approaches that shortened activation time.", "Supported service quality and operational efficiency."],
+      } as LL,
+    },
+    {
+      org: { ar: "الكشري سنت", en: "Al Koshary Cent" },
+      role: { ar: "مبيعات", en: "Sales" },
+      period: { ar: "2024–2025", en: "2024–2025" },
+      points: {
+        ar: ["بناء علاقات مع العملاء وفهم احتياجاتهم، والمساهمة في رفع المبيعات."],
+        en: ["Built customer relationships, understood their needs and helped grow sales."],
+      } as LL,
+    },
+  ],
+};
