@@ -42,9 +42,9 @@ export const maazeem: Project = {
   accent: { dark: "#c9a6ec", light: "#5b2f84" },
   chapter: { bg: "linear-gradient(160deg,#221434 0%,#362248 45%,#553473 100%)", ink: "#f4ecfb", sub: "#cbb8de", dark: true },
   proof: [
-    { value: { ar: "Meta أو بوت", en: "Meta or bot" }, label: { ar: "إرسال رسمي عبر واتساب Meta، أو عبر بوت خاص بمعازيم", en: "Official WhatsApp sending through Meta, or through MAAZEEM's own bot" } },
-    { value: { ar: "QR مخصص", en: "Custom QR" }, label: { ar: "باركود يُضبط حسب المناسبة: يظهر دائماً أو بعد قبول الدعوة فقط", en: "A QR code set per event: always visible, or shown only after the guest accepts" } },
-    { value: { ar: "تقويم", en: "Calendar" }, label: { ar: "تنبيهات للضيوف تُضاف إلى التقويم قبل المناسبة", en: "Guest reminders added to their calendar ahead of the event" } },
+    { value: { ar: "إرسال رسمي", en: "Official sending" }, label: { ar: "عبر واتساب Meta، أو عبر بوت خاص بمعازيم", en: "Through WhatsApp via Meta, or through MAAZEEM's own bot" } },
+    { value: { ar: "باركود مخصص", en: "Custom QR" }, label: { ar: "يُضبط حسب المناسبة: يظهر دائماً أو بعد قبول الدعوة فقط", en: "A QR code set per event: always visible, or shown only after the guest accepts" } },
+    { value: { ar: "تذكير بالتقويم", en: "Calendar reminders" }, label: { ar: "تنبيهات تُضاف إلى تقويم الضيف قبل المناسبة", en: "Added to the guest's calendar ahead of the event" } },
   ],
   mediaNote: { ar: "لقطات من المنصة ببيانات تجريبية.", en: "Screens from the platform with demo data." },
   facts: [
