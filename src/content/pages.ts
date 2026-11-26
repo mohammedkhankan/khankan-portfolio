@@ -80,12 +80,12 @@ export const leadership = [
     org: { ar: "رفد التعليمية", en: "RAFD Educational Platform" } as L,
     role: { ar: "مؤسس ومدير تنفيذي", en: "Founder & CEO" } as L,
     body: {
-      ar: "منصة تعليمية تجمع خبرتنا كطلاب مع خبرة الدكاترة في الشرح، وقدّمت نموذجاً ناجحاً للتعليم الجامعي المساند. بنينا لها موقع ويب، وتطبيق أندرويد، وتطبيق ويندوز لحضور الدروس، ونظاماً مالياً خاصاً بها، وتضم أكثر من 2,000 مشترك.",
-      en: "A learning platform that combines our experience as students with lecturers' teaching expertise, and became a successful model for university learning support. We built its website, an Android app, a Windows app for attending lessons, and its own finance system; it has 2,000+ subscribers.",
+      ar: "منصة تعليمية تجمع خبرتنا كطلاب مع خبرة الدكاترة في الشرح، وقدّمت نموذجاً ناجحاً للتعليم الجامعي المساند. بنينا لها موقع ويب، وتطبيق أندرويد، وتطبيق ويندوز لحضور الدروس، ونظاماً مالياً خاصاً بها، وتضم أكثر من 2,000 مشترك. تولّيت التواصل مع الدكاترة وإقناعهم بالعمل معنا، ووضعت آلية العمل وسياسة الفريق.",
+      en: "A learning platform that combines our experience as students with lecturers' teaching expertise, and became a successful model for university learning support. We built its website, an Android app, a Windows app for attending lessons, and its own finance system; it has 2,000+ subscribers. I reached out to lecturers and convinced them to work with us, and set the team's workflow and policies.",
     } as L,
     points: {
-      ar: ["التخطيط والقرارات الاستراتيجية", "التواصل مع الأكاديميين والتعاقدات", "قيادة تطوير الخدمات والتطبيقات", "تصميم وتطوير النظام المالي الداخلي"],
-      en: ["Planning & strategic decisions", "Academic relationships & contracts", "Leading service and app development", "Designing & building the internal finance system"],
+      ar: ["التخطيط والقرارات الاستراتيجية", "التواصل مع الدكاترة وإقناعهم بالعمل معنا", "تحديد آلية العمل وسياسة الفريق", "قيادة تطوير الخدمات والتطبيقات", "تصميم وتطوير النظام المالي الداخلي"],
+      en: ["Planning & strategic decisions", "Reaching out to lecturers and bringing them on board", "Setting the team's workflow and policies", "Leading service and app development", "Designing & building the internal finance system"],
     } as LL,
     projects: ["rafd", "rafd-finance"],
   },
@@ -127,8 +127,8 @@ export const about = {
       k: { ar: "التأسيس", en: "Founding" },
       t: { ar: "رفد", en: "RAFD" },
       p: {
-        ar: ["أسس رفد، منصة تعليمية تجمع خبرة الطلاب مع خبرة الدكاترة في الشرح، وقدّمت نموذجاً ناجحاً للتعليم الجامعي المساند بأكثر من 2,000 مشترك. قاد التعاقد مع الأكاديميين، وبناء الموقع وتطبيق أندرويد وتطبيق ويندوز لحضور الدروس، وبنى النظام المالي الخاص بالمنصة بنفسه."],
-        en: ["He founded RAFD, a learning platform combining students' experience with lecturers' teaching expertise, which became a successful model for university learning support with 2,000+ subscribers. He led work with academics, built the website, the Android app and a Windows app for attending lessons, and wrote the platform's own finance system himself."],
+        ar: ["أسس رفد، منصة تعليمية تجمع خبرة الطلاب مع خبرة الدكاترة في الشرح، وقدّمت نموذجاً ناجحاً للتعليم الجامعي المساند بأكثر من 2,000 مشترك. تولّى التواصل مع الدكاترة وإقناعهم بالعمل مع المنصة، ووضع آلية العمل وسياسة الفريق، وقاد بناء الموقع وتطبيق أندرويد وتطبيق ويندوز لحضور الدروس، وبنى النظام المالي الخاص بالمنصة بنفسه."],
+        en: ["He founded RAFD, a learning platform combining students' experience with lecturers' teaching expertise, which became a successful model for university learning support with 2,000+ subscribers. He reached out to lecturers and convinced them to join, set the team's workflow and policies, built the website, the Android app and a Windows app for attending lessons, and wrote the platform's own finance system himself."],
       },
     },
     {
