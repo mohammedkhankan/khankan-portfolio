@@ -42,9 +42,9 @@ export const maazeem: Project = {
   accent: { dark: "#c9a6ec", light: "#5b2f84" },
   chapter: { bg: "linear-gradient(160deg,#221434 0%,#362248 45%,#553473 100%)", ink: "#f4ecfb", sub: "#cbb8de", dark: true },
   proof: [
-    { value: { ar: "52 / 52", en: "52 / 52" }, label: { ar: "اختباراً ناجحاً على PostgreSQL حقيقي معزول", en: "tests passing on an isolated real PostgreSQL" } },
-    { value: { ar: "1.84 ث", en: "1.84 s" }, label: { ar: "لاستيراد 10,000 ضيف من Excel", en: "to import 10,000 guests from Excel" } },
-    { value: { ar: "5 من 30", en: "5 of 30" }, label: { ar: "30 مسحاً متزامناً لدعوة لخمسة أشخاص أدخلت 5 بالضبط", en: "30 concurrent scans on a 5-person invite admitted exactly 5" } },
+    { value: { ar: "Meta أو بوت", en: "Meta or bot" }, label: { ar: "إرسال رسمي عبر واتساب Meta، أو عبر بوت خاص بمعازيم", en: "Official WhatsApp sending through Meta, or through MAAZEEM's own bot" } },
+    { value: { ar: "QR مخصص", en: "Custom QR" }, label: { ar: "باركود يُضبط حسب المناسبة: يظهر دائماً أو بعد قبول الدعوة فقط", en: "A QR code set per event: always visible, or shown only after the guest accepts" } },
+    { value: { ar: "تقويم", en: "Calendar" }, label: { ar: "تنبيهات للضيوف تُضاف إلى التقويم قبل المناسبة", en: "Guest reminders added to their calendar ahead of the event" } },
   ],
   mediaNote: { ar: "لقطات من المنصة ببيانات تجريبية.", en: "Screens from the platform with demo data." },
   facts: [
