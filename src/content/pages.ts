@@ -6,11 +6,11 @@ export const home = {
   meta: {
     title: { ar: "محمد خانكان — مؤسس ومهندس برمجيات", en: "Mohammed Khankan — Founder & Software Engineer" } as L,
     description: {
-      ar: "مؤسس شركة أفق للحلول التقنية والرقمنة ومنصة رفد التعليمية. يبني منتجات SaaS وأنظمة أعمال متكاملة: ركن، أفق للمطاعم، معازيم، رفد، الطيف.",
-      en: "Founder of OFOQ Technical Solutions & Digitalization and RAFD. Builds SaaS products and business systems: RUKN, OFOQ Restaurant OS, MAAZEEM, RAFD and AL TAYF.",
+      ar: "مؤسس شركة أفق للحلول التقنية والرقمنة ومنصة رفد التعليمية. يبني تطبيقات ويب وجوال وأنظمة تشغيل للشركات ومنصات SaaS: ركن، أفق للمطاعم، معازيم، رفد، الطيف.",
+      en: "Founder of OFOQ Technical Solutions & Digitalization and RAFD. Builds web and mobile apps, business operating systems and SaaS platforms: RUKN, OFOQ Restaurant OS, MAAZEEM, RAFD and AL TAYF.",
     } as L,
   },
-  eyebrow: { ar: "مؤسس أفق ورفد، ومهندس برمجيات يبني منتجات SaaS", en: "Founder of OFOQ and RAFD, software engineer building SaaS products" } as L,
+  eyebrow: { ar: "مؤسس أفق ورفد، ومهندس برمجيات: تطبيقات ويب وجوال وأنظمة للشركات", en: "Founder of OFOQ and RAFD, software engineer: web & mobile apps and business systems" } as L,
   headline: {
     ar: "أبني منتجات رقمية تحلّ مشكلات أعمال حقيقية — وتبقى تعمل بعد الإطلاق.",
     en: "I build digital products that solve real business problems — and keep working long after launch.",
