@@ -80,8 +80,8 @@ export const leadership = [
     org: { ar: "رفد التعليمية", en: "RAFD Educational Platform" } as L,
     role: { ar: "مؤسس ومدير تنفيذي", en: "Founder & CEO" } as L,
     body: {
-      ar: "منصة تعليمية تجمع خبرتنا كطلاب مع خبرة الدكاترة في الشرح، وقدّمت نموذجاً ناجحاً للتعليم الجامعي المساند. طوّرنا لها تطبيقات خاصة لويندوز وأندرويد، وتضم أكثر من 2,000 مشترك.",
-      en: "A learning platform that combines our experience as students with lecturers' teaching expertise, and became a successful model for university learning support. We built dedicated Windows and Android apps for it; it has 2,000+ subscribers.",
+      ar: "منصة تعليمية تجمع خبرتنا كطلاب مع خبرة الدكاترة في الشرح، وقدّمت نموذجاً ناجحاً للتعليم الجامعي المساند. بنينا لها موقع ويب، وتطبيق أندرويد، وتطبيق ويندوز لحضور الدروس، ونظاماً مالياً خاصاً بها، وتضم أكثر من 2,000 مشترك.",
+      en: "A learning platform that combines our experience as students with lecturers' teaching expertise, and became a successful model for university learning support. We built its website, an Android app, a Windows app for attending lessons, and its own finance system; it has 2,000+ subscribers.",
     } as L,
     points: {
       ar: ["التخطيط والقرارات الاستراتيجية", "التواصل مع الأكاديميين والتعاقدات", "قيادة تطوير الخدمات والتطبيقات", "تصميم وتطوير النظام المالي الداخلي"],
@@ -127,8 +127,8 @@ export const about = {
       k: { ar: "التأسيس", en: "Founding" },
       t: { ar: "رفد", en: "RAFD" },
       p: {
-        ar: ["أسس رفد، منصة تعليمية تجمع خبرة الطلاب مع خبرة الدكاترة في الشرح، وقدّمت نموذجاً ناجحاً للتعليم الجامعي المساند بأكثر من 2,000 مشترك. قاد التعاقد مع الأكاديميين، وتطوير تطبيقات ويندوز وأندرويد، وبنى النظام المالي الداخلي بنفسه."],
-        en: ["He founded RAFD, a learning platform combining students' experience with lecturers' teaching expertise, which became a successful model for university learning support with 2,000+ subscribers. He led work with academics, built the Windows and Android apps, and wrote the internal finance system himself."],
+        ar: ["أسس رفد، منصة تعليمية تجمع خبرة الطلاب مع خبرة الدكاترة في الشرح، وقدّمت نموذجاً ناجحاً للتعليم الجامعي المساند بأكثر من 2,000 مشترك. قاد التعاقد مع الأكاديميين، وبناء الموقع وتطبيق أندرويد وتطبيق ويندوز لحضور الدروس، وبنى النظام المالي الخاص بالمنصة بنفسه."],
+        en: ["He founded RAFD, a learning platform combining students' experience with lecturers' teaching expertise, which became a successful model for university learning support with 2,000+ subscribers. He led work with academics, built the website, the Android app and a Windows app for attending lessons, and wrote the platform's own finance system himself."],
       },
     },
     {

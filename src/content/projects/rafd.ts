@@ -12,8 +12,8 @@ export const rafd: Project = {
     en: "A supplementary learning platform for Syrian Virtual University students",
   },
   summary: {
-    ar: "منصة تجمع خبرتنا كطلاب مع خبرة الدكاترة في الشرح: كورسات وملفات وكويزات وأدوات أكاديمية على الويب وتطبيقات خاصة لويندوز وأندرويد، بأكثر من 2,000 مشترك.",
-    en: "A platform combining our experience as students with lecturers' teaching expertise: courses, files, quizzes and academic tools on the web and dedicated Windows and Android apps, with 2,000+ subscribers.",
+    ar: "منصة تجمع خبرتنا كطلاب مع خبرة الدكاترة في الشرح: كورسات وملفات وكويزات وأدوات أكاديمية على موقع ويب وتطبيق أندرويد وتطبيق ويندوز لحضور الدروس، مع نظام مالي خاص بها، بأكثر من 2,000 مشترك.",
+    en: "A platform combining our experience as students with lecturers' teaching expertise: courses, files, quizzes and academic tools on a website, an Android app and a Windows app for attending lessons, backed by its own finance system, with 2,000+ subscribers.",
   },
   kind: { ar: "منصة تعليمية وتطبيقات", en: "Learning platform & apps" },
   role: {
