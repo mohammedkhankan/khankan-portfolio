@@ -64,9 +64,10 @@ export default async function LocaleLayout({
     homeLocation: { "@type": "Country", name: person.location[locale] },
     alumniOf: { "@type": "CollegeOrUniversity", name: locale === "ar" ? "الجامعة الافتراضية السورية" : "Syrian Virtual University" },
     worksFor: [
-      { "@type": "Organization", name: "OFOQ Technical Solutions & Digitalization" },
-      { "@type": "Organization", name: "RAFD" },
+      { "@type": "Organization", name: "OFOQ Technical Solutions & Digitalization", alternateName: "شركة أفق للحلول التقنية والرقمنة", url: "https://ofoqsy.com/" },
+      { "@type": "Organization", name: "RAFD", alternateName: "منصة رفد التعليمية", url: "https://rafd6.netlify.app/" },
     ],
+    knowsAbout: ["Software Engineering", "Web Development", "Mobile Apps", "SaaS", "Business Systems", "PostgreSQL", "Next.js", "React", "TypeScript", "ASP.NET Core"],
     sameAs: [links.github, links.linkedin],
   };
 

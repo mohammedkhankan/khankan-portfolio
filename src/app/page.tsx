@@ -7,6 +7,7 @@ import { BASE } from "@/lib/base";
 export const metadata: Metadata = {
   title: "Mohammed Khankan — محمد خانكان",
   robots: { index: false, follow: true },
+  verification: { google: "QLW3gtmKQ7n43UKX1NzHPqmepgfPFo9OZbCYDMR5yK4" },
 };
 
 const pick = `(function(){var l;try{l=localStorage.getItem('lang')}catch(e){}if(l!=='ar'&&l!=='en'){l=((navigator.language||'').toLowerCase().indexOf('ar')===0)?'ar':((navigator.language||'').toLowerCase().indexOf('en')===0?'en':'ar')}location.replace('${BASE}/'+l+'/')})();`;
