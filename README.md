@@ -1,6 +1,6 @@
 # khankan-portfolio
 
-Source for my personal site: **[mohammedkhankan.github.io/khankan-portfolio](https://mohammedkhankan.github.io/khankan-portfolio/en/)**
+Source for my personal site: **[mohammedkhankan.ofoqsy.com](https://mohammedkhankan.ofoqsy.com/en/)**
 
 ![Mohammed Khankan portfolio](public/og/default-en.png)
 
