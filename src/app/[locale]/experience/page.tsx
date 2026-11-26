@@ -6,6 +6,8 @@ import { experience, fieldExperience, home, leadership } from "@/content/pages";
 import { getProject, projects } from "@/content/projects";
 import { href, isLocale } from "@/lib/i18n";
 import { pageMeta } from "@/lib/seo";
+import { ProjectLink } from "@/components/ProjectLink";
+import { ArrowUpRight } from "@/components/Icons";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -40,9 +42,10 @@ export default async function ExperiencePage({ params }: Props) {
               {o.projects.map((s) => {
                 const p = getProject(s)!;
                 return (
-                  <Link key={s} href={href(locale, `/projects/${s}`)} className="inline-flex min-h-11 items-center gap-2 rounded-full border border-line-strong px-4 text-sm hover:border-ink">
+                  <ProjectLink key={s} p={p} locale={locale} className="inline-flex min-h-11 items-center gap-2 rounded-full border border-line-strong px-4 text-sm hover:border-ink">
                     <span className="size-2 rounded-full" style={{ background: p.accent.dark }} aria-hidden />{p.name[locale]}
-                  </Link>
+                    {p.url && <ArrowUpRight className="size-3.5 opacity-60" aria-hidden />}
+                  </ProjectLink>
                 );
               })}
             </div>

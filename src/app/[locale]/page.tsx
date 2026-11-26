@@ -10,6 +10,7 @@ import { CutoutPortrait, ProjectHeroImage } from "@/components/Media";
 import { ExternalLink } from "@/components/Footer";
 import { ArrowUpRight } from "@/components/Icons";
 import { CountUp } from "@/components/CountUp";
+import { ProjectLink } from "@/components/ProjectLink";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -32,7 +33,7 @@ function Chapter({ p, locale, flip }: { p: Project; locale: Locale; flip: boolea
       <div className="container-page grid items-center gap-10 py-20 md:py-28 lg:grid-cols-12 lg:gap-12">
         <div className={`lg:col-span-4 ${flip ? "lg:order-2" : ""}`}>
           <p className="text-sm" style={{ color: c.sub }}>{p.kind[locale]}</p>
-          <h2 id={`ch-${p.slug}`} className="mt-3 text-h2 [overflow-wrap:anywhere]">{p.name[locale]}</h2>
+          <h2 id={`ch-${p.slug}`} className="mt-3 text-h2 [overflow-wrap:anywhere]"><ProjectLink p={p} locale={locale} className="inline-flex items-center gap-2 hover:opacity-80">{p.name[locale]}{p.url && <ArrowUpRight className="size-6 opacity-60" aria-hidden />}</ProjectLink></h2>
           <p className="mt-5 text-lead" style={{ color: c.sub }}>{p.summary[locale]}</p>
           {p.proof && (
             <dl className="mt-10 grid gap-6">
@@ -137,7 +138,7 @@ export default async function Home({ params }: Props) {
         <div className="container-page grid gap-12 py-20 md:py-28 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <p className="text-sm" style={{ color: rafd.chapter.sub }}>{rafd.kind[locale]}</p>
-            <h2 id="ch-rafd" className="mt-3 text-h1">{rafd.name[locale]}</h2>
+            <h2 id="ch-rafd" className="mt-3 text-h1"><ProjectLink p={rafd} locale={locale} className="inline-flex items-center gap-2 hover:opacity-80">{rafd.name[locale]}{rafd.url && <ArrowUpRight className="size-7 opacity-60" aria-hidden />}</ProjectLink></h2>
             <p className="mt-3 text-sm" style={{ color: rafd.chapter.sub }}>{rafd.role[locale]}</p>
           </div>
           <div className="lg:col-span-6 lg:col-start-7">
@@ -242,10 +243,11 @@ export default async function Home({ params }: Props) {
                   {o.projects.map((s) => {
                     const p = getProject(s)!;
                     return (
-                      <Link key={s} href={href(locale, `/projects/${s}`)} className="inline-flex min-h-11 items-center gap-2 rounded-full border border-line-strong px-4 text-sm transition-colors hover:border-ink">
+                      <ProjectLink key={s} p={p} locale={locale} className="inline-flex min-h-11 items-center gap-2 rounded-full border border-line-strong px-4 text-sm transition-colors hover:border-ink">
                         <span className="size-2 rounded-full" style={{ background: p.accent.dark }} aria-hidden />
                         {p.name[locale]}
-                      </Link>
+                        {p.url && <ArrowUpRight className="size-3.5 opacity-60" aria-hidden />}
+                      </ProjectLink>
                     );
                   })}
                 </div>
